@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\COMPARTIDO\\William Sotomayor 31-08-2022\\back c#\\Ws-precotex\\Ws-precotex.csproj": {}
+    "D:\\HARONI\\Ws-precotex\\Ws-precotex.csproj": {}
   },
   "projects": {
-    "D:\\COMPARTIDO\\William Sotomayor 31-08-2022\\back c#\\Ws-precotex\\Ws-precotex.csproj": {
+    "D:\\HARONI\\Ws-precotex\\Ws-precotex.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\COMPARTIDO\\William Sotomayor 31-08-2022\\back c#\\Ws-precotex\\Ws-precotex.csproj",
+        "projectUniqueName": "D:\\HARONI\\Ws-precotex\\Ws-precotex.csproj",
         "projectName": "Ws-precotex",
-        "projectPath": "D:\\COMPARTIDO\\William Sotomayor 31-08-2022\\back c#\\Ws-precotex\\Ws-precotex.csproj",
-        "packagesPath": "C:\\Users\\haroni\\.nuget\\packages\\",
-        "outputPath": "D:\\COMPARTIDO\\William Sotomayor 31-08-2022\\back c#\\Ws-precotex\\obj\\",
+        "projectPath": "D:\\HARONI\\Ws-precotex\\Ws-precotex.csproj",
+        "packagesPath": "C:\\Users\\jlino\\.nuget\\packages\\",
+        "outputPath": "D:\\HARONI\\Ws-precotex\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\haroni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jlino\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -85,10 +85,17 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.17, 5.0.17]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -97,7 +104,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
