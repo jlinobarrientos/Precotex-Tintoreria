@@ -1,0 +1,371 @@
+D:\Ws-precotex\bin\Release\net5.0\TraceReloggerLib.dll
+D:\Ws-precotex\bin\Release\net5.0\Dia2Lib.dll
+D:\Ws-precotex\bin\Release\net5.0\OSExtensions.dll
+D:\Ws-precotex\bin\Release\net5.0\appsettings.Development.json
+D:\Ws-precotex\bin\Release\net5.0\appsettings.json
+D:\Ws-precotex\bin\Release\net5.0\x86\KernelTraceControl.dll
+D:\Ws-precotex\bin\Release\net5.0\x86\KernelTraceControl.Win61.dll
+D:\Ws-precotex\bin\Release\net5.0\x86\msdia140.dll
+D:\Ws-precotex\bin\Release\net5.0\x86\msvcp140.dll
+D:\Ws-precotex\bin\Release\net5.0\x86\vcruntime140.dll
+D:\Ws-precotex\bin\Release\net5.0\amd64\KernelTraceControl.dll
+D:\Ws-precotex\bin\Release\net5.0\amd64\msdia140.dll
+D:\Ws-precotex\bin\Release\net5.0\amd64\msvcp140.dll
+D:\Ws-precotex\bin\Release\net5.0\amd64\vcruntime140.dll
+D:\Ws-precotex\bin\Release\net5.0\amd64\vcruntime140_1.dll
+D:\Ws-precotex\bin\Release\net5.0\Ws-precotex.exe
+D:\Ws-precotex\bin\Release\net5.0\Ws-precotex.deps.json
+D:\Ws-precotex\bin\Release\net5.0\Ws-precotex.runtimeconfig.json
+D:\Ws-precotex\bin\Release\net5.0\Ws-precotex.runtimeconfig.dev.json
+D:\Ws-precotex\bin\Release\net5.0\Ws-precotex.dll
+D:\Ws-precotex\bin\Release\net5.0\ref\Ws-precotex.dll
+D:\Ws-precotex\bin\Release\net5.0\Ws-precotex.pdb
+D:\Ws-precotex\bin\Release\net5.0\BenchmarkDotNet.dll
+D:\Ws-precotex\bin\Release\net5.0\BenchmarkDotNet.Annotations.dll
+D:\Ws-precotex\bin\Release\net5.0\CommandLine.dll
+D:\Ws-precotex\bin\Release\net5.0\Humanizer.dll
+D:\Ws-precotex\bin\Release\net5.0\Iced.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.CodeAnalysis.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.Data.SqlClient.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.Diagnostics.NETCore.Client.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.Diagnostics.Runtime.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.Diagnostics.FastSerialization.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.Diagnostics.Tracing.TraceEvent.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.DotNet.InternalAbstractions.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.EntityFrameworkCore.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.Extensions.DependencyModel.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.Extensions.PlatformAbstractions.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.Identity.Client.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.IdentityModel.Protocols.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\Ws-precotex\bin\Release\net5.0\Microsoft.OpenApi.dll
+D:\Ws-precotex\bin\Release\net5.0\Newtonsoft.Json.dll
+D:\Ws-precotex\bin\Release\net5.0\Perfolizer.dll
+D:\Ws-precotex\bin\Release\net5.0\Prometheus.NetCore.dll
+D:\Ws-precotex\bin\Release\net5.0\Prometheus.NetStandard.dll
+D:\Ws-precotex\bin\Release\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Ws-precotex\bin\Release\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Ws-precotex\bin\Release\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Ws-precotex\bin\Release\net5.0\System.CodeDom.dll
+D:\Ws-precotex\bin\Release\net5.0\System.Configuration.ConfigurationManager.dll
+D:\Ws-precotex\bin\Release\net5.0\System.Diagnostics.DiagnosticSource.dll
+D:\Ws-precotex\bin\Release\net5.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Ws-precotex\bin\Release\net5.0\System.Management.dll
+D:\Ws-precotex\bin\Release\net5.0\System.Runtime.Caching.dll
+D:\Ws-precotex\bin\Release\net5.0\System.Security.Cryptography.ProtectedData.dll
+D:\Ws-precotex\bin\Release\net5.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Ws-precotex\bin\Release\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Ws-precotex\bin\Release\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Ws-precotex\bin\Release\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Ws-precotex\bin\Release\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Ws-precotex\bin\Release\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Ws-precotex\bin\Release\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Ws-precotex\bin\Release\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Ws-precotex\bin\Release\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Ws-precotex\bin\Release\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Ws-precotex\bin\Release\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\Ws-precotex\bin\Release\net5.0\runtimes\win\lib\netcoreapp2.0\System.Management.dll
+D:\Ws-precotex\bin\Release\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Ws-precotex\bin\Release\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Ws-precotex\obj\Release\net5.0\Ws-precotex.csproj.AssemblyReference.cache
+D:\Ws-precotex\obj\Release\net5.0\Ws-precotex.GeneratedMSBuildEditorConfig.editorconfig
+D:\Ws-precotex\obj\Release\net5.0\Ws-precotex.AssemblyInfoInputs.cache
+D:\Ws-precotex\obj\Release\net5.0\Ws-precotex.AssemblyInfo.cs
+D:\Ws-precotex\obj\Release\net5.0\Ws-precotex.csproj.CoreCompileInputs.cache
+D:\Ws-precotex\obj\Release\net5.0\Ws-precotex.MvcApplicationPartsAssemblyInfo.cs
+D:\Ws-precotex\obj\Release\net5.0\Ws-precotex.MvcApplicationPartsAssemblyInfo.cache
+D:\Ws-precotex\obj\Release\net5.0\staticwebassets\Ws-precotex.StaticWebAssets.Manifest.cache
+D:\Ws-precotex\obj\Release\net5.0\staticwebassets\Ws-precotex.StaticWebAssets.xml
+D:\Ws-precotex\obj\Release\net5.0\scopedcss\bundle\Ws-precotex.styles.css
+D:\Ws-precotex\obj\Release\net5.0\Ws-precotex.RazorTargetAssemblyInfo.cache
+D:\Ws-precotex\obj\Release\net5.0\Ws-precotex.csproj.CopyComplete
+D:\Ws-precotex\obj\Release\net5.0\Ws-precotex.dll
+D:\Ws-precotex\obj\Release\net5.0\ref\Ws-precotex.dll
+D:\Ws-precotex\obj\Release\net5.0\Ws-precotex.pdb
+D:\Ws-precotex\obj\Release\net5.0\Ws-precotex.genruntimeconfig.cache
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\appsettings.Development.json
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\appsettings.json
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\x86\KernelTraceControl.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\x86\KernelTraceControl.Win61.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\x86\msdia140.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\x86\msvcp140.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\x86\vcruntime140.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\amd64\KernelTraceControl.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\amd64\msdia140.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\amd64\msvcp140.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\amd64\vcruntime140.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\amd64\vcruntime140_1.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\TraceReloggerLib.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Dia2Lib.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\OSExtensions.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Ws-precotex.exe
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Ws-precotex.deps.json
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Ws-precotex.runtimeconfig.json
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Ws-precotex.runtimeconfig.dev.json
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Ws-precotex.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\ref\Ws-precotex.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Ws-precotex.pdb
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\BenchmarkDotNet.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\BenchmarkDotNet.Annotations.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\CommandLine.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Humanizer.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Iced.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.CodeAnalysis.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.Data.SqlClient.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.Diagnostics.NETCore.Client.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.Diagnostics.Runtime.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.Diagnostics.FastSerialization.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.Diagnostics.Tracing.TraceEvent.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.DotNet.InternalAbstractions.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.EntityFrameworkCore.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.Extensions.DependencyInjection.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.Extensions.DependencyModel.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.Extensions.PlatformAbstractions.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.Identity.Client.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.IdentityModel.Protocols.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.OpenApi.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Newtonsoft.Json.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Perfolizer.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Prometheus.NetCore.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Prometheus.NetStandard.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\System.CodeDom.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\System.Configuration.ConfigurationManager.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\System.Diagnostics.DiagnosticSource.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\System.IdentityModel.Tokens.Jwt.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\System.Management.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\System.Runtime.Caching.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\System.Security.Cryptography.ProtectedData.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\win\lib\netcoreapp2.0\System.Management.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\Ws-precotex.csproj.AssemblyReference.cache
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\Ws-precotex.GeneratedMSBuildEditorConfig.editorconfig
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\Ws-precotex.AssemblyInfoInputs.cache
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\Ws-precotex.AssemblyInfo.cs
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\Ws-precotex.csproj.CoreCompileInputs.cache
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\Ws-precotex.MvcApplicationPartsAssemblyInfo.cs
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\Ws-precotex.MvcApplicationPartsAssemblyInfo.cache
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\staticwebassets\Ws-precotex.StaticWebAssets.Manifest.cache
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\staticwebassets\Ws-precotex.StaticWebAssets.xml
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\scopedcss\bundle\Ws-precotex.styles.css
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\Ws-precotex.RazorTargetAssemblyInfo.cache
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\Ws-precotex.csproj.CopyComplete
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\Ws-precotex.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\ref\Ws-precotex.dll
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\Ws-precotex.pdb
+D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\Ws-precotex.genruntimeconfig.cache
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\appsettings.Development.json
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\appsettings.json
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\x86\KernelTraceControl.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\x86\KernelTraceControl.Win61.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\x86\msdia140.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\x86\msvcp140.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\x86\vcruntime140.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\amd64\KernelTraceControl.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\amd64\msdia140.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\amd64\msvcp140.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\amd64\vcruntime140.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\amd64\vcruntime140_1.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\TraceReloggerLib.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Dia2Lib.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\OSExtensions.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Ws-precotex.StaticWebAssets.xml
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Ws-precotex.exe
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Ws-precotex.deps.json
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Ws-precotex.runtimeconfig.json
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Ws-precotex.runtimeconfig.dev.json
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Ws-precotex.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Ws-precotex.pdb
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\BenchmarkDotNet.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\BenchmarkDotNet.Annotations.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\CommandLine.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Humanizer.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Iced.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.CodeAnalysis.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.Data.SqlClient.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.Diagnostics.NETCore.Client.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.Diagnostics.Runtime.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.Diagnostics.FastSerialization.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.Diagnostics.Tracing.TraceEvent.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.DotNet.InternalAbstractions.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.EntityFrameworkCore.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.Extensions.DependencyInjection.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.Extensions.DependencyModel.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.Extensions.PlatformAbstractions.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.Identity.Client.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.IdentityModel.Logging.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.IdentityModel.Protocols.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.IdentityModel.Tokens.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Microsoft.OpenApi.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Newtonsoft.Json.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Perfolizer.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Prometheus.NetCore.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Prometheus.NetStandard.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\System.CodeDom.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\System.Configuration.ConfigurationManager.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\System.Diagnostics.DiagnosticSource.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\System.IdentityModel.Tokens.Jwt.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\System.Management.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\System.Runtime.Caching.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\System.Security.Cryptography.ProtectedData.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\win\lib\netcoreapp2.0\System.Management.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Release\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\Ws-precotex.csproj.AssemblyReference.cache
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\Ws-precotex.GeneratedMSBuildEditorConfig.editorconfig
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\Ws-precotex.AssemblyInfoInputs.cache
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\Ws-precotex.AssemblyInfo.cs
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\Ws-precotex.csproj.CoreCompileInputs.cache
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\Ws-precotex.MvcApplicationPartsAssemblyInfo.cs
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\Ws-precotex.MvcApplicationPartsAssemblyInfo.cache
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\scopedcss\bundle\Ws-precotex.styles.css
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\staticwebassets\Ws-precotex.StaticWebAssets.Manifest.cache
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\staticwebassets\Ws-precotex.StaticWebAssets.Pack.cache
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\staticwebassets\msbuild.Ws-precotex.Microsoft.AspNetCore.StaticWebAssets.props
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\staticwebassets\msbuild.build.Ws-precotex.props
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\staticwebassets\msbuild.buildMultiTargeting.Ws-precotex.props
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\staticwebassets\msbuild.buildTransitive.Ws-precotex.props
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\Ws-precotex.RazorTargetAssemblyInfo.cache
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\Ws-precotex.csproj.CopyComplete
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\Ws-precotex.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\refint\Ws-precotex.dll
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\Ws-precotex.pdb
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\Ws-precotex.genruntimeconfig.cache
+D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Release\net5.0\ref\Ws-precotex.dll
