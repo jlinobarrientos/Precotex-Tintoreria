@@ -10090,11 +10090,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\JLINO\\FUENTES\\TINTORERIA\\PROYECTO_WEB\\Ws-precotex.csproj",
+      "projectUniqueName": "D:\\HARONI\\Proyecto_Tintoreria\\Ws-precotex\\Ws-precotex.csproj",
       "projectName": "Ws-precotex",
-      "projectPath": "D:\\JLINO\\FUENTES\\TINTORERIA\\PROYECTO_WEB\\Ws-precotex.csproj",
+      "projectPath": "D:\\HARONI\\Proyecto_Tintoreria\\Ws-precotex\\Ws-precotex.csproj",
       "packagesPath": "C:\\Users\\jlino\\.nuget\\packages\\",
-      "outputPath": "D:\\JLINO\\FUENTES\\TINTORERIA\\PROYECTO_WEB\\obj\\",
+      "outputPath": "D:\\HARONI\\Proyecto_Tintoreria\\Ws-precotex\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jlino\\AppData\\Roaming\\NuGet\\NuGet.Config",

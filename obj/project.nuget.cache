@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HAH7AH2gGAN+m7uPQVBWl7Ns3R61pFeo7o7MYevT/59wPp6aX7UFj5mQOjZAWKcqp76E2rlj53K33YoWQvzsGQ==",
+  "dgSpecHash": "M76g+5iivlgGlyCDvmjlAkHXKkbUc3EtzOkqVr6cc3izGCIcq6lGlNII5yYEOw4G61sOLO/nfZQq0TFC6A0wjg==",
   "success": true,
-  "projectFilePath": "D:\\JLINO\\FUENTES\\TINTORERIA\\PROYECTO_WEB\\Ws-precotex.csproj",
+  "projectFilePath": "D:\\HARONI\\Proyecto_Tintoreria\\Ws-precotex\\Ws-precotex.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jlino\\.nuget\\packages\\benchmarkdotnet\\0.13.1\\benchmarkdotnet.0.13.1.nupkg.sha512",
     "C:\\Users\\jlino\\.nuget\\packages\\benchmarkdotnet.annotations\\0.13.1\\benchmarkdotnet.annotations.0.13.1.nupkg.sha512",

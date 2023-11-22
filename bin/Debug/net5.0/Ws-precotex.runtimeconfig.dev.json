@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\haroni\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\haroni\\.nuget\\packages"
+      "C:\\Users\\jlino\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\jlino\\.nuget\\packages"
     ]
   }
 }
