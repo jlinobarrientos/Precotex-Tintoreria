@@ -268,4 +268,58 @@ namespace Ws_prectoex.Data
 
     }
 
+    public class RecetaAcabado 
+    {
+        public string Cod_RecetaAcabado { get; set; }
+        public string Pr_Velocidad { get; set; }
+        public string Pr_Tiempo_Ciclo_1 { get; set; }
+        public string Pr_Tiempo_Ciclo_2 { get; set; }
+        public string Pr_Tiempo_Ciclo_3 { get; set; }
+        public string Pr_Tiempo_Ciclo_4 { get; set; }
+        public string Pr_Tiempo_Ciclo_5 { get; set; }
+        public string Pr_Niv_Bano_Maq { get; set; }
+        public string Pr_Ph_Pilling { get; set; }
+        public string Tr_Velocidad { get; set; }
+        public string Tr_Tiempo_Ciclo_1 { get; set; }
+        public string Tr_Tiempo_Ciclo_2 { get; set; }
+        public string Tr_Tiempo_Ciclo_3 { get; set; }
+        public string Tr_Tiempo_Ciclo_4 { get; set; }
+        public string Tr_Tiempo_Ciclo_5 { get; set; }
+        public string Tr_Volumen { get; set; }
+        public string Tr_Niv_Bano_Maq1 { get; set; }
+        public string Tr_Ph_Inicio_1 { get; set; }
+        public string Tr_Ph_Inicio_2 { get; set; }
+        public string Tr_Densidad_Sal_1 { get; set; }
+        public string Tr_Densidad_Sal_2 { get; set; }
+        public string Tr_Temperatura_1 { get; set; }
+        public string Tr_Temperatura_2 { get; set; }
+        public string Tr_Lt_Dosif_Color { get; set; }
+        public string Tr_Lt_Dosif_Sal { get; set; }
+        public string Tr_Lt_Dosif1_Alca { get; set; }
+        public string Tr_Ph_1_Alcali_1 { get; set; }
+        public string Tr_Ph_1_Alcali_2 { get; set; }
+        public string Tr_Lt_Dosif2_Alca { get; set; }
+        public string Tr_Niv_Bano_Maq2 { get; set; }
+        public string Tr_Agotamiento_1 { get; set; }
+        public string Tr_Agotamiento_2 { get; set; }
+        public string Tr_Tiempo_Agota { get; set; }
+        public string Ja_Ph1_1 { get; set; }
+        public string Ja_Ph1_2 { get; set; }
+        public string Fi_Ph { get; set; }
+        public string Ac_Ph_1 { get; set; }
+        public string Ac_Ph_2 { get; set ; }
+        public string Ac_Hora_Descarga { get; set; }
+        public string Td_Velocidad { get; set; }
+        public string Td_Tiempo_Ciclo_1 { get; set; }
+        public string Td_Tiempo_Ciclo_2 { get; set; }
+        public string Td_Tiempo_Ciclo_3 { get; set; }
+        public string Td_Tiempo_Ciclo_4 { get; set; }
+        public string Td_Tiempo_Ciclo_5 { get; set; }
+        public string Td_Ph_Tenido { get; set; }
+        public string Td_Ph_Descarga_Disp { get; set; }
+        public string Cambio_Turno { get; set; }
+        public string Operario_Entr { get; set; }
+        public string Observaciones { get; set; }
+    }
+
 }

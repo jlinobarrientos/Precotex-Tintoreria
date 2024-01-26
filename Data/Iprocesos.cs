@@ -1460,5 +1460,88 @@ namespace Ws_prectoex.Data
             return partidastatusColor;
         }
 
+        public List<RecetaAcabado> MuestraParamReceta( string CodReceta,string Cod_usuario)
+        {
+            Conectar();
+            List<RecetaAcabado> lsParamReceta = new List<RecetaAcabado>();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("TIN_SEL_PARAMAQ_DATA_WS", cnn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@COD_RECETAACABADO", CodReceta);
+                cmd.Parameters.AddWithValue("@USU_REGISTRO", Cod_usuario);                
+
+                SqlDataReader read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+                    RecetaAcabado lista = new RecetaAcabado()
+                    {
+                        Cod_RecetaAcabado = read["COD_RECETAACABADO"].ToString(),
+                        Pr_Velocidad = read["PR_VELOCIDAD"].ToString(),                
+                        //Pr_Tiempo_Ciclo_1 = read["PR_TIEMPO_CICLO_1"].ToString(),
+                        //Pr_Tiempo_Ciclo_2 = read["PR_TIEMPO_CICLO_2"].ToString(),
+                        //Pr_Tiempo_Ciclo_3 = read["PR_TIEMPO_CICLO_3"].ToString(),
+                        //Pr_Tiempo_Ciclo_4 = read["PR_TIEMPO_CICLO_4"].ToString(),
+                        //Pr_Tiempo_Ciclo_5 = read["PR_TIEMPO_CICLO_5"].ToString(),
+                        //Pr_Niv_Bano_Maq = read["PR_NIV_BANO_MAQ"].ToString(),
+                        //Pr_Ph_Pilling = read["PR_PH_PILLING"].ToString(),
+                        //Tr_Velocidad = read["TR_VELOCIDAD"].ToString(),
+                        //Tr_Tiempo_Ciclo_1 = read["TR_TIEMPO_CICLO_1"].ToString(),
+                        //Tr_Tiempo_Ciclo_2 = read["TR_TIEMPO_CICLO_2"].ToString(),
+                        //Tr_Tiempo_Ciclo_3 = read["TR_TIEMPO_CICLO_3"].ToString(),
+                        //Tr_Tiempo_Ciclo_4 = read["TR_TIEMPO_CICLO_4"].ToString(),
+                        //Tr_Tiempo_Ciclo_5 = read["TR_TIEMPO_CICLO_5"].ToString(),
+                        //Tr_Volumen = read["TR_VOLUMEN"].ToString(),
+                        //Tr_Niv_Bano_Maq1 = read["TR_NIV_BANO_MAQ1"].ToString(),
+                        //Tr_Ph_Inicio_1 = read["TR_PH_INICIO_1"].ToString(),
+                        //Tr_Ph_Inicio_2 = read["TR_PH_INICIO_2"].ToString(),
+                        //Tr_Densidad_Sal_1 = read["TR_DENSIDAD_SAL_1"].ToString(),
+                        //Tr_Densidad_Sal_2 = read["TR_DENSIDAD_SAL_2"].ToString(),
+                        //Tr_Temperatura_1 = read["TR_TEMPERATURA_1"].ToString(),
+                        //Tr_Temperatura_2 = read["TR_TEMPERATURA_2"].ToString(),
+                        //Tr_Lt_Dosif_Color = read["TR_LT_DOSIF_COLOR"].ToString(),
+                        //Tr_Lt_Dosif_Sal = read["TR_LT_DOSIF_SAL"].ToString(),
+                        //Tr_Lt_Dosif1_Alca = read["TR_LT_DOSIF1_ALCA"].ToString(),
+                        //Tr_Ph_1_Alcali_1 = read["TR_PH_1_ALCALI_1"].ToString(),
+                        //Tr_Ph_1_Alcali_2 = read["TR_PH_1_ALCALI_2"].ToString(),
+                        //Tr_Lt_Dosif2_Alca = read["TR_LT_DOSIF2_ALCA"].ToString(),
+                        //Tr_Niv_Bano_Maq2 = read["TR_NIV_BANO_MAQ2"].ToString(),
+                        //Tr_Agotamiento_1 = read["TR_AGOTAMIENTO_1"].ToString(),
+                        //Tr_Agotamiento_2 = read["TR_AGOTAMIENTO_2"].ToString(),
+                        //Tr_Tiempo_Agota = read["TR_TIEMPO_AGOTA"].ToString(),
+                        //Ja_Ph1_1 = read["JA_PH1_1"].ToString(),
+                        //Ja_Ph1_2 = read["JA_PH1_2"].ToString(),
+                        //Fi_Ph = read["FI_PH"].ToString(),
+                        //Ac_Ph_1 = read["AC_PH_1"].ToString(),
+                        //Ac_Ph_2 = read["AC_PH_2"].ToString(),
+                        //Ac_Hora_Descarga = read["AC_HORA_DESCARGA"].ToString(),
+                        //Td_Velocidad = read["TD_VELOCIDAD"].ToString(),
+                        //Td_Tiempo_Ciclo_1 = read["TD_TIEMPO_CICLO_1"].ToString(),
+                        //Td_Tiempo_Ciclo_2 = read["TD_TIEMPO_CICLO_2"].ToString(),
+                        //Td_Tiempo_Ciclo_3 = read["TD_TIEMPO_CICLO_3"].ToString(),
+                        //Td_Tiempo_Ciclo_4 = read["TD_TIEMPO_CICLO_4"].ToString(),
+                        //Td_Tiempo_Ciclo_5 = read["TD_TIEMPO_CICLO_5"].ToString(),
+                        //Td_Ph_Tenido = read["TD_PH_TENIDO"].ToString(),
+                        //Td_Ph_Descarga_Disp = read["TD_PH_DESCARGA_DISP"].ToString(),
+                        //Cambio_Turno = read["CAMBIO_TURNO"].ToString(),
+                        //Operario_Entr = read["OPERARIO_ENTR"].ToString(),
+                        //Observaciones = read["OBSERVACIONES"].ToString()
+                    };
+                    lsParamReceta.Add(lista);
+                }
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception("Error " + e.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+            return lsParamReceta;
+        }
+
     }
 }

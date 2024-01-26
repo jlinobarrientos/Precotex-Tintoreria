@@ -707,7 +707,24 @@ namespace Ws_prectoex.Controllers
             {
                 throw new Exception("Error " + e.Message);
             }
-        }       
+        }
+
+        [Route("procesos/MuestraParamReceta/{CodReceta}/{Cod_usuario}")]
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<List<RecetaAcabado>> MuestraParamReceta(string CodReceta,string Cod_usuario)
+        {
+            List<RecetaAcabado> lsParamReceta = new List<RecetaAcabado>();
+            try
+            {
+                lsParamReceta = iprocesos.MuestraParamReceta(CodReceta, Cod_usuario);                
+                return lsParamReceta;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+        }
 
     }
 }
