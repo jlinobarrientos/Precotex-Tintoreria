@@ -726,5 +726,222 @@ namespace Ws_prectoex.Controllers
             }
         }
 
+        [Route("seguimientotobera/CargarImagen/")]
+        [AllowAnonymous]
+        [HttpPost]        
+        public async Task<RptaPx> CargarImagen([FromForm] FileUploadTinto objFile)
+        {
+
+            string Foto1 = "";
+            string Foto2 = "";
+
+            try
+            {
+                //if (objFile.files != null)
+                //{
+                //    await subirImagen(objFile.files, objFile.partida, codreceta, 1);
+                //}
+                //if (objFile.files2 != null)
+                //{
+                //    await subirImagen(objFile.files2, objFile.partida, codreceta, 2);
+                //}
+                
+                await subirImagenParam(objFile.Cod_Receta
+                                       ,objFile.Pr_Tobera
+                                       ,objFile.Pr_Niv_Bano_Maq
+                                       ,objFile.Pr_Ph_Pilling
+                                       ,objFile.Tr_Tobera
+                                       ,objFile.Tr_Volumen
+                                       ,objFile.Tr_Niv_Bano_Maq1
+                                       ,objFile.Tr_Ph_Inicio_1
+                                       ,objFile.Tr_Ph_Inicio_2
+                                       ,objFile.Tr_Densidad_Sal_1
+                                       ,objFile.Tr_Densidad_Sal_2
+                                       ,objFile.Tr_Temperatura_1
+                                       ,objFile.Tr_Temperatura_2
+                                       ,objFile.Tr_Lt_Dosif_Color
+                                       ,objFile.Tr_Lt_Dosif_Sal
+                                       ,objFile.Tr_Lt_Dosif1_Alca
+                                       ,objFile.Tr_Ph_1_Alcali_1
+                                       ,objFile.Tr_Ph_1_Alcali_2
+                                       ,objFile.Tr_Lt_Dosif2_Alca
+                                       ,objFile.Tr_Niv_Bano_Maq2
+                                       ,objFile.Tr_Agotamiento_1
+                                       ,objFile.Tr_Agotamiento_2
+                                       ,objFile.Tr_Tiempo_Agota
+                                       ,objFile.Ja_Ph1_1
+                                       ,objFile.Ja_Ph1_2
+                                       ,objFile.Fi_Ph
+                                       ,objFile.Ac_Ph_1
+                                       ,objFile.Ac_Ph_2                                       
+                                       ,objFile.Td_Tobera
+                                       ,objFile.Td_Ph_Tenido
+                                       ,objFile.Td_Ph_Descarga_Disp
+                                       ,objFile.Cambio_Turno
+                                       ,objFile.Operario_Entr
+                                       ,objFile.Observaciones
+                                       ,objFile.Cod_Usuario);
+
+                var rptx2 = new RptaPx();
+                rptx2.Mensaje = "OKOK";
+                return rptx2;
+            }
+
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private async Task<string> subirImagenParam(string Cod_Receta
+                                                     , string Pr_Tobera
+                                                     , string Pr_Niv_Bano_Maq
+                                                     , string Pr_Ph_Pilling
+                                                     , string Tr_Tobera
+                                                     , string Tr_Volumen
+                                                     , string Tr_Niv_Bano_Maq1
+                                                     , string Tr_Ph_Inicio_1
+                                                     , string Tr_Ph_Inicio_2
+                                                     , string Tr_Densidad_Sal_1
+                                                     , string Tr_Densidad_Sal_2
+                                                     , string Tr_Temperatura_1
+                                                     , string Tr_Temperatura_2
+                                                     , string Tr_Lt_Dosif_Color
+                                                     , string Tr_Lt_Dosif_Sal
+                                                     , string Tr_Lt_Dosif1_Alca
+                                                     , string Tr_Ph_1_Alcali_1
+                                                     , string Tr_Ph_1_Alcali_2
+                                                     , string Tr_Lt_Dosif2_Alca
+                                                     , string Tr_Niv_Bano_Maq2
+                                                     , string Tr_Agotamiento_1
+                                                     , string Tr_Agotamiento_2
+                                                     , string Tr_Tiempo_Agota
+                                                     , string Ja_Ph1_1
+                                                     , string Ja_Ph1_2
+                                                     , string Fi_Ph
+                                                     , string Ac_Ph_1
+                                                     , string Ac_Ph_2                                                     
+                                                     , string Td_Tobera
+                                                     , string Td_Ph_Tenido
+                                                     , string Td_Ph_Descarga_Disp
+                                                     , string Cambio_Turno
+                                                     , string Operario_Entr
+                                                     , string Observaciones
+                                                     , string Cod_Usuario)
+
+        {
+            try
+            {
+                //if (!Directory.Exists(_environment.WebRootPath + "\\uploads\\"))
+                //{
+                //    Directory.CreateDirectory(_environment.WebRootPath + "\\uploads\\");
+                //}              
+
+                //if (!Directory.Exists(_environment.WebRootPath + "\\uploads\\" + partida + "-" + codreceta + "-" + Secuencia + ".jpg"))
+                //{
+                //    System.IO.File.Delete(_environment.WebRootPath + "\\uploads\\" + partida + "-" + codreceta + "-" + Secuencia + ".jpg");
+                //}
+                
+                //using (FileStream fileStream = System.IO.File.Create(_environment.WebRootPath + "\\uploads\\" + partida + "-" + codreceta + "-" + Secuencia + ".jpg"))
+                //{
+                //    await objFile.CopyToAsync(fileStream);
+                //    fileStream.Flush();
+
+                //}
+
+                //var rptx2 = new RptaPx();
+                //var NombreImagen = partida + "-" + codreceta + "-" + Secuencia;
+                var bresultado = new RptaPx();
+
+                bresultado = iprocesos.grabarParamReceta(Cod_Receta
+                                                         , Pr_Tobera
+                                                         , Pr_Niv_Bano_Maq
+                                                         , Pr_Ph_Pilling
+                                                         , Tr_Tobera
+                                                         , Tr_Volumen
+                                                         , Tr_Niv_Bano_Maq1
+                                                         , Tr_Ph_Inicio_1
+                                                         , Tr_Ph_Inicio_2
+                                                         , Tr_Densidad_Sal_1
+                                                         , Tr_Densidad_Sal_2
+                                                         , Tr_Temperatura_1
+                                                         , Tr_Temperatura_2
+                                                         , Tr_Lt_Dosif_Color
+                                                         , Tr_Lt_Dosif_Sal
+                                                         , Tr_Lt_Dosif1_Alca
+                                                         , Tr_Ph_1_Alcali_1
+                                                         , Tr_Ph_1_Alcali_2
+                                                         , Tr_Lt_Dosif2_Alca
+                                                         , Tr_Niv_Bano_Maq2
+                                                         , Tr_Agotamiento_1
+                                                         , Tr_Agotamiento_2
+                                                         , Tr_Tiempo_Agota
+                                                         , Ja_Ph1_1
+                                                         , Ja_Ph1_2
+                                                         , Fi_Ph
+                                                         , Ac_Ph_1
+                                                         , Ac_Ph_2                                                         
+                                                         , Td_Tobera
+                                                         , Td_Ph_Tenido
+                                                         , Td_Ph_Descarga_Disp
+                                                         , Cambio_Turno
+                                                         , Operario_Entr
+                                                         , Observaciones
+                                                         , Cod_Usuario);
+
+                conteo += 1;
+                return Cod_Receta;
+
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        public class FileUploadTinto
+        {
+            public string Cod_Receta { get; set; }
+            public string Pr_Tobera { get; set; }            
+            public string Pr_Niv_Bano_Maq { get; set; }
+            public string Pr_Ph_Pilling { get; set; }
+            public string Tr_Tobera { get; set; }            
+            public string Tr_Volumen { get; set; }
+            public string Tr_Niv_Bano_Maq1 { get; set; }
+            public string Tr_Ph_Inicio_1 { get; set; }
+            public string Tr_Ph_Inicio_2 { get; set; }
+            public string Tr_Densidad_Sal_1 { get; set; }
+            public string Tr_Densidad_Sal_2 { get; set; }
+            public string Tr_Temperatura_1 { get; set; }
+            public string Tr_Temperatura_2 { get; set; }
+            public string Tr_Lt_Dosif_Color { get; set; }
+            public string Tr_Lt_Dosif_Sal { get; set; }
+            public string Tr_Lt_Dosif1_Alca { get; set; }
+            public string Tr_Ph_1_Alcali_1 { get; set; }
+            public string Tr_Ph_1_Alcali_2 { get; set; }
+            public string Tr_Lt_Dosif2_Alca { get; set; }
+            public string Tr_Niv_Bano_Maq2 { get; set; }
+            public string Tr_Agotamiento_1 { get; set; }
+            public string Tr_Agotamiento_2 { get; set; }
+            public string Tr_Tiempo_Agota { get; set; }
+            public string Ja_Ph1_1 { get; set; }
+            public string Ja_Ph1_2 { get; set; }
+            public string Fi_Ph { get; set; }
+            public string Ac_Ph_1 { get; set; }
+            public string Ac_Ph_2 { get; set; }            
+            public string Td_Tobera { get; set; }            
+            public string Td_Ph_Tenido { get; set; }
+            public string Td_Ph_Descarga_Disp { get; set; }
+
+            //public IFormFile Mu_Dureza_Tenido { get; set; }
+            //public IFormFile Mu_Peroxi_Residu { get; set; }         
+            public string Cambio_Turno { get; set; }
+            public string Operario_Entr { get; set; }
+            public string Observaciones { get; set; }
+            public string Cod_Usuario { get; set; }
+
+
+        }
     }
 }

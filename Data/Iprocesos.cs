@@ -1477,56 +1477,60 @@ namespace Ws_prectoex.Data
                 {
                     RecetaAcabado lista = new RecetaAcabado()
                     {
-                        Cod_RecetaAcabado = read["COD_RECETAACABADO"].ToString(),
-                        Pr_Velocidad = read["PR_VELOCIDAD"].ToString(),                
-                        //Pr_Tiempo_Ciclo_1 = read["PR_TIEMPO_CICLO_1"].ToString(),
-                        //Pr_Tiempo_Ciclo_2 = read["PR_TIEMPO_CICLO_2"].ToString(),
-                        //Pr_Tiempo_Ciclo_3 = read["PR_TIEMPO_CICLO_3"].ToString(),
-                        //Pr_Tiempo_Ciclo_4 = read["PR_TIEMPO_CICLO_4"].ToString(),
-                        //Pr_Tiempo_Ciclo_5 = read["PR_TIEMPO_CICLO_5"].ToString(),
-                        //Pr_Niv_Bano_Maq = read["PR_NIV_BANO_MAQ"].ToString(),
-                        //Pr_Ph_Pilling = read["PR_PH_PILLING"].ToString(),
-                        //Tr_Velocidad = read["TR_VELOCIDAD"].ToString(),
-                        //Tr_Tiempo_Ciclo_1 = read["TR_TIEMPO_CICLO_1"].ToString(),
-                        //Tr_Tiempo_Ciclo_2 = read["TR_TIEMPO_CICLO_2"].ToString(),
-                        //Tr_Tiempo_Ciclo_3 = read["TR_TIEMPO_CICLO_3"].ToString(),
-                        //Tr_Tiempo_Ciclo_4 = read["TR_TIEMPO_CICLO_4"].ToString(),
-                        //Tr_Tiempo_Ciclo_5 = read["TR_TIEMPO_CICLO_5"].ToString(),
-                        //Tr_Volumen = read["TR_VOLUMEN"].ToString(),
-                        //Tr_Niv_Bano_Maq1 = read["TR_NIV_BANO_MAQ1"].ToString(),
-                        //Tr_Ph_Inicio_1 = read["TR_PH_INICIO_1"].ToString(),
-                        //Tr_Ph_Inicio_2 = read["TR_PH_INICIO_2"].ToString(),
-                        //Tr_Densidad_Sal_1 = read["TR_DENSIDAD_SAL_1"].ToString(),
-                        //Tr_Densidad_Sal_2 = read["TR_DENSIDAD_SAL_2"].ToString(),
-                        //Tr_Temperatura_1 = read["TR_TEMPERATURA_1"].ToString(),
-                        //Tr_Temperatura_2 = read["TR_TEMPERATURA_2"].ToString(),
-                        //Tr_Lt_Dosif_Color = read["TR_LT_DOSIF_COLOR"].ToString(),
-                        //Tr_Lt_Dosif_Sal = read["TR_LT_DOSIF_SAL"].ToString(),
-                        //Tr_Lt_Dosif1_Alca = read["TR_LT_DOSIF1_ALCA"].ToString(),
-                        //Tr_Ph_1_Alcali_1 = read["TR_PH_1_ALCALI_1"].ToString(),
-                        //Tr_Ph_1_Alcali_2 = read["TR_PH_1_ALCALI_2"].ToString(),
-                        //Tr_Lt_Dosif2_Alca = read["TR_LT_DOSIF2_ALCA"].ToString(),
-                        //Tr_Niv_Bano_Maq2 = read["TR_NIV_BANO_MAQ2"].ToString(),
-                        //Tr_Agotamiento_1 = read["TR_AGOTAMIENTO_1"].ToString(),
-                        //Tr_Agotamiento_2 = read["TR_AGOTAMIENTO_2"].ToString(),
-                        //Tr_Tiempo_Agota = read["TR_TIEMPO_AGOTA"].ToString(),
-                        //Ja_Ph1_1 = read["JA_PH1_1"].ToString(),
-                        //Ja_Ph1_2 = read["JA_PH1_2"].ToString(),
-                        //Fi_Ph = read["FI_PH"].ToString(),
-                        //Ac_Ph_1 = read["AC_PH_1"].ToString(),
-                        //Ac_Ph_2 = read["AC_PH_2"].ToString(),
-                        //Ac_Hora_Descarga = read["AC_HORA_DESCARGA"].ToString(),
-                        //Td_Velocidad = read["TD_VELOCIDAD"].ToString(),
-                        //Td_Tiempo_Ciclo_1 = read["TD_TIEMPO_CICLO_1"].ToString(),
-                        //Td_Tiempo_Ciclo_2 = read["TD_TIEMPO_CICLO_2"].ToString(),
-                        //Td_Tiempo_Ciclo_3 = read["TD_TIEMPO_CICLO_3"].ToString(),
-                        //Td_Tiempo_Ciclo_4 = read["TD_TIEMPO_CICLO_4"].ToString(),
-                        //Td_Tiempo_Ciclo_5 = read["TD_TIEMPO_CICLO_5"].ToString(),
-                        //Td_Ph_Tenido = read["TD_PH_TENIDO"].ToString(),
-                        //Td_Ph_Descarga_Disp = read["TD_PH_DESCARGA_DISP"].ToString(),
-                        //Cambio_Turno = read["CAMBIO_TURNO"].ToString(),
-                        //Operario_Entr = read["OPERARIO_ENTR"].ToString(),
-                        //Observaciones = read["OBSERVACIONES"].ToString()
+                        Cod_Receta = read["COD_RECETAACABADO"].ToString(),
+                        Pr_Tobera = read["PR_TOBERA"].ToString(),
+                        Pr_Velocidad = read["PR_VELOCIDAD"].ToString(),
+                        Pr_Tiempo_Ciclo_1 = read["PR_TIEMPO_CICLO_1"].ToString(),
+                        Pr_Tiempo_Ciclo_2 = read["PR_TIEMPO_CICLO_2"].ToString(),
+                        Pr_Tiempo_Ciclo_3 = read["PR_TIEMPO_CICLO_3"].ToString(),
+                        Pr_Tiempo_Ciclo_4 = read["PR_TIEMPO_CICLO_4"].ToString(),
+                        Pr_Tiempo_Ciclo_5 = read["PR_TIEMPO_CICLO_5"].ToString(),
+                        Pr_Niv_Bano_Maq = read["PR_NIV_BANO_MAQ"].ToString(),
+                        Pr_Ph_Pilling = read["PR_PH_PILLING"].ToString(),
+                        Tr_Tobera = read["TR_TOBERA"].ToString(),
+                        Tr_Velocidad = read["TR_VELOCIDAD"].ToString(),
+                        Tr_Tiempo_Ciclo_1 = read["TR_TIEMPO_CICLO_1"].ToString(),
+                        Tr_Tiempo_Ciclo_2 = read["TR_TIEMPO_CICLO_2"].ToString(),
+                        Tr_Tiempo_Ciclo_3 = read["TR_TIEMPO_CICLO_3"].ToString(),
+                        Tr_Tiempo_Ciclo_4 = read["TR_TIEMPO_CICLO_4"].ToString(),
+                        Tr_Tiempo_Ciclo_5 = read["TR_TIEMPO_CICLO_5"].ToString(),
+                        Tr_Volumen = read["TR_VOLUMEN"].ToString(),
+                        Tr_Niv_Bano_Maq1 = read["TR_NIV_BANO_MAQ1"].ToString(),
+                        Tr_Ph_Inicio_1 = read["TR_PH_INICIO_1"].ToString(),
+                        Tr_Ph_Inicio_2 = read["TR_PH_INICIO_2"].ToString(),
+                        Tr_Densidad_Sal_1 = read["TR_DENSIDAD_SAL_1"].ToString(),
+                        Tr_Densidad_Sal_2 = read["TR_DENSIDAD_SAL_2"].ToString(),
+                        Tr_Temperatura_1 = read["TR_TEMPERATURA_1"].ToString(),
+                        Tr_Temperatura_2 = read["TR_TEMPERATURA_2"].ToString(),
+                        Tr_Lt_Dosif_Color = read["TR_LT_DOSIF_COLOR"].ToString(),
+                        Tr_Lt_Dosif_Sal = read["TR_LT_DOSIF_SAL"].ToString(),
+                        Tr_Lt_Dosif1_Alca = read["TR_LT_DOSIF1_ALCA"].ToString(),
+                        Tr_Ph_1_Alcali_1 = read["TR_PH_1_ALCALI_1"].ToString(),
+                        Tr_Ph_1_Alcali_2 = read["TR_PH_1_ALCALI_2"].ToString(),
+                        Tr_Lt_Dosif2_Alca = read["TR_LT_DOSIF2_ALCA"].ToString(),
+                        Tr_Niv_Bano_Maq2 = read["TR_NIV_BANO_MAQ2"].ToString(),
+                        Tr_Agotamiento_1 = read["TR_AGOTAMIENTO_1"].ToString(),
+                        Tr_Agotamiento_2 = read["TR_AGOTAMIENTO_2"].ToString(),
+                        Tr_Tiempo_Agota = read["TR_TIEMPO_AGOTA"].ToString(),
+                        Ja_Ph1_1 = read["JA_PH1_1"].ToString(),
+                        Ja_Ph1_2 = read["JA_PH1_2"].ToString(),
+                        Fi_Ph = read["FI_PH"].ToString(),
+                        Ac_Ph_1 = read["AC_PH_1"].ToString(),
+                        Ac_Ph_2 = read["AC_PH_2"].ToString(),
+                        Td_Tobera = read["TD_TOBERA"].ToString(),
+                        Td_Velocidad = read["TD_VELOCIDAD"].ToString(),
+                        Td_Tiempo_Ciclo_1 = read["TD_TIEMPO_CICLO_1"].ToString(),
+                        Td_Tiempo_Ciclo_2 = read["TD_TIEMPO_CICLO_2"].ToString(),
+                        Td_Tiempo_Ciclo_3 = read["TD_TIEMPO_CICLO_3"].ToString(),
+                        Td_Tiempo_Ciclo_4 = read["TD_TIEMPO_CICLO_4"].ToString(),
+                        Td_Tiempo_Ciclo_5 = read["TD_TIEMPO_CICLO_5"].ToString(),
+                        Td_Ph_Tenido = read["TD_PH_TENIDO"].ToString(),
+                        Td_Ph_Descarga_Disp = read["TD_PH_DESCARGA_DISP"].ToString(),
+                        Mu_Dureza_Tenido = read["MU_DUREZA_TENIDO"].ToString(),
+                        Mu_Peroxi_Residu = read["MU_PEROXI_RESIDU"].ToString(),
+                        Cambio_Turno = read["CAMBIO_TURNO"].ToString(),
+                        Operario_Entr = read["OPERARIO_ENTR"].ToString(),
+                        Observaciones = read["OBSERVACIONES"].ToString()
                     };
                     lsParamReceta.Add(lista);
                 }
@@ -1541,6 +1545,103 @@ namespace Ws_prectoex.Data
                 Desconectar();
             }
             return lsParamReceta;
+        }
+
+        public RptaPx grabarParamReceta(string Cod_Receta
+                                      , string Pr_Tobera
+                                      , string Pr_Niv_Bano_Maq
+                                      , string Pr_Ph_Pilling
+                                      , string Tr_Tobera
+                                      , string Tr_Volumen
+                                      , string Tr_Niv_Bano_Maq1
+                                      , string Tr_Ph_Inicio_1
+                                      , string Tr_Ph_Inicio_2
+                                      , string Tr_Densidad_Sal_1
+                                      , string Tr_Densidad_Sal_2
+                                      , string Tr_Temperatura_1
+                                      , string Tr_Temperatura_2
+                                      , string Tr_Lt_Dosif_Color
+                                      , string Tr_Lt_Dosif_Sal
+                                      , string Tr_Lt_Dosif1_Alca
+                                      , string Tr_Ph_1_Alcali_1
+                                      , string Tr_Ph_1_Alcali_2
+                                      , string Tr_Lt_Dosif2_Alca
+                                      , string Tr_Niv_Bano_Maq2
+                                      , string Tr_Agotamiento_1
+                                      , string Tr_Agotamiento_2
+                                      , string Tr_Tiempo_Agota
+                                      , string Ja_Ph1_1
+                                      , string Ja_Ph1_2
+                                      , string Fi_Ph
+                                      , string Ac_Ph_1
+                                      , string Ac_Ph_2                                      
+                                      , string Td_Tobera
+                                      , string Td_Ph_Tenido
+                                      , string Td_Ph_Descarga_Disp
+                                      , string Cambio_Turno
+                                      , string Operario_Entr
+                                      , string Observaciones
+                                      , string Cod_Usuario)
+        {
+            var bRespuesta = new RptaPx();
+
+            try
+            {
+                Conectar();
+                SqlCommand cmd = new SqlCommand("TIN_MAN_PARAMAQ_DATA_WS", cnn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@COD_RECETAACABADO", Cod_Receta);
+                cmd.Parameters.AddWithValue("@PR_TOBERA", Pr_Tobera);
+                cmd.Parameters.AddWithValue("@PR_TOBERA", Pr_Tobera);
+                cmd.Parameters.AddWithValue("@PR_PH_PILLING", Pr_Ph_Pilling);
+                cmd.Parameters.AddWithValue("@TR_TOBERA", Tr_Tobera);
+                cmd.Parameters.AddWithValue("@TR_VOLUMEN", Tr_Volumen);
+                cmd.Parameters.AddWithValue("@TR_NIV_BANO_MAQ1", Tr_Niv_Bano_Maq1);
+                cmd.Parameters.AddWithValue("@TR_PH_INICIO_1", Tr_Ph_Inicio_1);
+                cmd.Parameters.AddWithValue("@TR_PH_INICIO_2", Tr_Ph_Inicio_2);
+                cmd.Parameters.AddWithValue("@TR_DENSIDAD_SAL_1", Tr_Densidad_Sal_1);
+                cmd.Parameters.AddWithValue("@TR_DENSIDAD_SAL_2", Tr_Densidad_Sal_2);
+                cmd.Parameters.AddWithValue("@TR_TEMPERATURA_1", Tr_Temperatura_1);
+                cmd.Parameters.AddWithValue("@TR_TEMPERATURA_2", Tr_Temperatura_2);
+                cmd.Parameters.AddWithValue("@TR_LT_DOSIF_COLOR", Tr_Lt_Dosif_Color);
+                cmd.Parameters.AddWithValue("@TR_LT_DOSIF_SAL", Tr_Lt_Dosif_Sal);
+                cmd.Parameters.AddWithValue("@TR_LT_DOSIF1_ALCA", Tr_Lt_Dosif1_Alca);
+                cmd.Parameters.AddWithValue("@TR_PH_1_ALCALI_1", Tr_Ph_1_Alcali_1);
+                cmd.Parameters.AddWithValue("@TR_PH_1_ALCALI_2", Tr_Ph_1_Alcali_2);
+                cmd.Parameters.AddWithValue("@TR_LT_DOSIF2_ALCA", Tr_Lt_Dosif2_Alca);
+                cmd.Parameters.AddWithValue("@TR_NIV_BANO_MAQ2",Tr_Niv_Bano_Maq2);
+                cmd.Parameters.AddWithValue("@TR_AGOTAMIENTO_1", Tr_Agotamiento_1);
+                cmd.Parameters.AddWithValue("@TR_AGOTAMIENTO_2", Tr_Agotamiento_2);
+                cmd.Parameters.AddWithValue("@TR_TIEMPO_AGOTA", Tr_Tiempo_Agota);
+                cmd.Parameters.AddWithValue("@JA_PH1_1", Ja_Ph1_1);
+                cmd.Parameters.AddWithValue("@JA_PH1_2", Ja_Ph1_2);
+                cmd.Parameters.AddWithValue("@FI_PH", Fi_Ph);
+                cmd.Parameters.AddWithValue("@AC_PH_1", Ac_Ph_1);
+                cmd.Parameters.AddWithValue("@AC_PH_2", Ac_Ph_2);
+                cmd.Parameters.AddWithValue("@TD_TOBERA", Td_Tobera);
+                cmd.Parameters.AddWithValue("@TD_PH_TENIDO", Td_Ph_Tenido);
+                cmd.Parameters.AddWithValue("@TD_PH_DESCARGA_DISP", Td_Ph_Descarga_Disp);
+                //cmd.Parameters.AddWithValue("@MU_DUREZA_TENIDO", );
+                //cmd.Parameters.AddWithValue("@MU_PEROXI_RESIDU", Secuencia);
+                cmd.Parameters.AddWithValue("@CAMBIO_TURNO", Cambio_Turno);
+                cmd.Parameters.AddWithValue("@OPERARIO_ENTR", Operario_Entr);
+                cmd.Parameters.AddWithValue("@OBSERVACIONES", Observaciones);
+                cmd.Parameters.AddWithValue("@USU_REGISTRO", Cod_Usuario);
+                cmd.ExecuteNonQuery();
+                bRespuesta.Mensaje = "Ok";
+                bRespuesta.Status = "1";
+            }
+            catch (Exception e)
+            {
+                bRespuesta.Mensaje = e.Message;
+                bRespuesta.Status = "0";
+            }
+            finally
+            {
+                Desconectar();
+            }
+
+            return bRespuesta;
         }
 
     }

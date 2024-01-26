@@ -270,7 +270,8 @@ namespace Ws_prectoex.Data
 
     public class RecetaAcabado 
     {
-        public string Cod_RecetaAcabado { get; set; }
+        public string Cod_Receta { get; set; }
+        public string Pr_Tobera { get; set; }
         public string Pr_Velocidad { get; set; }
         public string Pr_Tiempo_Ciclo_1 { get; set; }
         public string Pr_Tiempo_Ciclo_2 { get; set; }
@@ -279,6 +280,7 @@ namespace Ws_prectoex.Data
         public string Pr_Tiempo_Ciclo_5 { get; set; }
         public string Pr_Niv_Bano_Maq { get; set; }
         public string Pr_Ph_Pilling { get; set; }
+        public string Tr_Tobera { get; set; }
         public string Tr_Velocidad { get; set; }
         public string Tr_Tiempo_Ciclo_1 { get; set; }
         public string Tr_Tiempo_Ciclo_2 { get; set; }
@@ -309,6 +311,7 @@ namespace Ws_prectoex.Data
         public string Ac_Ph_1 { get; set; }
         public string Ac_Ph_2 { get; set ; }
         public string Ac_Hora_Descarga { get; set; }
+        public string Td_Tobera { get; set; }
         public string Td_Velocidad { get; set; }
         public string Td_Tiempo_Ciclo_1 { get; set; }
         public string Td_Tiempo_Ciclo_2 { get; set; }
@@ -317,6 +320,8 @@ namespace Ws_prectoex.Data
         public string Td_Tiempo_Ciclo_5 { get; set; }
         public string Td_Ph_Tenido { get; set; }
         public string Td_Ph_Descarga_Disp { get; set; }
+        public string Mu_Dureza_Tenido { get; set; }
+        public string Mu_Peroxi_Residu { get; set; }
         public string Cambio_Turno { get; set; }
         public string Operario_Entr { get; set; }
         public string Observaciones { get; set; }
