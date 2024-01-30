@@ -1549,7 +1549,7 @@ namespace Ws_prectoex.Data
 
         public RptaPx grabarParamReceta(string Cod_Receta
                                       , string Pr_Tobera
-                                      , string Pr_Niv_Bano_Maq
+                                      //, string Pr_Niv_Bano_Maq
                                       , string Pr_Ph_Pilling
                                       , string Tr_Tobera
                                       , string Tr_Volumen
@@ -1591,8 +1591,7 @@ namespace Ws_prectoex.Data
                 SqlCommand cmd = new SqlCommand("TIN_MAN_PARAMAQ_DATA_WS", cnn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@COD_RECETAACABADO", Cod_Receta);
-                cmd.Parameters.AddWithValue("@PR_TOBERA", Pr_Tobera);
-                cmd.Parameters.AddWithValue("@PR_TOBERA", Pr_Tobera);
+                cmd.Parameters.AddWithValue("@PR_TOBERA", Pr_Tobera);                
                 cmd.Parameters.AddWithValue("@PR_PH_PILLING", Pr_Ph_Pilling);
                 cmd.Parameters.AddWithValue("@TR_TOBERA", Tr_Tobera);
                 cmd.Parameters.AddWithValue("@TR_VOLUMEN", Tr_Volumen);

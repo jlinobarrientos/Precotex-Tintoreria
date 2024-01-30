@@ -748,7 +748,7 @@ namespace Ws_prectoex.Controllers
                 
                 await subirImagenParam(objFile.Cod_Receta
                                        ,objFile.Pr_Tobera
-                                       ,objFile.Pr_Niv_Bano_Maq
+                                       //,objFile.Pr_Niv_Bano_Maq
                                        ,objFile.Pr_Ph_Pilling
                                        ,objFile.Tr_Tobera
                                        ,objFile.Tr_Volumen
@@ -796,7 +796,7 @@ namespace Ws_prectoex.Controllers
 
         private async Task<string> subirImagenParam(string Cod_Receta
                                                      , string Pr_Tobera
-                                                     , string Pr_Niv_Bano_Maq
+                                                     //, string Pr_Niv_Bano_Maq
                                                      , string Pr_Ph_Pilling
                                                      , string Tr_Tobera
                                                      , string Tr_Volumen
@@ -856,7 +856,7 @@ namespace Ws_prectoex.Controllers
 
                 bresultado = iprocesos.grabarParamReceta(Cod_Receta
                                                          , Pr_Tobera
-                                                         , Pr_Niv_Bano_Maq
+                                                         //, Pr_Niv_Bano_Maq
                                                          , Pr_Ph_Pilling
                                                          , Tr_Tobera
                                                          , Tr_Volumen
