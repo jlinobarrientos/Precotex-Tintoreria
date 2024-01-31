@@ -726,10 +726,10 @@ namespace Ws_prectoex.Controllers
             }
         }
 
-        [Route("seguimientotobera/CargarImagen/")]
+        [Route("paramreceta/SaveParamReceta/{scod_usuario}")]
         [AllowAnonymous]
         [HttpPost]        
-        public async Task<RptaPx> CargarImagen([FromForm] FileUploadTinto objFile)
+        public async Task<RptaPx> SaveParamReceta([FromForm] FileUploadTinto objFile, string scod_usuario)
         {
 
             string Foto1 = "";
@@ -746,44 +746,46 @@ namespace Ws_prectoex.Controllers
                 //    await subirImagen(objFile.files2, objFile.partida, codreceta, 2);
                 //}
                 
-                await subirImagenParam(objFile.Cod_Receta
-                                       ,objFile.Pr_Tobera
-                                       //,objFile.Pr_Niv_Bano_Maq
-                                       ,objFile.Pr_Ph_Pilling
-                                       ,objFile.Tr_Tobera
-                                       ,objFile.Tr_Volumen
-                                       ,objFile.Tr_Niv_Bano_Maq1
-                                       ,objFile.Tr_Ph_Inicio_1
-                                       ,objFile.Tr_Ph_Inicio_2
-                                       ,objFile.Tr_Densidad_Sal_1
-                                       ,objFile.Tr_Densidad_Sal_2
-                                       ,objFile.Tr_Temperatura_1
-                                       ,objFile.Tr_Temperatura_2
-                                       ,objFile.Tr_Lt_Dosif_Color
-                                       ,objFile.Tr_Lt_Dosif_Sal
-                                       ,objFile.Tr_Lt_Dosif1_Alca
-                                       ,objFile.Tr_Ph_1_Alcali_1
-                                       ,objFile.Tr_Ph_1_Alcali_2
-                                       ,objFile.Tr_Lt_Dosif2_Alca
-                                       ,objFile.Tr_Niv_Bano_Maq2
-                                       ,objFile.Tr_Agotamiento_1
-                                       ,objFile.Tr_Agotamiento_2
-                                       ,objFile.Tr_Tiempo_Agota
-                                       ,objFile.Ja_Ph1_1
-                                       ,objFile.Ja_Ph1_2
-                                       ,objFile.Fi_Ph
-                                       ,objFile.Ac_Ph_1
-                                       ,objFile.Ac_Ph_2                                       
-                                       ,objFile.Td_Tobera
-                                       ,objFile.Td_Ph_Tenido
-                                       ,objFile.Td_Ph_Descarga_Disp
-                                       ,objFile.Cambio_Turno
-                                       ,objFile.Operario_Entr
-                                       ,objFile.Observaciones
-                                       ,objFile.Cod_Usuario);
+                await subirParamReceta(objFile.sCod_Receta
+                                       , objFile.nCrAncho
+                                       , objFile.nCrDensidad
+                                       , objFile.nCrCuerdas
+                                       , objFile.nPrTobera                                       
+                                       , objFile.nPrPhPilling
+                                       , objFile.nTrTobera
+                                       , objFile.nTrVolumen
+                                       , objFile.nTrNivBanoMaq1
+                                       , objFile.nTrPhInicio1
+                                       , objFile.nTrPhInicio2
+                                       , objFile.nTrDensidadSal1
+                                       , objFile.nTrDensidadSal2
+                                       , objFile.nTrTemperatura1
+                                       , objFile.nTrTemperatura2
+                                       , objFile.nTrLtDosifColor
+                                       , objFile.nTrLtDosifSal
+                                       , objFile.nTrLtDosif1Alca
+                                       , objFile.nTrPh1Alcali1
+                                       , objFile.nTrPh1Alcali2
+                                       , objFile.nTrLtDosif2Alca
+                                       , objFile.nTrNivBanoMaq2
+                                       , objFile.nTrAgotamiento1
+                                       , objFile.nTrAgotamiento2
+                                       , objFile.nTrTiempoAgota
+                                       , objFile.nJaPh1
+                                       , objFile.nJaPh2
+                                       , objFile.nFiPh
+                                       , objFile.nAcPh1
+                                       , objFile.nAcPh2
+                                       , objFile.nTdTobera
+                                       , objFile.nTdPhTenido
+                                       , objFile.nTdPhDescargaDisp
+                                       , objFile.sCambioTurno
+                                       , objFile.sOpeEntrante
+                                       , objFile.sObs
+                                       , scod_usuario);
 
                 var rptx2 = new RptaPx();
-                rptx2.Mensaje = "OKOK";
+                rptx2.Mensaje = "Ok";
                 return rptx2;
             }
 
@@ -794,9 +796,11 @@ namespace Ws_prectoex.Controllers
             }
         }
 
-        private async Task<string> subirImagenParam(string Cod_Receta
-                                                     , string Pr_Tobera
-                                                     //, string Pr_Niv_Bano_Maq
+        private async Task<string> subirParamReceta(string Cod_Receta
+                                                     , string Cr_Ancho
+                                                     , string Cr_Densidad
+                                                     , string Cr_Cuerdas
+                                                     , string Pr_Tobera                                                     
                                                      , string Pr_Ph_Pilling
                                                      , string Tr_Tobera
                                                      , string Tr_Volumen
@@ -821,14 +825,14 @@ namespace Ws_prectoex.Controllers
                                                      , string Ja_Ph1_2
                                                      , string Fi_Ph
                                                      , string Ac_Ph_1
-                                                     , string Ac_Ph_2                                                     
+                                                     , string Ac_Ph_2
                                                      , string Td_Tobera
                                                      , string Td_Ph_Tenido
                                                      , string Td_Ph_Descarga_Disp
                                                      , string Cambio_Turno
                                                      , string Operario_Entr
                                                      , string Observaciones
-                                                     , string Cod_Usuario)
+                                                     , string scod_usuario)
 
         {
             try
@@ -855,8 +859,10 @@ namespace Ws_prectoex.Controllers
                 var bresultado = new RptaPx();
 
                 bresultado = iprocesos.grabarParamReceta(Cod_Receta
-                                                         , Pr_Tobera
-                                                         //, Pr_Niv_Bano_Maq
+                                                         , Cr_Ancho
+                                                         , Cr_Densidad
+                                                         , Cr_Cuerdas
+                                                         , Pr_Tobera                                                         
                                                          , Pr_Ph_Pilling
                                                          , Tr_Tobera
                                                          , Tr_Volumen
@@ -881,17 +887,17 @@ namespace Ws_prectoex.Controllers
                                                          , Ja_Ph1_2
                                                          , Fi_Ph
                                                          , Ac_Ph_1
-                                                         , Ac_Ph_2                                                         
+                                                         , Ac_Ph_2
                                                          , Td_Tobera
                                                          , Td_Ph_Tenido
                                                          , Td_Ph_Descarga_Disp
                                                          , Cambio_Turno
                                                          , Operario_Entr
                                                          , Observaciones
-                                                         , Cod_Usuario);
+                                                         , scod_usuario);
 
-                conteo += 1;
-                return Cod_Receta;
+                
+                return bresultado.Mensaje;
 
             }
             catch (Exception ex)
@@ -902,46 +908,46 @@ namespace Ws_prectoex.Controllers
 
         public class FileUploadTinto
         {
-            public string Cod_Receta { get; set; }
-            public string Pr_Tobera { get; set; }            
-            public string Pr_Niv_Bano_Maq { get; set; }
-            public string Pr_Ph_Pilling { get; set; }
-            public string Tr_Tobera { get; set; }            
-            public string Tr_Volumen { get; set; }
-            public string Tr_Niv_Bano_Maq1 { get; set; }
-            public string Tr_Ph_Inicio_1 { get; set; }
-            public string Tr_Ph_Inicio_2 { get; set; }
-            public string Tr_Densidad_Sal_1 { get; set; }
-            public string Tr_Densidad_Sal_2 { get; set; }
-            public string Tr_Temperatura_1 { get; set; }
-            public string Tr_Temperatura_2 { get; set; }
-            public string Tr_Lt_Dosif_Color { get; set; }
-            public string Tr_Lt_Dosif_Sal { get; set; }
-            public string Tr_Lt_Dosif1_Alca { get; set; }
-            public string Tr_Ph_1_Alcali_1 { get; set; }
-            public string Tr_Ph_1_Alcali_2 { get; set; }
-            public string Tr_Lt_Dosif2_Alca { get; set; }
-            public string Tr_Niv_Bano_Maq2 { get; set; }
-            public string Tr_Agotamiento_1 { get; set; }
-            public string Tr_Agotamiento_2 { get; set; }
-            public string Tr_Tiempo_Agota { get; set; }
-            public string Ja_Ph1_1 { get; set; }
-            public string Ja_Ph1_2 { get; set; }
-            public string Fi_Ph { get; set; }
-            public string Ac_Ph_1 { get; set; }
-            public string Ac_Ph_2 { get; set; }            
-            public string Td_Tobera { get; set; }            
-            public string Td_Ph_Tenido { get; set; }
-            public string Td_Ph_Descarga_Disp { get; set; }
+            public string sCod_Receta { get; set; }
+            public string nCrAncho { get; set; }
+            public string nCrDensidad { get; set; }
+            public string nCrCuerdas { get; set; }
+            public string nPrTobera { get; set; }            
+            public string nPrNivBanoMaq { get; set; }
+            public string nPrPhPilling { get; set; }
+            public string nTrTobera { get; set; }            
+            public string nTrVolumen { get; set; }
+            public string nTrNivBanoMaq1 { get; set; }
+            public string nTrPhInicio1 { get; set; }
+            public string nTrPhInicio2 { get; set; }
+            public string nTrDensidadSal1 { get; set; }
+            public string nTrDensidadSal2 { get; set; }
+            public string nTrTemperatura1 { get; set; }
+            public string nTrTemperatura2 { get; set; }
+            public string nTrLtDosifColor { get; set; }
+            public string nTrLtDosifSal { get; set; }
+            public string nTrLtDosif1Alca { get; set; }
+            public string nTrPh1Alcali1 { get; set; }
+            public string nTrPh1Alcali2 { get; set; }
+            public string nTrLtDosif2Alca { get; set; }
+            public string nTrNivBanoMaq2 { get; set; }
+            public string nTrAgotamiento1 { get; set; }
+            public string nTrAgotamiento2 { get; set; }
+            public string nTrTiempoAgota { get; set; }
+            public string nJaPh1 { get; set; }
+            public string nJaPh2 { get; set; }
+            public string nFiPh { get; set; }
+            public string nAcPh1 { get; set; }
+            public string nAcPh2 { get; set; }            
+            public string nTdTobera { get; set; }            
+            public string nTdPhTenido { get; set; }
+            public string nTdPhDescargaDisp { get; set; }
 
             //public IFormFile Mu_Dureza_Tenido { get; set; }
             //public IFormFile Mu_Peroxi_Residu { get; set; }         
-            public string Cambio_Turno { get; set; }
-            public string Operario_Entr { get; set; }
-            public string Observaciones { get; set; }
-            public string Cod_Usuario { get; set; }
-
-
+            public string sCambioTurno { get; set; }
+            public string sOpeEntrante { get; set; }
+            public string sObs { get; set; }
         }
     }
 }

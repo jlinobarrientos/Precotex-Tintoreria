@@ -1478,6 +1478,9 @@ namespace Ws_prectoex.Data
                     RecetaAcabado lista = new RecetaAcabado()
                     {
                         Cod_Receta = read["COD_RECETAACABADO"].ToString(),
+                        Cr_Ancho= read["CR_ANCHO"].ToString(),
+                        Cr_Densidad = read["CR_DENSIDAD"].ToString(),
+                        Cr_Cuerdas = read["CR_CUERDAS"].ToString(),
                         Pr_Tobera = read["PR_TOBERA"].ToString(),
                         Pr_Velocidad = read["PR_VELOCIDAD"].ToString(),
                         Pr_Tiempo_Ciclo_1 = read["PR_TIEMPO_CICLO_1"].ToString(),
@@ -1526,8 +1529,8 @@ namespace Ws_prectoex.Data
                         Td_Tiempo_Ciclo_5 = read["TD_TIEMPO_CICLO_5"].ToString(),
                         Td_Ph_Tenido = read["TD_PH_TENIDO"].ToString(),
                         Td_Ph_Descarga_Disp = read["TD_PH_DESCARGA_DISP"].ToString(),
-                        Mu_Dureza_Tenido = read["MU_DUREZA_TENIDO"].ToString(),
-                        Mu_Peroxi_Residu = read["MU_PEROXI_RESIDU"].ToString(),
+                        //Mu_Dureza_Tenido = read["MU_DUREZA_TENIDO"].ToString(),
+                        //Mu_Peroxi_Residu = read["MU_PEROXI_RESIDU"].ToString(),
                         Cambio_Turno = read["CAMBIO_TURNO"].ToString(),
                         Operario_Entr = read["OPERARIO_ENTR"].ToString(),
                         Observaciones = read["OBSERVACIONES"].ToString()
@@ -1548,8 +1551,10 @@ namespace Ws_prectoex.Data
         }
 
         public RptaPx grabarParamReceta(string Cod_Receta
-                                      , string Pr_Tobera
-                                      //, string Pr_Niv_Bano_Maq
+                                      , string Cr_Ancho
+                                      , string Cr_Densidad
+                                      , string Cr_Cuerdas
+                                      , string Pr_Tobera                                      
                                       , string Pr_Ph_Pilling
                                       , string Tr_Tobera
                                       , string Tr_Volumen
@@ -1591,7 +1596,10 @@ namespace Ws_prectoex.Data
                 SqlCommand cmd = new SqlCommand("TIN_MAN_PARAMAQ_DATA_WS", cnn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@COD_RECETAACABADO", Cod_Receta);
-                cmd.Parameters.AddWithValue("@PR_TOBERA", Pr_Tobera);                
+                cmd.Parameters.AddWithValue("@CR_ANCHO", Cr_Ancho);
+                cmd.Parameters.AddWithValue("@CR_DENSIDAD", Cr_Densidad);
+                cmd.Parameters.AddWithValue("@CR_CUERDAS", Cr_Cuerdas);
+                cmd.Parameters.AddWithValue("@PR_TOBERA", Pr_Tobera);
                 cmd.Parameters.AddWithValue("@PR_PH_PILLING", Pr_Ph_Pilling);
                 cmd.Parameters.AddWithValue("@TR_TOBERA", Tr_Tobera);
                 cmd.Parameters.AddWithValue("@TR_VOLUMEN", Tr_Volumen);
