@@ -270,11 +270,20 @@ namespace Ws_prectoex.Data
 
     public class RecetaAcabado 
     {
-        public string Cod_Receta { get; set; }
+        public string Nro_Referencia { get; set; }
+        public string Dg_Maquina { get; set; }
+        public string Dg_Partida{ get; set; }
+        public string Dg_Color { get; set; }
+        public string Dg_Articulo { get; set; }
+        public string Dg_Peso { get; set; }
+        public string Dg_Cuerdas { get; set; }
+        public string Dg_Cliente { get; set; }        
         public string Cr_Ancho { get; set; }
         public string Cr_Densidad { get; set; }
-        public string Cr_Cuerdas { get; set; }
+        public string Pr_Bar { get; set; }
         public string Pr_Tobera { get; set; }
+        public string Pr_Acumulador { get; set; }
+        public string Pr_Bomba { get; set; }        
         public string Pr_Velocidad { get; set; }
         public string Pr_Tiempo_Ciclo_1 { get; set; }
         public string Pr_Tiempo_Ciclo_2 { get; set; }

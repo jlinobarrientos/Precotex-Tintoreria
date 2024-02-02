@@ -1460,7 +1460,7 @@ namespace Ws_prectoex.Data
             return partidastatusColor;
         }
 
-        public List<RecetaAcabado> MuestraParamReceta( string CodReceta,string Cod_usuario)
+        public List<RecetaAcabado> MuestraParamReceta( string NroReferencia, string Cod_usuario)
         {
             Conectar();
             List<RecetaAcabado> lsParamReceta = new List<RecetaAcabado>();
@@ -1469,7 +1469,7 @@ namespace Ws_prectoex.Data
             {
                 SqlCommand cmd = new SqlCommand("TIN_SEL_PARAMAQ_DATA_WS", cnn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@COD_RECETAACABADO", CodReceta);
+                cmd.Parameters.AddWithValue("@NRO_REFERENCIA", NroReferencia);
                 cmd.Parameters.AddWithValue("@USU_REGISTRO", Cod_usuario);                
 
                 SqlDataReader read = cmd.ExecuteReader();
@@ -1477,11 +1477,20 @@ namespace Ws_prectoex.Data
                 {
                     RecetaAcabado lista = new RecetaAcabado()
                     {
-                        Cod_Receta = read["COD_RECETAACABADO"].ToString(),
-                        Cr_Ancho= read["CR_ANCHO"].ToString(),
+                        Nro_Referencia = read["NRO_REFERENCIA"].ToString(),
+                        Dg_Maquina = read["DG_MAQUINA"].ToString(),
+                        Dg_Partida = read["DG_PARTIDA"].ToString(),
+                        Dg_Color = read["DG_COLOR"].ToString(),
+                        Dg_Articulo = read["DG_ARTICULO"].ToString(),
+                        Dg_Peso = read["DG_PESO"].ToString(),
+                        Dg_Cuerdas = read["DG_CUERDAS"].ToString(),
+                        Dg_Cliente = read["DG_CLIENTE"].ToString(),                         
+                        Cr_Ancho = read["CR_ANCHO"].ToString(),
                         Cr_Densidad = read["CR_DENSIDAD"].ToString(),
-                        Cr_Cuerdas = read["CR_CUERDAS"].ToString(),
+                        Pr_Bar      = read["PR_BAR"].ToString(),
                         Pr_Tobera = read["PR_TOBERA"].ToString(),
+                        Pr_Acumulador = read["PR_ACUMULADOR"].ToString(),
+                        Pr_Bomba = read["PR_BOMBA"].ToString(),
                         Pr_Velocidad = read["PR_VELOCIDAD"].ToString(),
                         Pr_Tiempo_Ciclo_1 = read["PR_TIEMPO_CICLO_1"].ToString(),
                         Pr_Tiempo_Ciclo_2 = read["PR_TIEMPO_CICLO_2"].ToString(),
@@ -1490,9 +1499,9 @@ namespace Ws_prectoex.Data
                         Pr_Tiempo_Ciclo_5 = read["PR_TIEMPO_CICLO_5"].ToString(),
                         Pr_Niv_Bano_Maq = read["PR_NIV_BANO_MAQ"].ToString(),
                         Pr_Ph_Pilling = read["PR_PH_PILLING"].ToString(),
-                        Tr_Tobera = read["TR_TOBERA"].ToString(),
-                        Tr_Velocidad = read["TR_VELOCIDAD"].ToString(),
-                        Tr_Tiempo_Ciclo_1 = read["TR_TIEMPO_CICLO_1"].ToString(),
+                        Tr_Tobera = read["PR_TOBERA"].ToString(),
+                        Tr_Velocidad = read["PR_VELOCIDAD"].ToString(),
+                        Tr_Tiempo_Ciclo_1 = read["PR_TIEMPO_CICLO_1"].ToString(),
                         Tr_Tiempo_Ciclo_2 = read["TR_TIEMPO_CICLO_2"].ToString(),
                         Tr_Tiempo_Ciclo_3 = read["TR_TIEMPO_CICLO_3"].ToString(),
                         Tr_Tiempo_Ciclo_4 = read["TR_TIEMPO_CICLO_4"].ToString(),
@@ -1520,9 +1529,9 @@ namespace Ws_prectoex.Data
                         Fi_Ph = read["FI_PH"].ToString(),
                         Ac_Ph_1 = read["AC_PH_1"].ToString(),
                         Ac_Ph_2 = read["AC_PH_2"].ToString(),
-                        Td_Tobera = read["TD_TOBERA"].ToString(),
-                        Td_Velocidad = read["TD_VELOCIDAD"].ToString(),
-                        Td_Tiempo_Ciclo_1 = read["TD_TIEMPO_CICLO_1"].ToString(),
+                        Td_Tobera = read["PR_TOBERA"].ToString(),
+                        Td_Velocidad = read["PR_VELOCIDAD"].ToString(),
+                        Td_Tiempo_Ciclo_1 = read["PR_TIEMPO_CICLO_1"].ToString(),
                         Td_Tiempo_Ciclo_2 = read["TD_TIEMPO_CICLO_2"].ToString(),
                         Td_Tiempo_Ciclo_3 = read["TD_TIEMPO_CICLO_3"].ToString(),
                         Td_Tiempo_Ciclo_4 = read["TD_TIEMPO_CICLO_4"].ToString(),
@@ -1550,11 +1559,12 @@ namespace Ws_prectoex.Data
             return lsParamReceta;
         }
 
-        public RptaPx grabarParamReceta(string Cod_Receta
+        public RptaPx grabarParamReceta(string NroReferencia
                                       , string Cr_Ancho
                                       , string Cr_Densidad
-                                      , string Cr_Cuerdas
-                                      , string Pr_Tobera                                      
+                                      , string Dg_Cuerdas
+                                      , string Pr_Tobera  
+                                      , string Pr_Niv_Bano_Maq
                                       , string Pr_Ph_Pilling
                                       , string Tr_Tobera
                                       , string Tr_Volumen
@@ -1595,11 +1605,12 @@ namespace Ws_prectoex.Data
                 Conectar();
                 SqlCommand cmd = new SqlCommand("TIN_MAN_PARAMAQ_DATA_WS", cnn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@COD_RECETAACABADO", Cod_Receta);
+                cmd.Parameters.AddWithValue("@NRO_REFERENCIA", NroReferencia);
+                cmd.Parameters.AddWithValue("@DG_CUERDAS", Dg_Cuerdas);
                 cmd.Parameters.AddWithValue("@CR_ANCHO", Cr_Ancho);
-                cmd.Parameters.AddWithValue("@CR_DENSIDAD", Cr_Densidad);
-                cmd.Parameters.AddWithValue("@CR_CUERDAS", Cr_Cuerdas);
+                cmd.Parameters.AddWithValue("@CR_DENSIDAD", Cr_Densidad);                
                 cmd.Parameters.AddWithValue("@PR_TOBERA", Pr_Tobera);
+                cmd.Parameters.AddWithValue("@PR_NIV_BANO_MAQ", Pr_Niv_Bano_Maq);
                 cmd.Parameters.AddWithValue("@PR_PH_PILLING", Pr_Ph_Pilling);
                 cmd.Parameters.AddWithValue("@TR_TOBERA", Tr_Tobera);
                 cmd.Parameters.AddWithValue("@TR_VOLUMEN", Tr_Volumen);

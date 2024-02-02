@@ -709,15 +709,15 @@ namespace Ws_prectoex.Controllers
             }
         }
 
-        [Route("procesos/MuestraParamReceta/{CodReceta}/{Cod_usuario}")]
+        [Route("procesos/MuestraParamReceta/{NroReferencia}/{Cod_usuario}")]
         [AllowAnonymous]
         [HttpGet]
-        public async Task<List<RecetaAcabado>> MuestraParamReceta(string CodReceta,string Cod_usuario)
+        public async Task<List<RecetaAcabado>> MuestraParamReceta(string NroReferencia, string Cod_usuario)
         {
             List<RecetaAcabado> lsParamReceta = new List<RecetaAcabado>();
             try
             {
-                lsParamReceta = iprocesos.MuestraParamReceta(CodReceta, Cod_usuario);                
+                lsParamReceta = iprocesos.MuestraParamReceta(NroReferencia, Cod_usuario);                
                 return lsParamReceta;
             }
             catch (Exception e)
@@ -746,11 +746,12 @@ namespace Ws_prectoex.Controllers
                 //    await subirImagen(objFile.files2, objFile.partida, codreceta, 2);
                 //}
                 
-                await subirParamReceta(objFile.sCod_Receta
+                await subirParamReceta(objFile.Nro_Referencia
                                        , objFile.nCrAncho
                                        , objFile.nCrDensidad
-                                       , objFile.nCrCuerdas
-                                       , objFile.nPrTobera                                       
+                                       , objFile.nDgCuerdas
+                                       , objFile.nPrTobera 
+                                       , objFile.nPrNivBanoMaq
                                        , objFile.nPrPhPilling
                                        , objFile.nTrTobera
                                        , objFile.nTrVolumen
@@ -796,11 +797,12 @@ namespace Ws_prectoex.Controllers
             }
         }
 
-        private async Task<string> subirParamReceta(string Cod_Receta
+        private async Task<string> subirParamReceta(string NroReferencia
+                                                     , string Dg_Cuerdas
                                                      , string Cr_Ancho
-                                                     , string Cr_Densidad
-                                                     , string Cr_Cuerdas
-                                                     , string Pr_Tobera                                                     
+                                                     , string Cr_Densidad                                                     
+                                                     , string Pr_Tobera
+                                                     , string Pr_Niv_Bano_Maq
                                                      , string Pr_Ph_Pilling
                                                      , string Tr_Tobera
                                                      , string Tr_Volumen
@@ -858,11 +860,12 @@ namespace Ws_prectoex.Controllers
                 //var NombreImagen = partida + "-" + codreceta + "-" + Secuencia;
                 var bresultado = new RptaPx();
 
-                bresultado = iprocesos.grabarParamReceta(Cod_Receta
+                bresultado = iprocesos.grabarParamReceta(NroReferencia
+                                                         , Dg_Cuerdas
                                                          , Cr_Ancho
-                                                         , Cr_Densidad
-                                                         , Cr_Cuerdas
-                                                         , Pr_Tobera                                                         
+                                                         , Cr_Densidad                                                         
+                                                         , Pr_Tobera  
+                                                         , Pr_Niv_Bano_Maq
                                                          , Pr_Ph_Pilling
                                                          , Tr_Tobera
                                                          , Tr_Volumen
@@ -908,10 +911,10 @@ namespace Ws_prectoex.Controllers
 
         public class FileUploadTinto
         {
-            public string sCod_Receta { get; set; }
+            public string Nro_Referencia { get; set; }
+            public string nDgCuerdas { get; set; }
             public string nCrAncho { get; set; }
-            public string nCrDensidad { get; set; }
-            public string nCrCuerdas { get; set; }
+            public string nCrDensidad { get; set; }            
             public string nPrTobera { get; set; }            
             public string nPrNivBanoMaq { get; set; }
             public string nPrPhPilling { get; set; }
