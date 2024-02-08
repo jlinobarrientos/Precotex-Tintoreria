@@ -1,4 +1,5 @@
 D:\HARONI\Proyecto_Tintoreria\Ws-precotex\obj\Release\net5.0\PubTmp\Out\Ws-precotex.exe
+D:\HARONI\Proyecto_Tintoreria\Ws-precotex\obj\Release\net5.0\PubTmp\Out\wwwroot\uploadsparamtinto\MUPERE-294533.jpg
 D:\HARONI\Proyecto_Tintoreria\Ws-precotex\obj\Release\net5.0\PubTmp\Out\wwwroot\uploads\i0413-287001-1.jpg
 D:\HARONI\Proyecto_Tintoreria\Ws-precotex\obj\Release\net5.0\PubTmp\Out\appsettings.Development.json
 D:\HARONI\Proyecto_Tintoreria\Ws-precotex\obj\Release\net5.0\PubTmp\Out\appsettings.json

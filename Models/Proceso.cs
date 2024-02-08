@@ -301,8 +301,12 @@ namespace Ws_prectoex.Data
         public string Tr_Tiempo_Ciclo_5 { get; set; }
         public string Tr_Volumen { get; set; }
         public string Tr_Niv_Bano_Maq1 { get; set; }
-        public string Tr_Ph_Inicio_1 { get; set; }
-        public string Tr_Ph_Inicio_2 { get; set; }
+        //public string Tr_Ph_Inicio_1 { get; set; }
+        //public string Tr_Ph_Inicio_2 { get; set; }
+        public string Tr_Ph_Inicio1_CSal { get; set; }
+        public string Tr_Ph_Inicio2_CSal { get; set; }
+        public string Tr_Ph_Inicio1_SSal { get; set; }
+        public string Tr_Ph_Inicio2_SSal { get; set; }
         public string Tr_Densidad_Sal_1 { get; set; }
         public string Tr_Densidad_Sal_2 { get; set; }
         public string Tr_Temperatura_1 { get; set; }

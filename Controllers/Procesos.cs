@@ -737,15 +737,15 @@ namespace Ws_prectoex.Controllers
 
             try
             {
-                //if (objFile.files != null)
+                //if (objFile.sMuDurezaTenido != null)
                 //{
-                //    await subirImagen(objFile.files, objFile.partida, codreceta, 1);
+                //    await subirParamReceta(objFile.sMuDurezaTenido, objFile.Nro_Referencia);
                 //}
                 //if (objFile.files2 != null)
                 //{
                 //    await subirImagen(objFile.files2, objFile.partida, codreceta, 2);
                 //}
-                
+
                 await subirParamReceta(objFile.Nro_Referencia
                                        , objFile.nCrAncho
                                        , objFile.nCrDensidad
@@ -756,8 +756,12 @@ namespace Ws_prectoex.Controllers
                                        , objFile.nTrTobera
                                        , objFile.nTrVolumen
                                        , objFile.nTrNivBanoMaq1
-                                       , objFile.nTrPhInicio1
-                                       , objFile.nTrPhInicio2
+                                       , objFile.nTrPhInicio1CSal
+                                       , objFile.nTrPhInicio2CSal
+                                       , objFile.nTrPhInicio1SSal
+                                       , objFile.nTrPhInicio2SSal
+                                       //, objFile.nTrPhInicio1
+                                       //, objFile.nTrPhInicio2
                                        , objFile.nTrDensidadSal1
                                        , objFile.nTrDensidadSal2
                                        , objFile.nTrTemperatura1
@@ -780,6 +784,8 @@ namespace Ws_prectoex.Controllers
                                        , objFile.nTdTobera
                                        , objFile.nTdPhTenido
                                        , objFile.nTdPhDescargaDisp
+                                       , objFile.sMuDurezaTenido
+                                       , objFile.sMuPeroxiResidu
                                        , objFile.sCambioTurno
                                        , objFile.sOpeEntrante
                                        , objFile.sObs
@@ -807,8 +813,12 @@ namespace Ws_prectoex.Controllers
                                                      , string Tr_Tobera
                                                      , string Tr_Volumen
                                                      , string Tr_Niv_Bano_Maq1
-                                                     , string Tr_Ph_Inicio_1
-                                                     , string Tr_Ph_Inicio_2
+                                                     //, string Tr_Ph_Inicio_1
+                                                     //, string Tr_Ph_Inicio_2
+                                                     , string Tr_Ph_Inicio1_CSal
+                                                     , string Tr_Ph_Inicio2_CSal
+                                                     , string Tr_Ph_Inicio1_SSal
+                                                     , string Tr_Ph_Inicio2_SSal
                                                      , string Tr_Densidad_Sal_1
                                                      , string Tr_Densidad_Sal_2
                                                      , string Tr_Temperatura_1
@@ -831,6 +841,8 @@ namespace Ws_prectoex.Controllers
                                                      , string Td_Tobera
                                                      , string Td_Ph_Tenido
                                                      , string Td_Ph_Descarga_Disp
+                                                     , IFormFile sMuDurezaTenido
+                                                     , IFormFile sMuPeroxiResidu
                                                      , string Cambio_Turno
                                                      , string Operario_Entr
                                                      , string Observaciones
@@ -839,25 +851,46 @@ namespace Ws_prectoex.Controllers
         {
             try
             {
-                //if (!Directory.Exists(_environment.WebRootPath + "\\uploads\\"))
-                //{
-                //    Directory.CreateDirectory(_environment.WebRootPath + "\\uploads\\");
-                //}              
+                string Mu_Dureza_Tenido = "";
+                string Mu_Peroxi_Residu = "";
 
-                //if (!Directory.Exists(_environment.WebRootPath + "\\uploads\\" + partida + "-" + codreceta + "-" + Secuencia + ".jpg"))
-                //{
-                //    System.IO.File.Delete(_environment.WebRootPath + "\\uploads\\" + partida + "-" + codreceta + "-" + Secuencia + ".jpg");
-                //}
+                if (!Directory.Exists(_environment.WebRootPath + "\\uploadsparamtinto\\"))
+                {
+                    Directory.CreateDirectory(_environment.WebRootPath + "\\uploadsparamtinto\\");
+                }
+
+                if (sMuDurezaTenido != null)
+                {
+                    if (!Directory.Exists(_environment.WebRootPath + "\\uploadsparamtinto\\" + "MUDUTE-" + NroReferencia + ".jpg"))
+                    {
+                        System.IO.File.Delete(_environment.WebRootPath + "\\uploadsparamtinto\\" + "MUDUTE-" + NroReferencia + ".jpg");
+                    }
+
+                    using (FileStream fileStream = System.IO.File.Create(_environment.WebRootPath + "\\uploadsparamtinto\\" + "MUDUTE-" + NroReferencia + ".jpg"))
+                    {
+                        await sMuDurezaTenido.CopyToAsync(fileStream);
+                        fileStream.Flush();
+                        Mu_Dureza_Tenido = "MUDUTE-" + NroReferencia;
+                    }
+                }
+
+                if (sMuPeroxiResidu != null)
+                {
+                    if (!Directory.Exists(_environment.WebRootPath + "\\uploadsparamtinto\\" + "MUPERE-" + NroReferencia + ".jpg"))
+                    {
+                        System.IO.File.Delete(_environment.WebRootPath + "\\uploadsparamtinto\\" + "MUPERE-" + NroReferencia + ".jpg");
+                    }
+
+                    using (FileStream fileStream = System.IO.File.Create(_environment.WebRootPath + "\\uploadsparamtinto\\" + "MUPERE-" + NroReferencia + ".jpg"))
+                    {
+                        await sMuPeroxiResidu.CopyToAsync(fileStream);
+                        fileStream.Flush();
+                        Mu_Peroxi_Residu = "MUPERE-" + NroReferencia;
+                    }
+                }                    
+
+                var rptx2 = new RptaPx();               
                 
-                //using (FileStream fileStream = System.IO.File.Create(_environment.WebRootPath + "\\uploads\\" + partida + "-" + codreceta + "-" + Secuencia + ".jpg"))
-                //{
-                //    await objFile.CopyToAsync(fileStream);
-                //    fileStream.Flush();
-
-                //}
-
-                //var rptx2 = new RptaPx();
-                //var NombreImagen = partida + "-" + codreceta + "-" + Secuencia;
                 var bresultado = new RptaPx();
 
                 bresultado = iprocesos.grabarParamReceta(NroReferencia
@@ -870,8 +903,12 @@ namespace Ws_prectoex.Controllers
                                                          , Tr_Tobera
                                                          , Tr_Volumen
                                                          , Tr_Niv_Bano_Maq1
-                                                         , Tr_Ph_Inicio_1
-                                                         , Tr_Ph_Inicio_2
+                                                         //, Tr_Ph_Inicio_1
+                                                         //, Tr_Ph_Inicio_2
+                                                         , Tr_Ph_Inicio1_CSal
+                                                         , Tr_Ph_Inicio2_CSal
+                                                         , Tr_Ph_Inicio1_SSal
+                                                         , Tr_Ph_Inicio2_SSal
                                                          , Tr_Densidad_Sal_1
                                                          , Tr_Densidad_Sal_2
                                                          , Tr_Temperatura_1
@@ -894,6 +931,8 @@ namespace Ws_prectoex.Controllers
                                                          , Td_Tobera
                                                          , Td_Ph_Tenido
                                                          , Td_Ph_Descarga_Disp
+                                                         , Mu_Dureza_Tenido
+                                                         , Mu_Peroxi_Residu
                                                          , Cambio_Turno
                                                          , Operario_Entr
                                                          , Observaciones
@@ -909,6 +948,7 @@ namespace Ws_prectoex.Controllers
             }
         }
 
+
         public class FileUploadTinto
         {
             public string Nro_Referencia { get; set; }
@@ -921,8 +961,12 @@ namespace Ws_prectoex.Controllers
             public string nTrTobera { get; set; }            
             public string nTrVolumen { get; set; }
             public string nTrNivBanoMaq1 { get; set; }
-            public string nTrPhInicio1 { get; set; }
-            public string nTrPhInicio2 { get; set; }
+            //public string nTrPhInicio1 { get; set; }
+            //public string nTrPhInicio2 { get; set; }
+            public string nTrPhInicio1CSal { get; set; }
+            public string nTrPhInicio2CSal { get; set; }
+            public string nTrPhInicio1SSal { get; set; }
+            public string nTrPhInicio2SSal { get; set; }
             public string nTrDensidadSal1 { get; set; }
             public string nTrDensidadSal2 { get; set; }
             public string nTrTemperatura1 { get; set; }
@@ -945,12 +989,12 @@ namespace Ws_prectoex.Controllers
             public string nTdTobera { get; set; }            
             public string nTdPhTenido { get; set; }
             public string nTdPhDescargaDisp { get; set; }
-
-            //public IFormFile Mu_Dureza_Tenido { get; set; }
-            //public IFormFile Mu_Peroxi_Residu { get; set; }         
+            public IFormFile sMuDurezaTenido { get; set; }
+            public IFormFile sMuPeroxiResidu { get; set; }
             public string sCambioTurno { get; set; }
             public string sOpeEntrante { get; set; }
             public string sObs { get; set; }
         }
     }
 }
+
