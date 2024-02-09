@@ -1519,6 +1519,13 @@ namespace Ws_prectoex.Data
                         Tr_Densidad_Sal_2 = read["TR_DENSIDAD_SAL_2"].ToString(),
                         Tr_Temperatura_1 = read["TR_TEMPERATURA_1"].ToString(),
                         Tr_Temperatura_2 = read["TR_TEMPERATURA_2"].ToString(),
+
+                        Tr_GL_Densidad = read["TR_GL_DENSIDAD"].ToString(),
+                        Tr_LT_Densidad = read["TR_LT_DENSIDAD"].ToString(),
+                        Tr_Corr_Teorica_AC = read["TR_CORR_TEORICA_AC"].ToString(),
+                        Tr_Corr_Teorica_DC = read["TR_CORR_TEORICA_DC"].ToString(),
+                        Tr_Corr_Real       = read["TR_CORR_REAL"].ToString(),
+
                         Tr_Lt_Dosif_Color = read["TR_LT_DOSIF_COLOR"].ToString(),
                         Tr_Lt_Dosif_Sal = read["TR_LT_DOSIF_SAL"].ToString(),
                         Tr_Lt_Dosif1_Alca = read["TR_LT_DOSIF1_ALCA"].ToString(),

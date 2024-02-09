@@ -311,6 +311,11 @@ namespace Ws_prectoex.Data
         public string Tr_Densidad_Sal_2 { get; set; }
         public string Tr_Temperatura_1 { get; set; }
         public string Tr_Temperatura_2 { get; set; }
+        public string Tr_GL_Densidad { get; set; }
+        public string Tr_LT_Densidad { get; set; }
+        public string Tr_Corr_Teorica_AC { get; set; }
+        public string Tr_Corr_Teorica_DC { get; set; }
+        public string Tr_Corr_Real { get; set; }
         public string Tr_Lt_Dosif_Color { get; set; }
         public string Tr_Lt_Dosif_Sal { get; set; }
         public string Tr_Lt_Dosif1_Alca { get; set; }
