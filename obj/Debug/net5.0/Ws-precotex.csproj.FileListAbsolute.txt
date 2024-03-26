@@ -603,8 +603,12 @@ D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Debug\net5
 D:\JLINO\FUENTES\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Debug\net5.0\ref\Ws-precotex.dll
 D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\bin\Debug\net5.0\ref\Ws-precotex.dll
 D:\COMPARTIDO\William Sotomayor 31-08-2022\back c#\Ws-precotex\obj\Debug\net5.0\staticwebassets\Ws-precotex.StaticWebAssets.xml
+D:\HARONI\Proyecto_Tintoreria\Ws-precotex\bin\Debug\net5.0\TraceReloggerLib.dll
+D:\HARONI\Proyecto_Tintoreria\Ws-precotex\bin\Debug\net5.0\Dia2Lib.dll
+D:\HARONI\Proyecto_Tintoreria\Ws-precotex\bin\Debug\net5.0\OSExtensions.dll
 D:\HARONI\Proyecto_Tintoreria\Ws-precotex\bin\Debug\net5.0\appsettings.Development.json
 D:\HARONI\Proyecto_Tintoreria\Ws-precotex\bin\Debug\net5.0\appsettings.json
+D:\HARONI\Proyecto_Tintoreria\Ws-precotex\bin\Debug\net5.0\Ws-precotex.StaticWebAssets.xml
 D:\HARONI\Proyecto_Tintoreria\Ws-precotex\bin\Debug\net5.0\x86\KernelTraceControl.dll
 D:\HARONI\Proyecto_Tintoreria\Ws-precotex\bin\Debug\net5.0\x86\KernelTraceControl.Win61.dll
 D:\HARONI\Proyecto_Tintoreria\Ws-precotex\bin\Debug\net5.0\x86\msdia140.dll
@@ -615,10 +619,6 @@ D:\HARONI\Proyecto_Tintoreria\Ws-precotex\bin\Debug\net5.0\amd64\msdia140.dll
 D:\HARONI\Proyecto_Tintoreria\Ws-precotex\bin\Debug\net5.0\amd64\msvcp140.dll
 D:\HARONI\Proyecto_Tintoreria\Ws-precotex\bin\Debug\net5.0\amd64\vcruntime140.dll
 D:\HARONI\Proyecto_Tintoreria\Ws-precotex\bin\Debug\net5.0\amd64\vcruntime140_1.dll
-D:\HARONI\Proyecto_Tintoreria\Ws-precotex\bin\Debug\net5.0\TraceReloggerLib.dll
-D:\HARONI\Proyecto_Tintoreria\Ws-precotex\bin\Debug\net5.0\Dia2Lib.dll
-D:\HARONI\Proyecto_Tintoreria\Ws-precotex\bin\Debug\net5.0\OSExtensions.dll
-D:\HARONI\Proyecto_Tintoreria\Ws-precotex\bin\Debug\net5.0\Ws-precotex.StaticWebAssets.xml
 D:\HARONI\Proyecto_Tintoreria\Ws-precotex\bin\Debug\net5.0\Ws-precotex.exe
 D:\HARONI\Proyecto_Tintoreria\Ws-precotex\bin\Debug\net5.0\Ws-precotex.deps.json
 D:\HARONI\Proyecto_Tintoreria\Ws-precotex\bin\Debug\net5.0\Ws-precotex.runtimeconfig.json
