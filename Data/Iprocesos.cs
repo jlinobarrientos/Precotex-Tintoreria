@@ -1478,8 +1478,6 @@ namespace Ws_prectoex.Data
                     RecetaAcabado lista = new RecetaAcabado()
                     {
                         Nro_Referencia = read["NRO_REFERENCIA"].ToString(),
-                        Dg_Hora = read["DG_HORA"].ToString(),
-                        Dg_Minuto = read["DG_MINUTO"].ToString(),
                         Dg_Maquina = read["DG_MAQUINA"].ToString(),
                         Dg_Partida = read["DG_PARTIDA"].ToString(),
                         Dg_Color = read["DG_COLOR"].ToString(),
@@ -1487,8 +1485,6 @@ namespace Ws_prectoex.Data
                         Dg_Peso = read["DG_PESO"].ToString(),
                         Dg_Cuerdas = read["DG_CUERDAS"].ToString(),
                         Dg_Cliente = read["DG_CLIENTE"].ToString(),
-                        Dg_RelaBano = read["DG_RELABANO"].ToString(),
-                        Dg_VolReceta = read["DG_VOLRECETA"].ToString(),
                         Cr_Ancho = read["CR_ANCHO"].ToString(),
                         Cr_Densidad = read["CR_DENSIDAD"].ToString(),
                         Pr_Bar = read["PR_BAR"].ToString(),
@@ -1502,9 +1498,8 @@ namespace Ws_prectoex.Data
                         Pr_Tiempo_Ciclo_4 = read["PR_TIEMPO_CICLO_4"].ToString(),
                         Pr_Tiempo_Ciclo_5 = read["PR_TIEMPO_CICLO_5"].ToString(),
                         Pr_Niv_Bano_Maq = read["PR_NIV_BANO_MAQ"].ToString(),
-                        Pr_Ph_Pilling_1 = read["PR_PH_PILLING_1"].ToString(),
-                        Pr_Ph_Pilling_2 = read["PR_PH_PILLING_2"].ToString(),
-                        Tr_Tobera = read["TR_TOBERA"].ToString(),
+                        Pr_Ph_Pilling = read["PR_PH_PILLING"].ToString(),
+                        Tr_Tobera = read["PR_TOBERA"].ToString(),
                         Tr_Velocidad = read["PR_VELOCIDAD"].ToString(),
                         Tr_Tiempo_Ciclo_1 = read["PR_TIEMPO_CICLO_1"].ToString(),
                         Tr_Tiempo_Ciclo_2 = read["TR_TIEMPO_CICLO_2"].ToString(),
@@ -1512,8 +1507,9 @@ namespace Ws_prectoex.Data
                         Tr_Tiempo_Ciclo_4 = read["TR_TIEMPO_CICLO_4"].ToString(),
                         Tr_Tiempo_Ciclo_5 = read["TR_TIEMPO_CICLO_5"].ToString(),
                         Tr_Volumen = read["TR_VOLUMEN"].ToString(),
-                        Tr_Niv_Bano_Maq_1 = read["TR_NIV_BANO_MAQ_1"].ToString(),
-                        
+                        Tr_Niv_Bano_Maq1 = read["TR_NIV_BANO_MAQ1"].ToString(),
+                        //Tr_Ph_Inicio_1 = read["TR_PH_INICIO_1"].ToString(),
+                        //Tr_Ph_Inicio_2 = read["TR_PH_INICIO_2"].ToString(),
                         Tr_Ph_Inicio1_CSal = read["TR_PH_INICIO1_CSAL"].ToString(),
                         Tr_Ph_Inicio2_CSal = read["TR_PH_INICIO2_CSAL"].ToString(),
                         Tr_Ph_Inicio1_SSal = read["TR_PH_INICIO1_SSAL"].ToString(),
@@ -1526,25 +1522,23 @@ namespace Ws_prectoex.Data
 
                         Tr_GL_Densidad = read["TR_GL_DENSIDAD"].ToString(),
                         Tr_LT_Densidad = read["TR_LT_DENSIDAD"].ToString(),
-                        Tr_Corr_Teorica = read["TR_CORR_TEORICA"].ToString(),                        
-                        Tr_Corr_Real    = read["TR_CORR_REAL"].ToString(),
+                        Tr_Corr_Teorica_AC = read["TR_CORR_TEORICA_AC"].ToString(),
+                        Tr_Corr_Teorica_DC = read["TR_CORR_TEORICA_DC"].ToString(),
+                        Tr_Corr_Real       = read["TR_CORR_REAL"].ToString(),
 
                         Tr_Lt_Dosif_Color = read["TR_LT_DOSIF_COLOR"].ToString(),
                         Tr_Lt_Dosif_Sal = read["TR_LT_DOSIF_SAL"].ToString(),
                         Tr_Lt_Dosif1_Alca = read["TR_LT_DOSIF1_ALCA"].ToString(),
                         Tr_Ph_1_Alcali_1 = read["TR_PH_1_ALCALI_1"].ToString(),
                         Tr_Ph_1_Alcali_2 = read["TR_PH_1_ALCALI_2"].ToString(),
-                        Tr_Ph_2_Alcali_1 = read["TR_PH_2_ALCALI_1"].ToString(),
-                        Tr_Ph_2_Alcali_2 = read["TR_PH_2_ALCALI_2"].ToString(),
                         Tr_Lt_Dosif2_Alca = read["TR_LT_DOSIF2_ALCA"].ToString(),
-                        Tr_Niv_Bano_Maq_2 = read["TR_NIV_BANO_MAQ_2"].ToString(),
+                        Tr_Niv_Bano_Maq2 = read["TR_NIV_BANO_MAQ2"].ToString(),
                         Tr_Agotamiento_1 = read["TR_AGOTAMIENTO_1"].ToString(),
                         Tr_Agotamiento_2 = read["TR_AGOTAMIENTO_2"].ToString(),
                         Tr_Tiempo_Agota = read["TR_TIEMPO_AGOTA"].ToString(),
-                        Ja_Ph_1 = read["JA_PH_1"].ToString(),
-                        Ja_Ph_2 = read["JA_PH_2"].ToString(),
-                        Fi_Ph_1 = read["FI_PH_1"].ToString(),
-                        Fi_Ph_2 = read["FI_PH_2"].ToString(),
+                        Ja_Ph1_1 = read["JA_PH1_1"].ToString(),
+                        Ja_Ph1_2 = read["JA_PH1_2"].ToString(),
+                        Fi_Ph = read["FI_PH"].ToString(),
                         Ac_Ph_1 = read["AC_PH_1"].ToString(),
                         Ac_Ph_2 = read["AC_PH_2"].ToString(),
                         Td_Tobera = read["PR_TOBERA"].ToString(),
@@ -1554,13 +1548,12 @@ namespace Ws_prectoex.Data
                         Td_Tiempo_Ciclo_3 = read["TD_TIEMPO_CICLO_3"].ToString(),
                         Td_Tiempo_Ciclo_4 = read["TD_TIEMPO_CICLO_4"].ToString(),
                         Td_Tiempo_Ciclo_5 = read["TD_TIEMPO_CICLO_5"].ToString(),
-                        Td_Ph_Tenido_1 = read["TD_PH_TENIDO_1"].ToString(),
-                        Td_Ph_Tenido_2 = read["TD_PH_TENIDO_2"].ToString(),
-                        Td_Ph_Descarga_Disp_1 = read["TD_PH_DESCARGA_DISP_1"].ToString(),
-                        Td_Ph_Descarga_Disp_2 = read["TD_PH_DESCARGA_DISP_2"].ToString(),
+                        Td_Ph_Tenido = read["TD_PH_TENIDO"].ToString(),
+                        Td_Ph_Descarga_Disp = read["TD_PH_DESCARGA_DISP"].ToString(),
                         Mu_Dureza_Tenido = read["MU_DUREZA_TENIDO"].ToString(),
                         Mu_Peroxi_Residu = read["MU_PEROXI_RESIDU"].ToString(),
-                        Cambio_Turno = read["CAMBIO_TURNO"].ToString(),                        
+                        Cambio_Turno = read["CAMBIO_TURNO"].ToString(),
+                        Operario_Entr = read["OPERARIO_ENTR"].ToString(),
                         Observaciones = read["OBSERVACIONES"].ToString()
                     };
                     lsParamReceta.Add(lista);
@@ -1578,62 +1571,18 @@ namespace Ws_prectoex.Data
             return lsParamReceta;
         }
 
-        public List<PartidaPendientesEstRef> MuestraPartidasPendientesRef()
-        {
-            Conectar();
-            List<PartidaPendientesEstRef> lspartidas = new List<PartidaPendientesEstRef>();
-
-            try
-            {
-                SqlCommand cmd = new SqlCommand("ACA_MUESTRA_PARTIDAS_PEND_ESTREF_WS", cnn);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;               
-                SqlDataReader read = cmd.ExecuteReader();
-                while (read.Read())
-                {
-                    PartidaPendientesEstRef lista = new PartidaPendientesEstRef()
-                    {
-                        cod_ordtra = read["COD_ORDTRA"].ToString(),
-                        nom_cliente = read["NOM_CLIENTE"].ToString(),
-                        cod_tela = read["COD_TELA"].ToString(),
-                        des_color = read["DES_COLOR"].ToString(),
-                        fec_descarga = read["FEC_DESCARGA"].ToString(),
-                        hora_transcurrido = read["HORA_TRANSCURRIDO"].ToString(),
-                        min_transcurrrido = read["MIN_TRANSCURRIDO"].ToString(),
-                        tono_aprob = read["TONO_APROB"].ToString(),
-                        flg_ingreso_sistema = read["FLG_ING_SISTEMA"].ToString(),
-                        des_responsable = read["DES_RESPONSABLE"].ToString(),
-                        fec_registro = read["FEC_REGISTRO"].ToString(),
-                        hora_registro = read["HORA_REGISTRO"].ToString(),
-                        turno = read["TURNO"].ToString()
-                    };
-                    lspartidas.Add(lista);
-                }
-            }
-            catch (Exception e)
-            {
-
-                throw new Exception("Error " + e.Message);
-            }
-            finally
-            {
-                Desconectar();
-            }
-            return lsParamReceta;
-        }
-
         public RptaPx grabarParamReceta(string NroReferencia
-                                      , string nDg_Hora_Carga
-                                      , string Dg_Cuerdas
                                       , string Cr_Ancho
-                                      , string Cr_Densidad                                      
+                                      , string Cr_Densidad
+                                      , string Dg_Cuerdas
                                       , string Pr_Tobera
                                       , string Pr_Niv_Bano_Maq
-                                      , string Pr_Ph_Pilling_1
-                                      , string Pr_Ph_Pilling_2        
+                                      , string Pr_Ph_Pilling
                                       , string Tr_Tobera
                                       , string Tr_Volumen
-                                      , string Tr_Niv_Bano_Maq_1
-                                      , string Tr_Niv_Bano_Maq_2
+                                      , string Tr_Niv_Bano_Maq1
+                                      //, string Tr_Ph_Inicio_1
+                                      //, string Tr_Ph_Inicio_2
                                       , string Tr_Ph_Inicio1_CSal
                                       , string Tr_Ph_Inicio2_CSal
                                       , string Tr_Ph_Inicio1_SSal
@@ -1647,26 +1596,23 @@ namespace Ws_prectoex.Data
                                       , string Tr_Lt_Dosif1_Alca
                                       , string Tr_Ph_1_Alcali_1
                                       , string Tr_Ph_1_Alcali_2
-                                      , string Tr_Ph_2_Alcali_1
-                                      , string Tr_Ph_2_Alcali_2
-                                      , string Tr_Lt_Dosif2_Alca                                      
+                                      , string Tr_Lt_Dosif2_Alca
+                                      , string Tr_Niv_Bano_Maq2
                                       , string Tr_Agotamiento_1
                                       , string Tr_Agotamiento_2
                                       , string Tr_Tiempo_Agota
-                                      , string Ja_Ph_1
-                                      , string Ja_Ph_2
-                                      , string Fi_Ph_1
-                                      , string Fi_Ph_2
+                                      , string Ja_Ph1_1
+                                      , string Ja_Ph1_2
+                                      , string Fi_Ph
                                       , string Ac_Ph_1
                                       , string Ac_Ph_2
                                       , string Td_Tobera
-                                      , string Td_Ph_Tenido_1
-                                      , string Td_Ph_Tenido_2
-                                      , string Td_Ph_Descarga_Disp_1
-                                      , string Td_Ph_Descarga_Disp_2
+                                      , string Td_Ph_Tenido
+                                      , string Td_Ph_Descarga_Disp
                                       , string Mu_Dureza_Tenido
                                       , string Mu_Peroxi_Residu
-                                      , string Cambio_Turno                                      
+                                      , string Cambio_Turno
+                                      , string Operario_Entr
                                       , string Observaciones
                                       , string Cod_Usuario)
         {
@@ -1678,18 +1624,17 @@ namespace Ws_prectoex.Data
                 SqlCommand cmd = new SqlCommand("TIN_MAN_PARAMAQ_DATA_WS", cnn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@NRO_REFERENCIA", NroReferencia);
-                cmd.Parameters.AddWithValue("@DG_HORACARGA", nDg_Hora_Carga);
                 cmd.Parameters.AddWithValue("@DG_CUERDAS", Dg_Cuerdas);
                 cmd.Parameters.AddWithValue("@CR_ANCHO", Cr_Ancho);
                 cmd.Parameters.AddWithValue("@CR_DENSIDAD", Cr_Densidad);                
                 cmd.Parameters.AddWithValue("@PR_TOBERA", Pr_Tobera);
                 cmd.Parameters.AddWithValue("@PR_NIV_BANO_MAQ", Pr_Niv_Bano_Maq);
-                cmd.Parameters.AddWithValue("@PR_PH_PILLING_1", Pr_Ph_Pilling_1);
-                cmd.Parameters.AddWithValue("@PR_PH_PILLING_2", Pr_Ph_Pilling_2);
+                cmd.Parameters.AddWithValue("@PR_PH_PILLING", Pr_Ph_Pilling);
                 cmd.Parameters.AddWithValue("@TR_TOBERA", Tr_Tobera);
                 cmd.Parameters.AddWithValue("@TR_VOLUMEN", Tr_Volumen);
-                cmd.Parameters.AddWithValue("@TR_NIV_BANO_MAQ_1", Tr_Niv_Bano_Maq_1);
-                cmd.Parameters.AddWithValue("@TR_NIV_BANO_MAQ_2", Tr_Niv_Bano_Maq_2);
+                cmd.Parameters.AddWithValue("@TR_NIV_BANO_MAQ1", Tr_Niv_Bano_Maq1);
+                //cmd.Parameters.AddWithValue("@TR_PH_INICIO_1", Tr_Ph_Inicio_1);
+                //cmd.Parameters.AddWithValue("@TR_PH_INICIO_2", Tr_Ph_Inicio_2);
                 cmd.Parameters.AddWithValue("@TR_PH_INICIO1_CSAL", Tr_Ph_Inicio1_CSal);
                 cmd.Parameters.AddWithValue("@TR_PH_INICIO2_CSAL", Tr_Ph_Inicio2_CSal);
                 cmd.Parameters.AddWithValue("@TR_PH_INICIO1_SSAL", Tr_Ph_Inicio1_SSal);
@@ -1703,26 +1648,23 @@ namespace Ws_prectoex.Data
                 cmd.Parameters.AddWithValue("@TR_LT_DOSIF1_ALCA", Tr_Lt_Dosif1_Alca);
                 cmd.Parameters.AddWithValue("@TR_PH_1_ALCALI_1", Tr_Ph_1_Alcali_1);
                 cmd.Parameters.AddWithValue("@TR_PH_1_ALCALI_2", Tr_Ph_1_Alcali_2);
-                cmd.Parameters.AddWithValue("@TR_PH_2_ALCALI_2", Tr_Ph_2_Alcali_2);
-                cmd.Parameters.AddWithValue("@TR_PH_2_ALCALI_1", Tr_Ph_2_Alcali_1);
-                cmd.Parameters.AddWithValue("@TR_LT_DOSIF2_ALCA", Tr_Lt_Dosif2_Alca);                
+                cmd.Parameters.AddWithValue("@TR_LT_DOSIF2_ALCA", Tr_Lt_Dosif2_Alca);
+                cmd.Parameters.AddWithValue("@TR_NIV_BANO_MAQ2",Tr_Niv_Bano_Maq2);
                 cmd.Parameters.AddWithValue("@TR_AGOTAMIENTO_1", Tr_Agotamiento_1);
                 cmd.Parameters.AddWithValue("@TR_AGOTAMIENTO_2", Tr_Agotamiento_2);
                 cmd.Parameters.AddWithValue("@TR_TIEMPO_AGOTA", Tr_Tiempo_Agota);
-                cmd.Parameters.AddWithValue("@JA_PH_1", Ja_Ph_1);
-                cmd.Parameters.AddWithValue("@JA_PH_2", Ja_Ph_2);
-                cmd.Parameters.AddWithValue("@FI_PH_1", Fi_Ph_1);
-                cmd.Parameters.AddWithValue("@FI_PH_2", Fi_Ph_2);
+                cmd.Parameters.AddWithValue("@JA_PH1_1", Ja_Ph1_1);
+                cmd.Parameters.AddWithValue("@JA_PH1_2", Ja_Ph1_2);
+                cmd.Parameters.AddWithValue("@FI_PH", Fi_Ph);
                 cmd.Parameters.AddWithValue("@AC_PH_1", Ac_Ph_1);
                 cmd.Parameters.AddWithValue("@AC_PH_2", Ac_Ph_2);
                 cmd.Parameters.AddWithValue("@TD_TOBERA", Td_Tobera);
-                cmd.Parameters.AddWithValue("@TD_PH_TENIDO_1", Td_Ph_Tenido_1);
-                cmd.Parameters.AddWithValue("@TD_PH_TENIDO_2", Td_Ph_Tenido_2);
-                cmd.Parameters.AddWithValue("@TD_PH_DESCARGA_DISP_1", Td_Ph_Descarga_Disp_1);
-                cmd.Parameters.AddWithValue("@TD_PH_DESCARGA_DISP_2", Td_Ph_Descarga_Disp_2);
+                cmd.Parameters.AddWithValue("@TD_PH_TENIDO", Td_Ph_Tenido);
+                cmd.Parameters.AddWithValue("@TD_PH_DESCARGA_DISP", Td_Ph_Descarga_Disp);
                 cmd.Parameters.AddWithValue("@MU_DUREZA_TENIDO", Mu_Dureza_Tenido);
                 cmd.Parameters.AddWithValue("@MU_PEROXI_RESIDU", Mu_Peroxi_Residu);
-                cmd.Parameters.AddWithValue("@CAMBIO_TURNO", Cambio_Turno);                
+                cmd.Parameters.AddWithValue("@CAMBIO_TURNO", Cambio_Turno);
+                cmd.Parameters.AddWithValue("@OPERARIO_ENTR", Operario_Entr);
                 cmd.Parameters.AddWithValue("@OBSERVACIONES", Observaciones);
                 cmd.Parameters.AddWithValue("@USU_REGISTRO", Cod_Usuario);
                 cmd.ExecuteNonQuery();

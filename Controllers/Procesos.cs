@@ -709,24 +709,6 @@ namespace Ws_prectoex.Controllers
             }
         }
 
-        [Route("procesos/MuestraPartidasPendientesRef}")]
-        [AllowAnonymous]
-        [HttpGet]
-        public async Task<List<PartidaPendientesEstRef>> MuestraPartidasPendientesRef()
-        {
-            List<PartidaPendientesEstRef> lspartidas = new List<PartidaPendientesEstRef>();
-            try
-            {
-                lspartidas= iprocesos.MuestraPartidasPendientesRef();
-                return lspartidas;
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Error " + e.Message);
-            }
-        }
-
-
         [Route("procesos/MuestraParamReceta/{NroReferencia}/{Cod_usuario}")]
         [AllowAnonymous]
         [HttpGet]
@@ -765,22 +747,21 @@ namespace Ws_prectoex.Controllers
                 //}
 
                 await subirParamReceta(objFile.Nro_Referencia
-                                       , objFile.nDgHoraCarga
-                                       , objFile.nDgCuerdas
                                        , objFile.nCrAncho
-                                       , objFile.nCrDensidad                                       
+                                       , objFile.nCrDensidad
+                                       , objFile.nDgCuerdas
                                        , objFile.nPrTobera 
                                        , objFile.nPrNivBanoMaq
-                                       , objFile.nPrPhPilling1
-                                       , objFile.nPrPhPilling2
+                                       , objFile.nPrPhPilling
                                        , objFile.nTrTobera
                                        , objFile.nTrVolumen
                                        , objFile.nTrNivBanoMaq1
-                                       , objFile.nTrNivBanoMaq2 
                                        , objFile.nTrPhInicio1CSal
                                        , objFile.nTrPhInicio2CSal
                                        , objFile.nTrPhInicio1SSal
-                                       , objFile.nTrPhInicio2SSal                                       
+                                       , objFile.nTrPhInicio2SSal
+                                       //, objFile.nTrPhInicio1
+                                       //, objFile.nTrPhInicio2
                                        , objFile.nTrDensidadSal1
                                        , objFile.nTrDensidadSal2
                                        , objFile.nTrTemperatura1
@@ -790,26 +771,23 @@ namespace Ws_prectoex.Controllers
                                        , objFile.nTrLtDosif1Alca
                                        , objFile.nTrPh1Alcali1
                                        , objFile.nTrPh1Alcali2
-                                       , objFile.nTrPh2Alcali1
-                                       , objFile.nTrPh2Alcali2
-                                       , objFile.nTrLtDosif2Alca                               
+                                       , objFile.nTrLtDosif2Alca
+                                       , objFile.nTrNivBanoMaq2
                                        , objFile.nTrAgotamiento1
                                        , objFile.nTrAgotamiento2
                                        , objFile.nTrTiempoAgota
                                        , objFile.nJaPh1
                                        , objFile.nJaPh2
-                                       , objFile.nFiPh1
-                                       , objFile.nFiPh2
+                                       , objFile.nFiPh
                                        , objFile.nAcPh1
                                        , objFile.nAcPh2
                                        , objFile.nTdTobera
-                                       , objFile.nTdPhTenido1
-                                       , objFile.nTdPhTenido2
-                                       , objFile.nTdPhDescargaDisp1
-                                       , objFile.nTdPhDescargaDisp2
+                                       , objFile.nTdPhTenido
+                                       , objFile.nTdPhDescargaDisp
                                        , objFile.sMuDurezaTenido
                                        , objFile.sMuPeroxiResidu
-                                       , objFile.sCambioTurno                                       
+                                       , objFile.sCambioTurno
+                                       , objFile.sOpeEntrante
                                        , objFile.sObs
                                        , scod_usuario);
 
@@ -826,18 +804,17 @@ namespace Ws_prectoex.Controllers
         }
 
         private async Task<string> subirParamReceta(string NroReferencia
-                                                     , string nDg_Hora_Carga
                                                      , string Dg_Cuerdas
                                                      , string Cr_Ancho
                                                      , string Cr_Densidad                                                     
                                                      , string Pr_Tobera
                                                      , string Pr_Niv_Bano_Maq
-                                                     , string Pr_Ph_Pilling_1
-                                                     , string Pr_Ph_Pilling_2
+                                                     , string Pr_Ph_Pilling
                                                      , string Tr_Tobera
                                                      , string Tr_Volumen
                                                      , string Tr_Niv_Bano_Maq1
-                                                     , string Tr_Niv_Bano_Maq2
+                                                     //, string Tr_Ph_Inicio_1
+                                                     //, string Tr_Ph_Inicio_2
                                                      , string Tr_Ph_Inicio1_CSal
                                                      , string Tr_Ph_Inicio2_CSal
                                                      , string Tr_Ph_Inicio1_SSal
@@ -851,26 +828,23 @@ namespace Ws_prectoex.Controllers
                                                      , string Tr_Lt_Dosif1_Alca
                                                      , string Tr_Ph_1_Alcali_1
                                                      , string Tr_Ph_1_Alcali_2
-                                                     , string Tr_Ph_2_Alcali_1
-                                                     , string Tr_Ph_2_Alcali_2
-                                                     , string Tr_Lt_Dosif2_Alca                                                     
+                                                     , string Tr_Lt_Dosif2_Alca
+                                                     , string Tr_Niv_Bano_Maq2
                                                      , string Tr_Agotamiento_1
                                                      , string Tr_Agotamiento_2
                                                      , string Tr_Tiempo_Agota
-                                                     , string Ja_Ph_1
-                                                     , string Ja_Ph_2
-                                                     , string Fi_Ph_1
-                                                     , string Fi_Ph_2                
+                                                     , string Ja_Ph1_1
+                                                     , string Ja_Ph1_2
+                                                     , string Fi_Ph
                                                      , string Ac_Ph_1
                                                      , string Ac_Ph_2
                                                      , string Td_Tobera
-                                                     , string Td_Ph_Tenido_1
-                                                     , string Td_Ph_Tenido_2
-                                                     , string Td_Ph_Descarga_Disp_1
-                                                     , string Td_Ph_Descarga_Disp_2
+                                                     , string Td_Ph_Tenido
+                                                     , string Td_Ph_Descarga_Disp
                                                      , IFormFile sMuDurezaTenido
                                                      , IFormFile sMuPeroxiResidu
-                                                     , string Cambio_Turno                                                     
+                                                     , string Cambio_Turno
+                                                     , string Operario_Entr
                                                      , string Observaciones
                                                      , string scod_usuario)
 
@@ -913,25 +887,24 @@ namespace Ws_prectoex.Controllers
                         fileStream.Flush();
                         Mu_Peroxi_Residu = "MUPERE-" + NroReferencia;
                     }
-                }
+                }                    
 
-                var rptx2 = new RptaPx();
-
+                var rptx2 = new RptaPx();               
+                
                 var bresultado = new RptaPx();
 
                 bresultado = iprocesos.grabarParamReceta(NroReferencia
-                                                         , nDg_Hora_Carga
                                                          , Dg_Cuerdas
                                                          , Cr_Ancho
-                                                         , Cr_Densidad
-                                                         , Pr_Tobera
+                                                         , Cr_Densidad                                                         
+                                                         , Pr_Tobera  
                                                          , Pr_Niv_Bano_Maq
-                                                         , Pr_Ph_Pilling_1
-                                                         , Pr_Ph_Pilling_2
+                                                         , Pr_Ph_Pilling
                                                          , Tr_Tobera
                                                          , Tr_Volumen
                                                          , Tr_Niv_Bano_Maq1
-                                                         , Tr_Niv_Bano_Maq2
+                                                         //, Tr_Ph_Inicio_1
+                                                         //, Tr_Ph_Inicio_2
                                                          , Tr_Ph_Inicio1_CSal
                                                          , Tr_Ph_Inicio2_CSal
                                                          , Tr_Ph_Inicio1_SSal
@@ -945,26 +918,23 @@ namespace Ws_prectoex.Controllers
                                                          , Tr_Lt_Dosif1_Alca
                                                          , Tr_Ph_1_Alcali_1
                                                          , Tr_Ph_1_Alcali_2
-                                                         , Tr_Ph_2_Alcali_1
-                                                         , Tr_Ph_2_Alcali_2
                                                          , Tr_Lt_Dosif2_Alca
+                                                         , Tr_Niv_Bano_Maq2
                                                          , Tr_Agotamiento_1
                                                          , Tr_Agotamiento_2
                                                          , Tr_Tiempo_Agota
-                                                         , Ja_Ph_1
-                                                         , Ja_Ph_2
-                                                         , Fi_Ph_1
-                                                         , Fi_Ph_2
+                                                         , Ja_Ph1_1
+                                                         , Ja_Ph1_2
+                                                         , Fi_Ph
                                                          , Ac_Ph_1
                                                          , Ac_Ph_2
                                                          , Td_Tobera
-                                                         , Td_Ph_Tenido_1
-                                                         , Td_Ph_Tenido_2
-                                                         , Td_Ph_Descarga_Disp_1
-                                                         , Td_Ph_Descarga_Disp_2
+                                                         , Td_Ph_Tenido
+                                                         , Td_Ph_Descarga_Disp
                                                          , Mu_Dureza_Tenido
                                                          , Mu_Peroxi_Residu
-                                                         , Cambio_Turno                                                         
+                                                         , Cambio_Turno
+                                                         , Operario_Entr
                                                          , Observaciones
                                                          , scod_usuario);
 
@@ -982,18 +952,17 @@ namespace Ws_prectoex.Controllers
         public class FileUploadTinto
         {
             public string Nro_Referencia { get; set; }
-            public string nDgHoraCarga { get; set; }
             public string nDgCuerdas { get; set; }
             public string nCrAncho { get; set; }
             public string nCrDensidad { get; set; }            
             public string nPrTobera { get; set; }            
             public string nPrNivBanoMaq { get; set; }
-            public string nPrPhPilling1 { get; set; }
-            public string nPrPhPilling2 { get; set; }
+            public string nPrPhPilling { get; set; }
             public string nTrTobera { get; set; }            
             public string nTrVolumen { get; set; }
             public string nTrNivBanoMaq1 { get; set; }
-            public string nTrNivBanoMaq2 { get; set; }
+            //public string nTrPhInicio1 { get; set; }
+            //public string nTrPhInicio2 { get; set; }
             public string nTrPhInicio1CSal { get; set; }
             public string nTrPhInicio2CSal { get; set; }
             public string nTrPhInicio1SSal { get; set; }
@@ -1007,26 +976,23 @@ namespace Ws_prectoex.Controllers
             public string nTrLtDosif1Alca { get; set; }
             public string nTrPh1Alcali1 { get; set; }
             public string nTrPh1Alcali2 { get; set; }
-            public string nTrPh2Alcali1 { get; set; }
-            public string nTrPh2Alcali2 { get; set; }
-            public string nTrLtDosif2Alca { get; set; }            
+            public string nTrLtDosif2Alca { get; set; }
+            public string nTrNivBanoMaq2 { get; set; }
             public string nTrAgotamiento1 { get; set; }
             public string nTrAgotamiento2 { get; set; }
             public string nTrTiempoAgota { get; set; }
             public string nJaPh1 { get; set; }
             public string nJaPh2 { get; set; }
-            public string nFiPh1 { get; set; }
-            public string nFiPh2 { get; set; }
+            public string nFiPh { get; set; }
             public string nAcPh1 { get; set; }
             public string nAcPh2 { get; set; }            
             public string nTdTobera { get; set; }            
-            public string nTdPhTenido1 { get; set; }
-            public string nTdPhTenido2 { get; set; }
-            public string nTdPhDescargaDisp1 { get; set; }
-            public string nTdPhDescargaDisp2 { get; set; }
+            public string nTdPhTenido { get; set; }
+            public string nTdPhDescargaDisp { get; set; }
             public IFormFile sMuDurezaTenido { get; set; }
             public IFormFile sMuPeroxiResidu { get; set; }
-            public string sCambioTurno { get; set; }            
+            public string sCambioTurno { get; set; }
+            public string sOpeEntrante { get; set; }
             public string sObs { get; set; }
         }
     }
