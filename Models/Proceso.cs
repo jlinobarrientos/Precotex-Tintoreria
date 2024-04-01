@@ -268,22 +268,26 @@ namespace Ws_prectoex.Data
 
     }
 
-    public class RecetaAcabado 
+    public class RecetaAcabado
     {
         public string Nro_Referencia { get; set; }
+        public string Dg_Hora { get; set; }
+        public string Dg_Minuto { get; set; }
         public string Dg_Maquina { get; set; }
-        public string Dg_Partida{ get; set; }
+        public string Dg_Partida { get; set; }
         public string Dg_Color { get; set; }
         public string Dg_Articulo { get; set; }
         public string Dg_Peso { get; set; }
         public string Dg_Cuerdas { get; set; }
-        public string Dg_Cliente { get; set; }        
+        public string Dg_Cliente { get; set; }
+        public string Dg_RelaBano { get; set; }
+        public string Dg_VolReceta { get; set; }
         public string Cr_Ancho { get; set; }
         public string Cr_Densidad { get; set; }
         public string Pr_Bar { get; set; }
         public string Pr_Tobera { get; set; }
         public string Pr_Acumulador { get; set; }
-        public string Pr_Bomba { get; set; }        
+        public string Pr_Bomba { get; set; }
         public string Pr_Velocidad { get; set; }
         public string Pr_Tiempo_Ciclo_1 { get; set; }
         public string Pr_Tiempo_Ciclo_2 { get; set; }
@@ -291,8 +295,11 @@ namespace Ws_prectoex.Data
         public string Pr_Tiempo_Ciclo_4 { get; set; }
         public string Pr_Tiempo_Ciclo_5 { get; set; }
         public string Pr_Niv_Bano_Maq { get; set; }
-        public string Pr_Ph_Pilling { get; set; }
+        public string Pr_Ph_Pilling_1 { get; set; }
+        public string Pr_Ph_Pilling_2 { get; set; }
         public string Tr_Tobera { get; set; }
+        public string Tr_Acumulador { get; set; }
+        public string Tr_Bomba { get; set; }
         public string Tr_Velocidad { get; set; }
         public string Tr_Tiempo_Ciclo_1 { get; set; }
         public string Tr_Tiempo_Ciclo_2 { get; set; }
@@ -300,9 +307,7 @@ namespace Ws_prectoex.Data
         public string Tr_Tiempo_Ciclo_4 { get; set; }
         public string Tr_Tiempo_Ciclo_5 { get; set; }
         public string Tr_Volumen { get; set; }
-        public string Tr_Niv_Bano_Maq1 { get; set; }
-        //public string Tr_Ph_Inicio_1 { get; set; }
-        //public string Tr_Ph_Inicio_2 { get; set; }
+        public string Tr_Niv_Bano_Maq_1 { get; set; }
         public string Tr_Ph_Inicio1_CSal { get; set; }
         public string Tr_Ph_Inicio2_CSal { get; set; }
         public string Tr_Ph_Inicio1_SSal { get; set; }
@@ -312,40 +317,49 @@ namespace Ws_prectoex.Data
         public string Tr_Temperatura_1 { get; set; }
         public string Tr_Temperatura_2 { get; set; }
         public string Tr_GL_Densidad { get; set; }
+        public string Tr_GL_Densidad_2 { get; set; }
         public string Tr_LT_Densidad { get; set; }
-        public string Tr_Corr_Teorica_AC { get; set; }
-        public string Tr_Corr_Teorica_DC { get; set; }
+        public string Tr_LT_Densidad_2 { get; set; }
+        public string Tr_Corr_Teorica { get; set; }
+        public string Tr_Corr_Teorica_2 { get; set; }
         public string Tr_Corr_Real { get; set; }
+        public string Tr_Corr_Real_2 { get; set; }
         public string Tr_Lt_Dosif_Color { get; set; }
         public string Tr_Lt_Dosif_Sal { get; set; }
         public string Tr_Lt_Dosif1_Alca { get; set; }
         public string Tr_Ph_1_Alcali_1 { get; set; }
         public string Tr_Ph_1_Alcali_2 { get; set; }
+        public string Tr_Ph_2_Alcali_1 { get; set; }
+        public string Tr_Ph_2_Alcali_2 { get; set; }
         public string Tr_Lt_Dosif2_Alca { get; set; }
-        public string Tr_Niv_Bano_Maq2 { get; set; }
+        public string Tr_Niv_Bano_Maq_2 { get; set; }
         public string Tr_Agotamiento_1 { get; set; }
         public string Tr_Agotamiento_2 { get; set; }
         public string Tr_Tiempo_Agota { get; set; }
-        public string Ja_Ph1_1 { get; set; }
-        public string Ja_Ph1_2 { get; set; }
-        public string Fi_Ph { get; set; }
+        public string Ja_Ph_1 { get; set; }
+        public string Ja_Ph_2 { get; set; }
+        public string Fi_Ph_1 { get; set; }
+        public string Fi_Ph_2 { get; set; }
         public string Ac_Ph_1 { get; set; }
-        public string Ac_Ph_2 { get; set ; }
-        public string Ac_Hora_Descarga { get; set; }
+        public string Ac_Ph_2 { get; set; }
         public string Td_Tobera { get; set; }
+        public string Td_Acumulador { get; set; }
+        public string Td_Bomba { get; set; }
         public string Td_Velocidad { get; set; }
         public string Td_Tiempo_Ciclo_1 { get; set; }
         public string Td_Tiempo_Ciclo_2 { get; set; }
         public string Td_Tiempo_Ciclo_3 { get; set; }
         public string Td_Tiempo_Ciclo_4 { get; set; }
         public string Td_Tiempo_Ciclo_5 { get; set; }
-        public string Td_Ph_Tenido { get; set; }
-        public string Td_Ph_Descarga_Disp { get; set; }
+        public string Td_Ph_Tenido_1 { get; set; }
+        public string Td_Ph_Tenido_2 { get; set; }
+        public string Td_Ph_Descarga_Disp_1 { get; set; }
+        public string Td_Ph_Descarga_Disp_2 { get; set; }
         public string Mu_Dureza_Tenido { get; set; }
         public string Mu_Peroxi_Residu { get; set; }
         public string Cambio_Turno { get; set; }
-        public string Operario_Entr { get; set; }
         public string Observaciones { get; set; }
+        public string Flg_Habilita { get; set; }
     }
 
 }
