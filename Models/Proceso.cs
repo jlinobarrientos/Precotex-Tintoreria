@@ -181,7 +181,46 @@ namespace Ws_prectoex.Data
         public decimal Crudo { get; set; }
         public string Rollos_Asignados { get; set; }
         public string Respuesta  { get; set; }
-}
+    }
+
+    public class solicitud_agujas {
+        public string Num_Registro { get; set; }
+        public string Fecha_Registro { get; set; }
+        public string Cod_Maquina_Tejeduria { get; set; }
+        public string Cod_Ordtra { get; set; }
+        public string Tip_Trabajador { get; set; }
+        public string Cod_Tejedor { get; set; }
+        public string Nom_Tejedor { get; set; }
+        public string Cod_Tipo_Aguja { get; set; }
+        public string Tipo_Aguja { get; set; }
+        public string Talon_C1 { get; set; }
+        public string Talon_C2 { get; set; }
+        public string Talon_C3 { get; set; }
+        public string Talon_C4 { get; set; }
+        public string Talon_Pl1 { get; set; }
+        public string Talon_Pl2 { get; set; }
+        public string Cntd { get; set; }       
+    }
+
+    public class Tejedor
+    {
+        public string Cod_Tejedor { get; set; }
+        public string Nom_Tejedor { get; set; }
+        public string Respuesta { get; set; }
+    }
+
+    public class MaquinaTejeduria
+    {
+        public string Cod_Maquina_Tejeduria { get; set; }
+        public string Nom_Maquina_Tejeduria { get; set; }
+    }
+
+    public class TipoAguja
+    {
+        public string Tipo_Aguja { get; set; }
+        public string Nombre_Tipo_Aguja { get; set; }
+    }
+
     public class tela_proceso
     {
         public string Partida { get; set; }        

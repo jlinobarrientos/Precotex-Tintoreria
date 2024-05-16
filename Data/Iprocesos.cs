@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -764,6 +765,169 @@ namespace Ws_prectoex.Data
                 Desconectar();
             }
             return lstPartResumen;
+        }
+
+        public List<solicitud_agujas> SolicitudAgujas(string opcion, string num_registro ,string cod_maquina_tejeduria, string cod_ordtra, string tip_trabajador, string cod_trabajador, string cod_tipo_aguja, string t1
+                                                        , string t2, string t3, string t4, string tp1, string tp2, string cntd, string cod_usuario, string fecregini, string fecregfin)
+        {
+            Conectar();
+
+            List<solicitud_agujas> lstSolicitudAguja = new List<solicitud_agujas>();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("Lg_Man_Solicitud_Agujas_WS", cnn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Opcion", opcion);
+                cmd.Parameters.AddWithValue("@Num_Registro", num_registro);
+                cmd.Parameters.AddWithValue("@Cod_Maquina_Tejeduria", cod_maquina_tejeduria);
+                cmd.Parameters.AddWithValue("@Cod_Ordtra", cod_ordtra);
+                cmd.Parameters.AddWithValue("@Tip_trabajador", tip_trabajador);
+                cmd.Parameters.AddWithValue("@Cod_Trabajador", cod_trabajador);
+                cmd.Parameters.AddWithValue("@TipoAguja", cod_tipo_aguja);
+                cmd.Parameters.AddWithValue("@T1", t1);
+                cmd.Parameters.AddWithValue("@T2", t2);
+                cmd.Parameters.AddWithValue("@T3", t3);
+                cmd.Parameters.AddWithValue("@T4", t4);
+                cmd.Parameters.AddWithValue("@Tp1", tp1);
+                cmd.Parameters.AddWithValue("@Tp2", tp2);
+                cmd.Parameters.AddWithValue("@Cntd", cntd);
+                cmd.Parameters.AddWithValue("@Cod_usuario", cod_usuario);
+                cmd.Parameters.AddWithValue("@FecRegIni", fecregini);                
+                cmd.Parameters.AddWithValue("@FecRegFin", fecregfin);                
+                
+                SqlDataReader read = cmd.ExecuteReader();
+
+                while (read.Read())
+                {
+                    solicitud_agujas solicitud = new solicitud_agujas()
+                    {
+                        Num_Registro = read["Num_Registro"].ToString(),
+                        Fecha_Registro = read["Fecha_Registro"].ToString(),
+                        Cod_Maquina_Tejeduria = read["Cod_Maquina_Tejeduria"].ToString(),
+                        Cod_Ordtra = read["Cod_Ordtra"].ToString(),
+                        Tip_Trabajador = read["Tip_Trabajador"].ToString(),
+                        Cod_Tejedor = read["Cod_Trabajador"].ToString(),
+                        Nom_Tejedor = read["Trabajador"].ToString(),
+                        Cod_Tipo_Aguja = read["Cod_Tipo_Aguja"].ToString(),
+                        Tipo_Aguja = read["Tipo_Aguja"].ToString(),
+                        Talon_C1 = read["Talon_C1"].ToString(),
+                        Talon_C2 = read["Talon_C2"].ToString(),
+                        Talon_C3 = read["Talon_C3"].ToString(),
+                        Talon_C4 = read["Talon_C4"].ToString(),
+                        Talon_Pl1 = read["Talon_Pl1"].ToString(),
+                        Talon_Pl2 = read["Talon_Pl2"].ToString(),
+                        Cntd = read["Cntd"].ToString()
+                    };
+
+                    lstSolicitudAguja.Add(solicitud);
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+            return lstSolicitudAguja;
+        }
+
+        public List<Tejedor> MuestraTejedor(string cod_trabajador)
+        {
+            Conectar();
+            List<Tejedor> lstejedor = new List<Tejedor>();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("TJ_MUESTRA_TEJEDOR_WS", cnn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Cod_Trabajador", cod_trabajador);
+                SqlDataReader read = cmd.ExecuteReader();
+                while (read.Read())
+                {                    
+                    Tejedor tejedor = new Tejedor()
+                    {
+                        Cod_Tejedor = read["Cod_Tejedor"].ToString(),
+                        Nom_Tejedor = read["Nom_Tejedor"].ToString(),
+                        Respuesta = read["Respuesta"].ToString()
+
+                    };
+                    lstejedor.Add(tejedor);
+                }
+            }
+            catch (Exception e)
+            {                
+                throw new Exception("Error " + e.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+            return lstejedor;
+        }
+
+        public List<TipoAguja> MuestraTipoAguja()
+        {
+            Conectar();
+            List<TipoAguja> lsttipoaguja = new List<TipoAguja>();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("TJ_MUESTRA_TIPOAGUJA_WS", cnn);
+                SqlDataReader read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+                    TipoAguja tipo = new TipoAguja()
+                    {
+                        Tipo_Aguja = read["Tipo_Aguja"].ToString(),
+                        Nombre_Tipo_Aguja = read["Nombre_Tipo_Aguja"].ToString()
+
+                    };
+                    lsttipoaguja.Add(tipo);
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+            return lsttipoaguja;
+        }
+
+        public List<MaquinaTejeduria> MuestraMaqTejeduria()
+        {
+            Conectar();
+            List<MaquinaTejeduria> lstmaqtejeduria = new List<MaquinaTejeduria>();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("TJ_MUESTRA_MAQUIN_TEJEDURIA_WS", cnn);
+                SqlDataReader read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+                    MaquinaTejeduria ficha = new MaquinaTejeduria()
+                    {
+                        Cod_Maquina_Tejeduria = read["Cod_Maquina_Tejeduria"].ToString(),
+                        Nom_Maquina_Tejeduria = read["Nom_Maquina_Tejeduria"].ToString()
+
+                    };
+                    lstmaqtejeduria.Add(ficha);
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+            return lstmaqtejeduria;
         }
 
         public List<tela_proceso> TelaProceso(string cod_ordtra, string Cod_tela)

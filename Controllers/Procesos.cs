@@ -489,6 +489,80 @@ namespace Ws_prectoex.Controllers
             }
         }
 
+        //[Route("tejeduria/tj_man_solicitud_agujas/{opcion}/{cod_maquina_tejeduria}/{cod_ordtra}/{tip_trabajador}/{cod_trabajador}/{cod_tipo_aguja}/{t1}/{t2}/{t3}/{t4}/{tp1}/{tp2}/{cntd}/{cod_usuario}/{fecregini}/{fecregfin}")]
+        [Route("tejeduria/tj_man_solicitud_agujas")]
+        //[Authorize]
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<List<solicitud_agujas>> tj_man_solicitud_agujas(string opcion, string num_registro, string cod_maquina_tejeduria,string cod_ordtra, string tip_trabajador, string cod_trabajador, string cod_tipo_aguja, string t1, string t2,string t3, string t4, string tp1, string tp2,string cntd,string cod_usuario, string fecregini, string fecregfin)
+        {
+            List<solicitud_agujas> lstSolicitudAguja = new List<solicitud_agujas>();
+            try
+            {
+                lstSolicitudAguja = iprocesos.SolicitudAgujas(opcion, num_registro, cod_maquina_tejeduria, cod_ordtra, tip_trabajador, cod_trabajador, cod_tipo_aguja, t1, t2, t3, t4, tp1, tp2, cntd, cod_usuario, fecregini, fecregfin);
+                return lstSolicitudAguja;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+        }
+
+
+        [Route("tejeduria/tj_muestra_Tejedor")]
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<List<Tejedor>> tj_muestra_Tejedor(string cod_trabajador)
+        {
+
+            List<Tejedor> lstejedor = new List<Tejedor>();
+            try
+            {
+                lstejedor = iprocesos.MuestraTejedor(cod_trabajador);
+                return lstejedor;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+        }
+
+        [Route("tejeduria/tj_muestra_TipoAguja")]
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<List<TipoAguja>> tj_muestra_TipoAguja()
+        {
+
+            List<TipoAguja> lsttipoaguja = new List<TipoAguja>();
+            try
+            {
+                lsttipoaguja = iprocesos.MuestraTipoAguja();
+                return lsttipoaguja;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+        }
+
+        [Route("tejeduria/tj_muestra_MaqTejeduria")]
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<List<MaquinaTejeduria>> tj_muestra_MaqTejeduria()
+        {
+
+            List<MaquinaTejeduria> lstMaqTejeduria = new List<MaquinaTejeduria>();
+            try
+            {
+                lstMaqTejeduria = iprocesos.MuestraMaqTejeduria();
+                return lstMaqTejeduria;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+        }
+
 
         [Route("procesos/TI_MUESTRA_PROCESO/{cod_ordtra}/{cod_tela}")]
         //[Authorize]
