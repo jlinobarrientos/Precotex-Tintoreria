@@ -489,7 +489,7 @@ namespace Ws_prectoex.Controllers
             }
         }
 
-        //[Route("tejeduria/tj_man_solicitud_agujas/{opcion}/{cod_maquina_tejeduria}/{cod_ordtra}/{tip_trabajador}/{cod_trabajador}/{cod_tipo_aguja}/{t1}/{t2}/{t3}/{t4}/{tp1}/{tp2}/{cntd}/{cod_usuario}/{fecregini}/{fecregfin}")]
+        
         [Route("tejeduria/tj_man_solicitud_agujas")]
         //[Authorize]
         [AllowAnonymous]
@@ -562,6 +562,103 @@ namespace Ws_prectoex.Controllers
                 throw new Exception("Error " + e.Message);
             }
         }
+
+                                                        /*Despacho Almacén*/
+        /*********************************************************************************************************************/
+
+        [Route("exportacion/Listar_Cliente")]
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<List<Cliente>> Listar_Cliente(string abr_cliente,string nom_cliente)
+        {
+
+            List<Cliente> lstcliente = new List<Cliente>();
+            try
+            {
+                lstcliente = iprocesos.ListarCliente(abr_cliente, nom_cliente);
+                return lstcliente;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+        }
+
+        [Route("exportacion/Listar_PrePackingList")]
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<List<PrePackingList>> ListarPrePackingList(string cod_cliente)
+        {
+
+            List<PrePackingList> lstPrePackingList= new List<PrePackingList>();
+            try
+            {
+                lstPrePackingList = iprocesos.ListarPrePackingList(cod_cliente);
+                return lstPrePackingList;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+        }
+
+        [Route("exportacion/Listar_PrePackingListDet")]
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<List<PrePackingList>> ListarPrePackingListDet(string cod_cliente, string cod_prepackinglist)
+        {
+
+            List<PrePackingList> lstPrePackingListDet = new List<PrePackingList>();
+            try
+            {
+                lstPrePackingListDet = iprocesos.ListarPrePackingListDet(cod_cliente, cod_prepackinglist);
+                return lstPrePackingListDet;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+        }
+
+        [Route("exportacion/Listar_PrePackingListDetPartida")]
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<List<PrePackingListDet>> ListarPrePackingListDetPartida(string cod_cliente, string cod_prepackinglist, string cod_ordtra)
+        {
+
+            List<PrePackingListDet> lstPrePackingListDetPartida = new List<PrePackingListDet>();
+            try
+            {
+                lstPrePackingListDetPartida = iprocesos.ListarPrePackingListDetPartida(cod_cliente, cod_prepackinglist, cod_ordtra);
+                return lstPrePackingListDetPartida;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+        }
+
+        [Route("exportacion/Registro_PackingList")]
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<List<PackingList>> RegistroPackingList(string cod_prepackinglist, string id_rollokey)
+        {
+
+            List<PackingList> lstPackingList = new List<PackingList>();
+            try
+            {
+                lstPackingList = iprocesos.RegistroPackingList(cod_prepackinglist, id_rollokey);
+                return lstPackingList;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+        }
+
+        /***********************************************************************************************************************/
+
+
 
 
         [Route("procesos/TI_MUESTRA_PROCESO/{cod_ordtra}/{cod_tela}")]
@@ -764,7 +861,7 @@ namespace Ws_prectoex.Controllers
             }
         }
 
-// partida con su estado y color
+        // partida con su estado y color
         [Route("procesos/ParticaColorEstado")]       
         [AllowAnonymous]
         [HttpGet]
@@ -810,16 +907,7 @@ namespace Ws_prectoex.Controllers
             string Foto2 = "";
 
             try
-            {
-                //if (objFile.sMuDurezaTenido != null)
-                //{
-                //    await subirParamReceta(objFile.sMuDurezaTenido, objFile.Nro_Referencia);
-                //}
-                //if (objFile.files2 != null)
-                //{
-                //    await subirImagen(objFile.files2, objFile.partida, codreceta, 2);
-                //}
-
+            {    
                 await subirParamReceta(objFile.Nro_Referencia 
                                        , objFile.nDgHoraCarga
                                        , objFile.nDgCuerdas 

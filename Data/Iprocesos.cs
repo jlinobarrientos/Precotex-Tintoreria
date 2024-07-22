@@ -1011,6 +1011,201 @@ namespace Ws_prectoex.Data
             return lstTelaProcesoCambioRuta;
         }
 
+                                                    /*Despacho Almacén*/
+        /*********************************************************************************************************************/
+        public List<Cliente> ListarCliente(string abr_cliente, string nom_cliente)
+        {
+            Conectar();
+
+            List<Cliente> lstClientes = new List<Cliente>();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("EXP_LISTAR_CLIENTE", cnn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ABR_CLIENTE", abr_cliente);
+                cmd.Parameters.AddWithValue("@NOM_CLIENTE", nom_cliente);                
+                SqlDataReader read = cmd.ExecuteReader();
+
+                while (read.Read())
+                {
+                    Cliente lista = new Cliente()
+                    {
+                        Codigo_Cliente      = read["COD_CLIENTE"].ToString(),
+                        Abreviatura_Cliente = read["ABR_CLIENTE"].ToString(),
+                        Nombre_Cliente      = read["NOM_CLIENTE"].ToString(),
+                    };
+
+                    lstClientes.Add(lista);
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+            return lstClientes;
+        }
+
+        public List<PrePackingList> ListarPrePackingList(string cod_cliente)
+        {
+            Conectar();
+
+            List<PrePackingList> lstPackingList = new List<PrePackingList>();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("EXP_LISTAR_PRE_PACKINGLIST_CLIENTE", cnn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@COD_CLIENTE", cod_cliente);                
+                SqlDataReader read = cmd.ExecuteReader();
+
+                while (read.Read())
+                {
+                    PrePackingList lista = new PrePackingList()
+                    {                        
+                        Codigo_PrePackingList = read["COD_PREPACKING"].ToString(),
+                        Total_Rollos_Lecturados = read["TOT_ROLLOSLECTURADO"].ToString(),
+                    };
+
+                    lstPackingList.Add(lista);
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+            return lstPackingList;
+        }
+
+        public List<PrePackingList> ListarPrePackingListDet(string cod_cliente,string cod_prepackinglist)
+        {
+            Conectar();
+
+            List<PrePackingList> lstPackingList = new List<PrePackingList>();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("EXP_LISTAR_PRE_PACKINGLIST_CLIENTE_DET", cnn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@COD_CLIENTE", cod_cliente);
+                cmd.Parameters.AddWithValue("@COD_PACKINGLIST", cod_prepackinglist);
+                //cmd.Parameters.AddWithValue("@COD_ORDTRA", cod_ordtra);
+                SqlDataReader read = cmd.ExecuteReader();
+
+                while (read.Read())
+                {
+                    PrePackingList lista = new PrePackingList()
+                    {
+                        Codigo_Ordtra = read["COD_ORDTRA"].ToString(),
+                        Codigo_Tela = read["COD_TELA"].ToString(),
+                        Codigo_Color = read["COD_COLOR"].ToString(),
+                        Codigo_Talla = read["COD_TALLA"].ToString(),
+                        Codigo_Combo = read["COD_COMBO"].ToString(),
+                        Total_Rollos = read["TOTAL"].ToString(),
+                        Total_Rollos_Lecturados = read["LEIDO"].ToString(),
+                        Total_Rollos_Faltantes = read["PENDIENTE"].ToString()
+                    };
+
+                    lstPackingList.Add(lista);
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+            return lstPackingList;
+        }
+
+        public List<PrePackingListDet> ListarPrePackingListDetPartida(string cod_cliente, string cod_prepackinglist,string cod_ordtra)
+        {
+            Conectar();
+
+            List<PrePackingListDet> lstPackingListDet = new List<PrePackingListDet>();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("EXP_LISTAR_PRE_PACKINGLIST_CLIENTE_DET_PARTIDA", cnn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@COD_CLIENTE", cod_cliente);
+                cmd.Parameters.AddWithValue("@COD_PACKINGLIST", cod_prepackinglist);
+                cmd.Parameters.AddWithValue("@COD_ORDTRA", cod_ordtra);
+                SqlDataReader read = cmd.ExecuteReader();
+
+                while (read.Read())
+                {
+                    PrePackingListDet lista = new PrePackingListDet()
+                    {
+                        Id_Rollo_Key = read["ID_ROLLOKEY"].ToString(),
+                        Peso_Neto = read["PESO_NETO"].ToString(),
+                        Peso_Bruto = read["PESO_BRUTO"].ToString(),
+                        Num_Rollo = read["NUM_ROLLO"].ToString()                       
+                    };
+
+                    lstPackingListDet.Add(lista);
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+            return lstPackingListDet;
+        }
+
+        public List<PackingList> RegistroPackingList(string cod_prepackinglist,string id_rollokey )
+        {
+            Conectar();
+
+            List<PackingList> lstPackingList = new List<PackingList>();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("EXP_MANT_DETALLE_PACKINGLIST", cnn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@COD_PREPACKINGLIST", cod_prepackinglist);
+                cmd.Parameters.AddWithValue("@IDROLLOKEY", id_rollokey);
+                SqlDataReader read = cmd.ExecuteReader();
+
+                while (read.Read())
+                {
+                    PackingList lista = new PackingList()
+                    {
+                        Codigo_PackingList = read["PACKINGLIST"].ToString(),
+                        Cod_Ordtra = read["PARTIDA"].ToString(),
+                        Total_Rollos_Lecturados = read["LEIDOS"].ToString(),
+                        Total_Rollos_Faltantes = read["FALTANTES"].ToString(),
+                        Total_Rollos = read["TOTAL"].ToString(),
+                        Mensaje = read["MSG"].ToString(),
+                        RutaImagen = read["RUTAIMAGEN"].ToString(),
+                        RutaSonido = read["RUTASONIDO"].ToString()
+                    };
+
+                    lstPackingList.Add(lista);
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+            return lstPackingList;
+        }
+
+        /***********************************************************************************************************************/
+
         /** Grabar los Rollos **/
         public RptaPx salvarDatosRollos(
             List<telas_partida_proceso> lstRollospartida, //Lista de rollos 

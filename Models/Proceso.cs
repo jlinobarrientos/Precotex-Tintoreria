@@ -237,6 +237,57 @@ namespace Ws_prectoex.Data
         public string Flg_Reproceso { get; set; }
     }
 
+
+                                                    /*Despacho Almacén*/
+    /*********************************************************************************************************************/
+    public class Cliente
+    {
+        public string Codigo_Cliente { get; set; }
+        public string Abreviatura_Cliente { get; set; }
+        public string Nombre_Cliente { get; set; }
+    }
+
+    public class PrePackingList
+    {        
+        public string Codigo_PrePackingList { get; set; }
+        public string Codigo_Cliente { get; set; }
+        public string Codigo_Ordtra { get; set; }
+        public string Codigo_Tela { get; set; }
+        public string Codigo_Color { get; set; }
+        public string Codigo_Talla { get; set; }
+        public string Codigo_Combo { get; set; }
+        public string Total_Rollos { get; set; }
+        public string Total_Rollos_Lecturados { get; set; }
+        public string Total_Rollos_Faltantes { get; set; }
+    }
+
+    public class PrePackingListDet
+    {
+        public string Codigo_PrePackingList { get; set; }
+        public string Codigo_Cliente { get; set; }
+        public string Codigo_Ordtra { get; set; }
+        public string Id_Rollo_Key { get; set; }
+        public string Peso_Neto { get; set; }
+        public string Peso_Bruto { get; set; }
+        public string Num_Rollo { get; set; }
+    }
+
+    public class PackingList
+    {
+        public string Codigo_PackingList { get; set; }
+        public string Codigo_PrePackingList { get; set; }
+        public string Id_Rollo_Key { get; set; }
+        public string Cod_Ordtra { get; set; }        
+        public string Total_Rollos_Lecturados { get; set; }
+        public string Total_Rollos_Faltantes { get; set; }
+        public string Total_Rollos { get; set; }
+        public string Mensaje { get; set; }
+        public string RutaImagen { get; set; }
+        public string RutaSonido { get; set; }
+    }
+
+    /*********************************************************************************************************************/
+
     public class partida_resumen2
     {
         public string partida { get; set; }

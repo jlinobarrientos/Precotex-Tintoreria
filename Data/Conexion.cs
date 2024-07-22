@@ -1,8 +1,10 @@
-﻿using Microsoft.Data.SqlClient;
+﻿using Microsoft.AspNetCore.Hosting.Server;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace Ws_prectoex.Data
 {
@@ -21,6 +23,12 @@ namespace Ws_prectoex.Data
 
         private string ds="192.168.1.9";
         private string db = "PRECOTEX_TEXTIL";
+
+        //private string ds2 = "192.168.1.37";
+        //private string db2 = "PRECOTEX_TEXTIL_160624";
+
+        private string ds2 = "192.168.1.37";
+        private string db2 = "HUA";
 
 
         protected void Conectar4()
@@ -66,7 +74,10 @@ namespace Ws_prectoex.Data
             {
                 //cnn = new SqlConnection("Data Source=192.168.1.9;Initial Catalog=PRECOTEX_TEXTIL; User ID=userWs;Password=Prec0tex2022");
 
-                cnn2 = new SqlConnection("Data Source=" + ds + ";Initial Catalog=" + db + "; User ID=userWs;Password=Prec0tex2022");
+                //cnn2 = new SqlConnection("Data Source=" + ds2 + ";Initial Catalog=" + db2 + "; User ID=userWs;Password=Pr3c0t3x");
+                cnn2 = new SqlConnection("Data Source=" + ds2 + ";Initial Catalog=" + db2 + ";Integrated Security=SSPI;");
+                
+                                
 
                 cnn2.Open();
             }
