@@ -266,6 +266,7 @@ namespace Ws_prectoex.Data
         public string Codigo_PrePackingList { get; set; }
         public string Codigo_Cliente { get; set; }
         public string Codigo_Ordtra { get; set; }
+        public string Cod_Tela { get; set; }
         public string Id_Rollo_Key { get; set; }
         public string Peso_Neto { get; set; }
         public string Peso_Bruto { get; set; }

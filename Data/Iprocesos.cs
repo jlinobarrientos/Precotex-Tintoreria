@@ -1083,7 +1083,7 @@ namespace Ws_prectoex.Data
             return lstPackingList;
         }
 
-        public List<PrePackingList> ListarPrePackingListDet(string cod_cliente,string cod_prepackinglist)
+        public List<PrePackingList> ListarPrePackingListDet(string opcion,string cod_cliente,string cod_prepackinglist)
         {
             Conectar();
 
@@ -1092,6 +1092,7 @@ namespace Ws_prectoex.Data
             {
                 SqlCommand cmd = new SqlCommand("EXP_LISTAR_PRE_PACKINGLIST_CLIENTE_DET", cnn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@OPCION", opcion);
                 cmd.Parameters.AddWithValue("@COD_CLIENTE", cod_cliente);
                 cmd.Parameters.AddWithValue("@COD_PACKINGLIST", cod_prepackinglist);
                 //cmd.Parameters.AddWithValue("@COD_ORDTRA", cod_ordtra);
@@ -1104,8 +1105,8 @@ namespace Ws_prectoex.Data
                         Codigo_Ordtra = read["COD_ORDTRA"].ToString(),
                         Codigo_Tela = read["COD_TELA"].ToString(),
                         Codigo_Color = read["COD_COLOR"].ToString(),
-                        Codigo_Talla = read["COD_TALLA"].ToString(),
-                        Codigo_Combo = read["COD_COMBO"].ToString(),
+                        //Codigo_Talla = read["COD_TALLA"].ToString(),
+                        //Codigo_Combo = read["COD_COMBO"].ToString(),
                         Total_Rollos = read["TOTAL"].ToString(),
                         Total_Rollos_Lecturados = read["LEIDO"].ToString(),
                         Total_Rollos_Faltantes = read["PENDIENTE"].ToString()
@@ -1125,7 +1126,7 @@ namespace Ws_prectoex.Data
             return lstPackingList;
         }
 
-        public List<PrePackingListDet> ListarPrePackingListDetPartida(string cod_cliente, string cod_prepackinglist,string cod_ordtra)
+        public List<PrePackingListDet> ListarPrePackingListDetPartida(string cod_cliente, string cod_prepackinglist,string cod_ordtra,string cod_tela)
         {
             Conectar();
 
@@ -1137,6 +1138,7 @@ namespace Ws_prectoex.Data
                 cmd.Parameters.AddWithValue("@COD_CLIENTE", cod_cliente);
                 cmd.Parameters.AddWithValue("@COD_PACKINGLIST", cod_prepackinglist);
                 cmd.Parameters.AddWithValue("@COD_ORDTRA", cod_ordtra);
+                cmd.Parameters.AddWithValue("@COD_TELA", cod_tela);
                 SqlDataReader read = cmd.ExecuteReader();
 
                 while (read.Read())

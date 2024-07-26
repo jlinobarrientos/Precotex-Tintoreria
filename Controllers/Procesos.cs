@@ -605,13 +605,13 @@ namespace Ws_prectoex.Controllers
         [Route("exportacion/Listar_PrePackingListDet")]
         [AllowAnonymous]
         [HttpGet]
-        public async Task<List<PrePackingList>> ListarPrePackingListDet(string cod_cliente, string cod_prepackinglist)
+        public async Task<List<PrePackingList>> ListarPrePackingListDet(string opcion,string cod_cliente, string cod_prepackinglist)
         {
 
             List<PrePackingList> lstPrePackingListDet = new List<PrePackingList>();
             try
             {
-                lstPrePackingListDet = iprocesos.ListarPrePackingListDet(cod_cliente, cod_prepackinglist);
+                lstPrePackingListDet = iprocesos.ListarPrePackingListDet(opcion,cod_cliente, cod_prepackinglist);
                 return lstPrePackingListDet;
             }
             catch (Exception e)
@@ -623,13 +623,13 @@ namespace Ws_prectoex.Controllers
         [Route("exportacion/Listar_PrePackingListDetPartida")]
         [AllowAnonymous]
         [HttpGet]
-        public async Task<List<PrePackingListDet>> ListarPrePackingListDetPartida(string cod_cliente, string cod_prepackinglist, string cod_ordtra)
+        public async Task<List<PrePackingListDet>> ListarPrePackingListDetPartida(string cod_cliente, string cod_prepackinglist, string cod_ordtra,string cod_tela)
         {
 
             List<PrePackingListDet> lstPrePackingListDetPartida = new List<PrePackingListDet>();
             try
             {
-                lstPrePackingListDetPartida = iprocesos.ListarPrePackingListDetPartida(cod_cliente, cod_prepackinglist, cod_ordtra);
+                lstPrePackingListDetPartida = iprocesos.ListarPrePackingListDetPartida(cod_cliente, cod_prepackinglist, cod_ordtra, cod_tela);
                 return lstPrePackingListDetPartida;
             }
             catch (Exception e)
