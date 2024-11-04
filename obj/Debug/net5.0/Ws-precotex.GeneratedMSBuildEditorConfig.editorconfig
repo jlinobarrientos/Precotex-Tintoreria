@@ -8,4 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Ws_prectoex
-build_property.ProjectDir = D:\HARONI\Proyecto_Tintoreria\Ws-precotex\
+build_property.ProjectDir = \\192.168.5.24\Proyecto_Tintoreria\Ws-precotex\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ws-precotex")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+904979f3ed1069e897370c20cfa3ed7e9b6121c5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ws-precotex")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ws-precotex")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

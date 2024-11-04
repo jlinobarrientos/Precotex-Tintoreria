@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Ws_precotex.Models;
+using Ws_prectoex.Models;
 
 namespace Ws_prectoex.Data
 {
@@ -196,260 +197,7 @@ namespace Ws_prectoex.Data
                 Desconectar();
             }
             return lstot;
-        }
-
-        public List<CC_Confec_Motivos> ConsultarDefecto(string Opcion, string Defecto)
-        {
-            Conectar();
-            List<CC_Confec_Motivos> lstdefecto = new List<CC_Confec_Motivos>();
-            try
-            {
-                SqlCommand cmd = new SqlCommand("TJ_MUESTRA_DEFECTOS4PUNTOS_WS", cnn);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Opcion", Opcion);
-                cmd.Parameters.AddWithValue("@DEFECTO", Defecto);
-                SqlDataReader read = cmd.ExecuteReader();
-                while (read.Read())
-                {
-
-                    CC_Confec_Motivos ficha = new CC_Confec_Motivos()
-                    {
-                        Cod_Motivo = read["Cod_Motivo"].ToString(),
-                        Descripcion = read["Descripcion"].ToString(),
-                    };
-                    lstdefecto.Add(ficha);
-                }
-            }
-            catch (Exception e)
-            {
-
-                throw new Exception("Error " + e.Message);
-            }
-            finally
-            {
-                Desconectar();
-            }
-            return lstdefecto;
-        }
-
-        public List<Detalle_Defectos_4_Puntos> ConsultarDetalleDefecto(int Ot, string CodRollo)
-        {
-            Conectar();
-            List<Detalle_Defectos_4_Puntos> lstdetalledefecto = new List<Detalle_Defectos_4_Puntos>();
-
-            try
-            {
-                SqlCommand cmd = new SqlCommand("TJ_MUESTRA_DETALLE_DEFECTOS_4PUNTOS_WS", cnn);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Ot", Ot);
-                cmd.Parameters.AddWithValue("@CodRollo", CodRollo);
-                SqlDataReader read = cmd.ExecuteReader();
-                while (read.Read())
-                {
-
-                    Detalle_Defectos_4_Puntos ficha = new Detalle_Defectos_4_Puntos()
-                    {
-                        MTRS = read["MTRS"].ToString(),
-                        Cod_Motivo = read["Cod_Motivo"].ToString(),
-                        Descripcion_Def = read["Descripcion"].ToString(),
-                        size = read["size"].ToString(),
-                        Ptos = read["Ptos"].ToString(),
-
-                        Ot = read["Cod_Ordtra"].ToString(),
-                        Rollo = read["Codigo_Rollo"].ToString(),
-                        Prefijo_Maquina = read["Prefijo_Maquina"].ToString(),
-                        Num_secuencia = read["Num_secuencia"].ToString()
-                    };
-                    lstdetalledefecto.Add(ficha);
-                }
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Error " + e.Message);
-            }
-            finally
-            {
-                Desconectar();
-            }
-            return lstdetalledefecto;
-            ;
-        }
-
-        public RptaPx salvarDetalleDefectos4Puntos(
-          string Accion,
-          string Cod_Ordtra,
-          string Codigo_Rollo,
-          string Prefijo_Maquina,
-          string Inspector,
-          string Digitador,
-          string Restriccion,
-          string Turno,
-          string Cod_Motivo,
-          decimal MTRS,
-          int Ptos,
-          string seg_usuario,
-          decimal size,
-          int Calidad,
-          string Tip_Trabajador,
-          string Cod_Trabajador,
-          string Observaciones,
-          decimal MetrosCuad,
-          string Secuencia_n
-          )
-        {
-            var bRespuesta = new RptaPx();
-
-            try
-            {
-                Conectar();
-                SqlCommand cmd2 = new SqlCommand("tj_detalle_calidad_rollo_4_puntos", cnn);
-                cmd2.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd2.Parameters.AddWithValue("@Accion", Accion);
-                cmd2.Parameters.AddWithValue("@Cod_Ordtra", Cod_Ordtra);
-                cmd2.Parameters.AddWithValue("@Codigo_Rollo", Codigo_Rollo);
-                cmd2.Parameters.AddWithValue("@Prefijo_Maquina", Prefijo_Maquina);
-                cmd2.Parameters.AddWithValue("@Cod_Auditor", Inspector);
-                cmd2.Parameters.AddWithValue("@Cod_Digitador", Digitador);
-                cmd2.Parameters.AddWithValue("@Cod_Restriccion", Restriccion);
-                cmd2.Parameters.AddWithValue("@Cod_Turno", Turno);
-                cmd2.Parameters.AddWithValue("@Cod_Motivo", Cod_Motivo);
-                cmd2.Parameters.AddWithValue("@MTRS", MTRS);
-                cmd2.Parameters.AddWithValue("@Ptos", Ptos);
-                cmd2.Parameters.AddWithValue("@Usuario", seg_usuario);
-                cmd2.Parameters.AddWithValue("@size", size);
-                cmd2.Parameters.AddWithValue("@Calidad", Calidad);
-                cmd2.Parameters.AddWithValue("@Tip_Trabajador", Tip_Trabajador);
-                cmd2.Parameters.AddWithValue("@Cod_Trabajador", Cod_Trabajador);
-                cmd2.Parameters.AddWithValue("@Observaciones", Observaciones);
-                cmd2.Parameters.AddWithValue("@MetrosCuad", MetrosCuad);
-                cmd2.Parameters.AddWithValue("@Secuencia_n", Secuencia_n);
-                cmd2.ExecuteNonQuery();
-                bRespuesta.Mensaje = "Ok";
-                bRespuesta.Status = "1";
-
-            }
-            catch (Exception e)
-            {
-                bRespuesta.Mensaje = e.Message;
-                bRespuesta.Status = "0";
-            }
-            finally
-            {
-                Desconectar();
-            }
-
-            return bRespuesta;
-        }
-
-        public RptaPx EliminarDetalleDefectos4Puntos(
-           string Accion,
-          string Cod_Ordtra,
-          string Codigo_Rollo,
-          string Prefijo_Maquina,
-          string Auditor,
-          string Digitador,
-          string Restriccion,
-          string Turno,
-          string Cod_Motivo,
-          decimal MTRS,
-          int Ptos,
-          string seg_usuario,
-          decimal size,
-          int Calidad,
-          string Tip_Trabajador,
-          string Cod_Trabajador,
-          string Observaciones,
-          decimal MetrosCuad,
-          string Secuencia_n
-
-          )
-        {
-            var bRespuesta = new RptaPx();
-
-            try
-            {
-                Conectar();
-                SqlCommand cmd2 = new SqlCommand("tj_detalle_calidad_rollo_4_puntos", cnn);
-                cmd2.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd2.Parameters.AddWithValue("@Accion", Accion);
-                cmd2.Parameters.AddWithValue("@Cod_Ordtra", Cod_Ordtra);
-                cmd2.Parameters.AddWithValue("@Codigo_Rollo", Codigo_Rollo);
-                cmd2.Parameters.AddWithValue("@Cod_Auditor", "");
-                cmd2.Parameters.AddWithValue("@Cod_Digitador", "");
-                cmd2.Parameters.AddWithValue("@Cod_Restriccion", "");
-                cmd2.Parameters.AddWithValue("@Cod_Turno", "");
-                cmd2.Parameters.AddWithValue("@Prefijo_Maquina", "");
-                cmd2.Parameters.AddWithValue("@Cod_Motivo", "");
-                cmd2.Parameters.AddWithValue("@MTRS", 0);
-                cmd2.Parameters.AddWithValue("@Ptos", 0);
-                cmd2.Parameters.AddWithValue("@Usuario", seg_usuario);
-                cmd2.Parameters.AddWithValue("@size", 0);
-                cmd2.Parameters.AddWithValue("@Calidad", Calidad);
-                cmd2.Parameters.AddWithValue("@Tip_Trabajador", Tip_Trabajador);
-                cmd2.Parameters.AddWithValue("@Cod_Trabajador", Cod_Trabajador);
-                cmd2.Parameters.AddWithValue("@Observaciones", Observaciones);
-                cmd2.Parameters.AddWithValue("@MetrosCuad", MetrosCuad);
-                cmd2.Parameters.AddWithValue("@Secuencia_n", Secuencia_n);
-                cmd2.ExecuteNonQuery();
-                bRespuesta.Mensaje = "Ok";
-                bRespuesta.Status = "1";
-            }
-            catch (Exception e)
-            {
-                bRespuesta.Mensaje = e.Message;
-                bRespuesta.Status = "0";
-            }
-            finally
-            {
-                Desconectar();
-            }
-            return bRespuesta;
-        }
-
-        public List<SumaPtos> SumaPtos(string Cod_Ordtra, string Codigo_Rollo, string Prefijo_Maquina, decimal MetrosCuad)
-        {
-            Conectar();
-            List<SumaPtos> lstsuma = new List<SumaPtos>();
-            var bRespuesta = new SumaPtos();
-            try
-            {
-                SqlCommand cmd = new SqlCommand("TJ_MUESTRA_DETALLE_DEFECTOS_4PUNTOS_SUMA_WS", cnn);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Ot", Cod_Ordtra);
-                cmd.Parameters.AddWithValue("@CodRollo", Codigo_Rollo);
-                cmd.Parameters.AddWithValue("@Prefijo_Maquina", Prefijo_Maquina);
-                cmd.Parameters.AddWithValue("@MetrosCuad", MetrosCuad);
-                SqlDataReader read = cmd.ExecuteReader();
-
-
-                while (read.Read())
-                {
-                    SumaPtos ficha = new SumaPtos()
-                    {
-                        SumaPt = read["SumaPtos"].ToString(),
-                        Mensaje = "Ok",
-                        Status = "1"
-                    };
-                    lstsuma.Add(ficha);
-                }
-            }
-            catch (Exception e)
-            {
-                SumaPtos ficha2 = new SumaPtos()
-                {
-                    SumaPt = "0.00",
-                    Mensaje = e.Message,
-                    Status = "0"
-                };
-                lstsuma.Add(ficha2);
-            }
-
-            finally
-            {
-                Desconectar();
-            }
-            return lstsuma;
-        }
+        }        
 
         /* ======= LABORATORIO  - LECTURA DE RECETAS  ============   */
         public List<Lb_Programa_Receta_Agrupado> showLecturaReceta(string Accion, string Tip_Trabajador, string Cod_Trabajador, string Cod_Cliente_Tex, string Tip_Partida,
@@ -767,6 +515,8 @@ namespace Ws_prectoex.Data
             return lstPartResumen;
         }
 
+                                                        /*Tejeduría*/
+        /*********************************************************************************************************************/
         public List<solicitud_agujas> SolicitudAgujas(string opcion, string num_registro ,string cod_maquina_tejeduria, string cod_ordtra, string tip_trabajador, string cod_trabajador, string cod_tipo_aguja, string t1
                                                         , string t2, string t3, string t4, string tp1, string tp2, string cntd, string cod_usuario, string fecregini, string fecregfin)
         {
@@ -929,6 +679,450 @@ namespace Ws_prectoex.Data
             }
             return lstmaqtejeduria;
         }
+
+        public List<Produccion_Rectilineo> produccion_Rectilineos(string Fec_Produccion_Ini, string Fec_Produccion_Fin, string OT, string Cod_Tela, string Cod_Usuario)
+        {
+            Conectar();
+            List<Produccion_Rectilineo> lstProdRectilineo = new List<Produccion_Rectilineo>();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("TJ_MUESTRA_PRODUCCION_RECTILINEO_WS", cnn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@FEC_INICIO", Fec_Produccion_Ini);
+                cmd.Parameters.AddWithValue("@FEC_FIN", Fec_Produccion_Fin);
+                cmd.Parameters.AddWithValue("@COD_ORDTRA", OT);
+                cmd.Parameters.AddWithValue("@COD_TELA", Cod_Tela);
+                cmd.Parameters.AddWithValue("@COD_USUARIO", Cod_Usuario);
+                SqlDataReader read = cmd.ExecuteReader();
+
+                while (read.Read())
+                {
+                    Produccion_Rectilineo lista = new Produccion_Rectilineo()
+                    {
+                        Fec_Lectura = read["FEC_LECTURA"].ToString(),
+                        Cod_Ordtra = read["COD_ORDTRA"].ToString(),
+                        Num_Secuencia = read["NUM_SECUENCIA"].ToString(),
+                        Sec_Maquina = read["SEC_MAQUINA"].ToString(),
+                        Cod_Maquina = read["COD_MAQUINA_TEJEDURIA"].ToString(),
+                        Cod_Tela = read["COD_TELA"].ToString(),
+                        Des_Tela = read["DES_TELA"].ToString(),
+                        Comb = read["COMB"].ToString(),
+                        Cod_Talla = read["COD_TALLA"].ToString(),
+                        Kg_Producido = read["KGS_PRODUCIDO"].ToString(),
+                        Und_Producido = read["UNI_PRODUCIDO"].ToString(),
+                        Und_Fallado = read["UNI_PRODUCIDO_FALLADO"].ToString(),
+                        Tejedor = read["TEJEDOR"].ToString(),
+                        Cod_Usuario = read["COD_USUARIO"].ToString(),
+                        OC = read["OC"].ToString(),
+                        Precio_Unitario = read["PRE_UNITARIO"].ToString(),
+                        Total = read["TOTAL"].ToString(),
+                        Cliente = read["NOM_CLIENTE"].ToString(),
+                        Id = read["ID"].ToString(),
+                        Tot_Und = read["TOT_UND"].ToString(),
+                        Tot_Falla = read["TOT_FALLA"].ToString()
+
+                    };
+
+                    lstProdRectilineo.Add(lista);
+                }
+            }
+
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+            return lstProdRectilineo;
+
+        }
+
+        public List<Produccion_Rectilineo> produccion_Rectilineos_Det(string Cod_Ordtra, string Cod_Maquina, string Cod_Usuario)
+        {
+            Conectar();
+            List<Produccion_Rectilineo> lstProdRectilineoDet = new List<Produccion_Rectilineo>();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("TJ_MUESTRA_DETALLE_OT_RECTILINEO_WS", cnn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;                
+                cmd.Parameters.AddWithValue("@COD_ORDTRA", Cod_Ordtra);
+                cmd.Parameters.AddWithValue("@COD_MAQUINA", Cod_Maquina);
+                cmd.Parameters.AddWithValue("@COD_USUARIO", Cod_Usuario);
+                SqlDataReader read = cmd.ExecuteReader();
+
+                while (read.Read())
+                {
+                    Produccion_Rectilineo lista = new Produccion_Rectilineo()
+                    {                        
+                        Cod_Ordtra = read["COD_ORDTRA"].ToString(),
+                        Num_Secuencia = read["NUM_SECUENCIA"].ToString(),
+                        Sec_Maquina = read["SEC_MAQUINA"].ToString(),
+                        Cod_Maquina = read["COD_MAQUINA_TEJEDURIA"].ToString(),
+                        Cod_Tela = read["COD_TELA"].ToString(),
+                        Des_Tela = read["DES_TELA"].ToString(),
+                        Comb = read["COMB"].ToString(),
+                        Cod_Talla = read["COD_TALLA"].ToString(),
+                        Und_Requerido = read["UND_REQUERIDO"].ToString(),
+                        Und_Producido = read["UND_PRODUCIDO"].ToString(),
+                        Und_Pendiente = read["UND_PENDIENTE"].ToString(),
+                        Und_Ingresar = read["UND_INGRESAR"].ToString(),
+                        Und_Fallado = read["UND_FALLADO"].ToString()
+                        
+                    };
+
+                    lstProdRectilineoDet.Add(lista);
+                }
+            }
+
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+            return lstProdRectilineoDet;
+
+        }
+
+        public List<Respuesta> mant_Produccion_Rectilineo(string accion, string cod_ordtra, string num_secuencia, string sec_maquina, string und_producido,
+            string und_fallado, string tip_trabajador, string cod_trabajador, string id, string cod_usuario)
+        {                   
+
+            Conectar();
+            List<Respuesta> lstRespuesta= new List<Respuesta>();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("UP_TJ_ORDTRA_TEJEDURIA_RECTILINEO_WS", cnn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Accion", accion);
+                cmd.Parameters.AddWithValue("@Cod_OrdTra", cod_ordtra);
+                cmd.Parameters.AddWithValue("@Num_Secuencia", num_secuencia);
+                cmd.Parameters.AddWithValue("@Sec_Maquina", sec_maquina);
+                cmd.Parameters.AddWithValue("@Uni_Producido", und_producido);
+                cmd.Parameters.AddWithValue("@Uni_Producido_Fallado", und_fallado);
+                cmd.Parameters.AddWithValue("@Tip_Trabajador_Tejedor", tip_trabajador);
+                cmd.Parameters.AddWithValue("@Cod_Trabajador_Tejedor", cod_trabajador);
+                cmd.Parameters.AddWithValue("@Id", id);
+                cmd.Parameters.AddWithValue("@Cod_Usuario", cod_usuario);
+
+                SqlDataReader read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+                    Respuesta solicitud = new Respuesta()
+                    {
+                        Resultado = read["Resultado"].ToString(),
+                        
+                    };
+
+                    lstRespuesta.Add(solicitud);
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+
+            return lstRespuesta;
+        }
+
+
+        public List<Tela> MuestraDesTela(string cod_tela)
+        {
+            Conectar();
+            List<Tela> list = new List<Tela>();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("MUESTRA_TELA_WS", cnn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@COD_TELA", cod_tela);
+                SqlDataReader read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+                    Tela tela = new Tela()
+                    {
+                        Cod_Tela = read["COD_TELA"].ToString(),
+                        Des_Tela = read["DES_TELA"].ToString(),
+                        Respuesta = read["RESPUESTA"].ToString()
+
+                    };
+                    list.Add(tela);
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+            return list;
+        }
+
+        public List<CC_Confec_Motivos> ConsultarDefecto(string Opcion, string Defecto)
+        {
+            Conectar();
+            List<CC_Confec_Motivos> lstdefecto = new List<CC_Confec_Motivos>();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("TJ_MUESTRA_DEFECTOS4PUNTOS_WS", cnn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Opcion", Opcion);
+                cmd.Parameters.AddWithValue("@DEFECTO", Defecto);
+                SqlDataReader read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+
+                    CC_Confec_Motivos ficha = new CC_Confec_Motivos()
+                    {
+                        Cod_Motivo = read["Cod_Motivo"].ToString(),
+                        Descripcion = read["Descripcion"].ToString(),
+                    };
+                    lstdefecto.Add(ficha);
+                }
+            }
+            catch (Exception e)
+            {
+
+                throw new Exception("Error " + e.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+            return lstdefecto;
+        }
+
+        public List<Detalle_Defectos_4_Puntos> ConsultarDetalleDefecto(int Ot, string CodRollo)
+        {
+            Conectar();
+            List<Detalle_Defectos_4_Puntos> lstdetalledefecto = new List<Detalle_Defectos_4_Puntos>();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("TJ_MUESTRA_DETALLE_DEFECTOS_4PUNTOS_WS", cnn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Ot", Ot);
+                cmd.Parameters.AddWithValue("@CodRollo", CodRollo);
+                SqlDataReader read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+
+                    Detalle_Defectos_4_Puntos ficha = new Detalle_Defectos_4_Puntos()
+                    {
+                        MTRS = read["MTRS"].ToString(),
+                        Cod_Motivo = read["Cod_Motivo"].ToString(),
+                        Descripcion_Def = read["Descripcion"].ToString(),
+                        size = read["size"].ToString(),
+                        Ptos = read["Ptos"].ToString(),
+
+                        Ot = read["Cod_Ordtra"].ToString(),
+                        Rollo = read["Codigo_Rollo"].ToString(),
+                        Prefijo_Maquina = read["Prefijo_Maquina"].ToString(),
+                        Num_secuencia = read["Num_secuencia"].ToString()
+                    };
+                    lstdetalledefecto.Add(ficha);
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+            return lstdetalledefecto;
+            ;
+        }
+
+        public RptaPx salvarDetalleDefectos4Puntos(
+          string Accion,
+          string Cod_Ordtra,
+          string Codigo_Rollo,
+          string Prefijo_Maquina,
+          string Inspector,
+          string Digitador,
+          string Restriccion,
+          string Turno,
+          string Cod_Motivo,
+          decimal MTRS,
+          int Ptos,
+          string seg_usuario,
+          decimal size,
+          int Calidad,
+          string Tip_Trabajador,
+          string Cod_Trabajador,
+          string Observaciones,
+          decimal MetrosCuad,
+          string Secuencia_n
+          )
+        {
+            var bRespuesta = new RptaPx();
+
+            try
+            {
+                Conectar();
+                SqlCommand cmd2 = new SqlCommand("tj_detalle_calidad_rollo_4_puntos", cnn);
+                cmd2.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd2.Parameters.AddWithValue("@Accion", Accion);
+                cmd2.Parameters.AddWithValue("@Cod_Ordtra", Cod_Ordtra);
+                cmd2.Parameters.AddWithValue("@Codigo_Rollo", Codigo_Rollo);
+                cmd2.Parameters.AddWithValue("@Prefijo_Maquina", Prefijo_Maquina);
+                cmd2.Parameters.AddWithValue("@Cod_Auditor", Inspector);
+                cmd2.Parameters.AddWithValue("@Cod_Digitador", Digitador);
+                cmd2.Parameters.AddWithValue("@Cod_Restriccion", Restriccion);
+                cmd2.Parameters.AddWithValue("@Cod_Turno", Turno);
+                cmd2.Parameters.AddWithValue("@Cod_Motivo", Cod_Motivo);
+                cmd2.Parameters.AddWithValue("@MTRS", MTRS);
+                cmd2.Parameters.AddWithValue("@Ptos", Ptos);
+                cmd2.Parameters.AddWithValue("@Usuario", seg_usuario);
+                cmd2.Parameters.AddWithValue("@size", size);
+                cmd2.Parameters.AddWithValue("@Calidad", Calidad);
+                cmd2.Parameters.AddWithValue("@Tip_Trabajador", Tip_Trabajador);
+                cmd2.Parameters.AddWithValue("@Cod_Trabajador", Cod_Trabajador);
+                cmd2.Parameters.AddWithValue("@Observaciones", Observaciones);
+                cmd2.Parameters.AddWithValue("@MetrosCuad", MetrosCuad);
+                cmd2.Parameters.AddWithValue("@Secuencia_n", Secuencia_n);
+                cmd2.ExecuteNonQuery();
+                bRespuesta.Mensaje = "Ok";
+                bRespuesta.Status = "1";
+
+            }
+            catch (Exception e)
+            {
+                bRespuesta.Mensaje = e.Message;
+                bRespuesta.Status = "0";
+            }
+            finally
+            {
+                Desconectar();
+            }
+
+            return bRespuesta;
+        }
+
+        public RptaPx EliminarDetalleDefectos4Puntos(
+           string Accion,
+          string Cod_Ordtra,
+          string Codigo_Rollo,
+          string Prefijo_Maquina,
+          string Auditor,
+          string Digitador,
+          string Restriccion,
+          string Turno,
+          string Cod_Motivo,
+          decimal MTRS,
+          int Ptos,
+          string seg_usuario,
+          decimal size,
+          int Calidad,
+          string Tip_Trabajador,
+          string Cod_Trabajador,
+          string Observaciones,
+          decimal MetrosCuad,
+          string Secuencia_n
+
+          )
+        {
+            var bRespuesta = new RptaPx();
+
+            try
+            {
+                Conectar();
+                SqlCommand cmd2 = new SqlCommand("tj_detalle_calidad_rollo_4_puntos", cnn);
+                cmd2.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd2.Parameters.AddWithValue("@Accion", Accion);
+                cmd2.Parameters.AddWithValue("@Cod_Ordtra", Cod_Ordtra);
+                cmd2.Parameters.AddWithValue("@Codigo_Rollo", Codigo_Rollo);
+                cmd2.Parameters.AddWithValue("@Cod_Auditor", "");
+                cmd2.Parameters.AddWithValue("@Cod_Digitador", "");
+                cmd2.Parameters.AddWithValue("@Cod_Restriccion", "");
+                cmd2.Parameters.AddWithValue("@Cod_Turno", "");
+                cmd2.Parameters.AddWithValue("@Prefijo_Maquina", "");
+                cmd2.Parameters.AddWithValue("@Cod_Motivo", "");
+                cmd2.Parameters.AddWithValue("@MTRS", 0);
+                cmd2.Parameters.AddWithValue("@Ptos", 0);
+                cmd2.Parameters.AddWithValue("@Usuario", seg_usuario);
+                cmd2.Parameters.AddWithValue("@size", 0);
+                cmd2.Parameters.AddWithValue("@Calidad", Calidad);
+                cmd2.Parameters.AddWithValue("@Tip_Trabajador", Tip_Trabajador);
+                cmd2.Parameters.AddWithValue("@Cod_Trabajador", Cod_Trabajador);
+                cmd2.Parameters.AddWithValue("@Observaciones", Observaciones);
+                cmd2.Parameters.AddWithValue("@MetrosCuad", MetrosCuad);
+                cmd2.Parameters.AddWithValue("@Secuencia_n", Secuencia_n);
+                cmd2.ExecuteNonQuery();
+                bRespuesta.Mensaje = "Ok";
+                bRespuesta.Status = "1";
+            }
+            catch (Exception e)
+            {
+                bRespuesta.Mensaje = e.Message;
+                bRespuesta.Status = "0";
+            }
+            finally
+            {
+                Desconectar();
+            }
+            return bRespuesta;
+        }
+
+        public List<SumaPtos> SumaPtos(string Cod_Ordtra, string Codigo_Rollo, string Prefijo_Maquina, decimal MetrosCuad)
+        {
+            Conectar();
+            List<SumaPtos> lstsuma = new List<SumaPtos>();
+            var bRespuesta = new SumaPtos();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("TJ_MUESTRA_DETALLE_DEFECTOS_4PUNTOS_SUMA_WS", cnn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Ot", Cod_Ordtra);
+                cmd.Parameters.AddWithValue("@CodRollo", Codigo_Rollo);
+                cmd.Parameters.AddWithValue("@Prefijo_Maquina", Prefijo_Maquina);
+                cmd.Parameters.AddWithValue("@MetrosCuad", MetrosCuad);
+                SqlDataReader read = cmd.ExecuteReader();
+
+
+                while (read.Read())
+                {
+                    SumaPtos ficha = new SumaPtos()
+                    {
+                        SumaPt = read["SumaPtos"].ToString(),
+                        Mensaje = "Ok",
+                        Status = "1"
+                    };
+                    lstsuma.Add(ficha);
+                }
+            }
+            catch (Exception e)
+            {
+                SumaPtos ficha2 = new SumaPtos()
+                {
+                    SumaPt = "0.00",
+                    Mensaje = e.Message,
+                    Status = "0"
+                };
+                lstsuma.Add(ficha2);
+            }
+
+            finally
+            {
+                Desconectar();
+            }
+            return lstsuma;
+        }
+
+        /*********************************************************************************************************************/
 
         public List<tela_proceso> TelaProceso(string cod_ordtra, string Cod_tela)
         {
@@ -1860,6 +2054,7 @@ namespace Ws_prectoex.Data
                         Pr_Niv_Bano_Maq = read["PR_NIV_BANO_MAQ"].ToString(),
                         Pr_Ph_Pilling_1 = read["PR_PH_PILLING_1"].ToString(),
                         Pr_Ph_Pilling_2 = read["PR_PH_PILLING_2"].ToString(),
+                        Tr_Bar = read["TR_BAR"].ToString(),
                         Tr_Tobera = read["TR_TOBERA"].ToString(),
                         Tr_Acumulador = read["TR_ACUMULADOR"].ToString(),
                         Tr_Bomba = read["TR_BOMBA"].ToString(),
@@ -1872,12 +2067,11 @@ namespace Ws_prectoex.Data
                         Tr_Ph_Inicio2_CSal = read["TR_PH_INICIO2_CSAL"].ToString(),
                         Tr_Ph_Inicio1_SSal = read["TR_PH_INICIO1_SSAL"].ToString(),
                         Tr_Ph_Inicio2_SSal = read["TR_PH_INICIO2_SSAL"].ToString(),
-
                         Tr_Densidad_Sal_1 = read["TR_DENSIDAD_SAL_1"].ToString(),
                         Tr_Densidad_Sal_2 = read["TR_DENSIDAD_SAL_2"].ToString(),
                         Tr_Temperatura_1 = read["TR_TEMPERATURA_1"].ToString(),
                         Tr_Temperatura_2 = read["TR_TEMPERATURA_2"].ToString(),
-
+                        Tr_Cant_Dosif = read["TR_CANT_DOSIF"].ToString(),
                         Tr_GL_Densidad = read["TR_GL_DENSIDAD"].ToString(),
                         Tr_GL_Densidad_2 = read["TR_GL_DENSIDAD2"].ToString(),
                         Tr_LT_Densidad = read["TR_LT_DENSIDAD"].ToString(),
@@ -1886,7 +2080,6 @@ namespace Ws_prectoex.Data
                         Tr_Corr_Teorica_2 = read["TR_CORR_TEORICA2"].ToString(),
                         Tr_Corr_Real = read["TR_CORR_REAL"].ToString(),
                         Tr_Corr_Real_2 = read["TR_CORR_REAL2"].ToString(),
-
                         Tr_Lt_Dosif_Color = read["TR_LT_DOSIF_COLOR"].ToString(),
                         Tr_Lt_Dosif_Sal = read["TR_LT_DOSIF_SAL"].ToString(),
                         Tr_Lt_Dosif1_Alca = read["TR_LT_DOSIF1_ALCA"].ToString(),
@@ -1895,16 +2088,19 @@ namespace Ws_prectoex.Data
                         Tr_Ph_2_Alcali_1 = read["TR_PH_2_ALCALI_1"].ToString(),
                         Tr_Ph_2_Alcali_2 = read["TR_PH_2_ALCALI_2"].ToString(),
                         Tr_Lt_Dosif2_Alca = read["TR_LT_DOSIF2_ALCA"].ToString(),
+                        Tr_Lt_Dosif3_Alca = read["TR_LT_DOSIF3_ALCA"].ToString(),
                         Tr_Niv_Bano_Maq_2 = read["TR_NIV_BANO_MAQ_2"].ToString(),
                         Tr_Agotamiento_1 = read["TR_AGOTAMIENTO_1"].ToString(),
                         Tr_Agotamiento_2 = read["TR_AGOTAMIENTO_2"].ToString(),
                         Tr_Tiempo_Agota = read["TR_TIEMPO_AGOTA"].ToString(),
+
                         Ja_Ph_1 = read["JA_PH_1"].ToString(),
                         Ja_Ph_2 = read["JA_PH_2"].ToString(),
                         Fi_Ph_1 = read["FI_PH_1"].ToString(),
                         Fi_Ph_2 = read["FI_PH_2"].ToString(),
                         Ac_Ph_1 = read["AC_PH_1"].ToString(),
                         Ac_Ph_2 = read["AC_PH_2"].ToString(),
+
                         Td_Tobera = read["TD_TOBERA"].ToString(),
                         Td_Acumulador = read["TD_ACUMULADOR"].ToString(),
                         Td_Bomba = read["TD_BOMBA"].ToString(),
@@ -1914,11 +2110,14 @@ namespace Ws_prectoex.Data
                         Td_Ph_Tenido_2 = read["TD_PH_TENIDO_2"].ToString(),
                         Td_Ph_Descarga_Disp_1 = read["TD_PH_DESCARGA_DISP_1"].ToString(),
                         Td_Ph_Descarga_Disp_2 = read["TD_PH_DESCARGA_DISP_2"].ToString(),
+
                         Mu_Dureza_Tenido = read["MU_DUREZA_TENIDO"].ToString(),
                         Mu_Peroxi_Residu = read["MU_PEROXI_RESIDU"].ToString(),
                         Cambio_Turno = read["CAMBIO_TURNO"].ToString(),
                         Observaciones = read["OBSERVACIONES"].ToString(),
-                        Flg_Habilita = read["FLG_HABILITA"].ToString()
+                        Flg_Habilita = read["FLG_HABILITA"].ToString(),
+                        Flg_Maquina_AT = read["FLG_MAQ_AT"].ToString(),
+                        Cod_Usuario = read["COD_USUARIO"].ToString(),
                     };
                     lsParamReceta.Add(lista);
                 }
@@ -1963,6 +2162,7 @@ namespace Ws_prectoex.Data
                                       , string Tr_Densidad_Sal_2
                                       , string Tr_Temperatura_1
                                       , string Tr_Temperatura_2
+                                      , string Tr_Cant_Dosif
                                       , string Tr_Lt_Dosif_Color
                                       , string Tr_Lt_Dosif_Sal
                                       , string Tr_Lt_Dosif1_Alca
@@ -1971,6 +2171,7 @@ namespace Ws_prectoex.Data
                                       , string Tr_Ph_2_Alcali_1
                                       , string Tr_Ph_2_Alcali_2
                                       , string Tr_Lt_Dosif2_Alca
+                                      , string Tr_Lt_Dosif3_Alca
                                       , string Tr_Niv_Bano_Maq2
                                       , string Tr_Agotamiento_1
                                       , string Tr_Agotamiento_2
@@ -2034,6 +2235,7 @@ namespace Ws_prectoex.Data
                 cmd.Parameters.AddWithValue("@TR_DENSIDAD_SAL_2", Tr_Densidad_Sal_2);
                 cmd.Parameters.AddWithValue("@TR_TEMPERATURA_1", Tr_Temperatura_1);
                 cmd.Parameters.AddWithValue("@TR_TEMPERATURA_2", Tr_Temperatura_2);
+                cmd.Parameters.AddWithValue("@TR_CANT_DOSIF", Tr_Cant_Dosif);
                 cmd.Parameters.AddWithValue("@TR_LT_DOSIF_COLOR", Tr_Lt_Dosif_Color);
                 cmd.Parameters.AddWithValue("@TR_LT_DOSIF_SAL", Tr_Lt_Dosif_Sal);
                 cmd.Parameters.AddWithValue("@TR_LT_DOSIF1_ALCA", Tr_Lt_Dosif1_Alca);
@@ -2041,7 +2243,8 @@ namespace Ws_prectoex.Data
                 cmd.Parameters.AddWithValue("@TR_PH_1_ALCALI_2", Tr_Ph_1_Alcali_2);
                 cmd.Parameters.AddWithValue("@TR_PH_2_ALCALI_1", Tr_Ph_2_Alcali_1);
                 cmd.Parameters.AddWithValue("@TR_PH_2_ALCALI_2", Tr_Ph_2_Alcali_2);
-                cmd.Parameters.AddWithValue("@TR_LT_DOSIF2_ALCA", Tr_Lt_Dosif2_Alca);                
+                cmd.Parameters.AddWithValue("@TR_LT_DOSIF2_ALCA", Tr_Lt_Dosif2_Alca);
+                cmd.Parameters.AddWithValue("@TR_LT_DOSIF3_ALCA", Tr_Lt_Dosif3_Alca);
                 cmd.Parameters.AddWithValue("@TR_AGOTAMIENTO_1", Tr_Agotamiento_1);
                 cmd.Parameters.AddWithValue("@TR_AGOTAMIENTO_2", Tr_Agotamiento_2);
                 cmd.Parameters.AddWithValue("@TR_TIEMPO_AGOTA", Tr_Tiempo_Agota);
@@ -2086,5 +2289,205 @@ namespace Ws_prectoex.Data
             return bRespuesta;
         }
 
+
+        public List<Capacidades> mantCapacidades(string opcion, string cod_familia, string cod_cliente, string tip_ancho, string cod_gama, string eco_master, string imaster, string trd, string atyc, string ms
+                                               , string obs_eco_master, string obs_imaster, string obs_trd, string obs_atyc, string obs_ms, string fec_reg_ini, string fec_reg_fin, string cod_usuario)
+        {
+            Conectar();
+
+            List<Capacidades> lstCapacidades = new List<Capacidades>();
+            try
+            {
+                SqlCommand cmd = new SqlCommand("TI_MAN_CAPACIDADES_WS", cnn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@OPCION", opcion);
+                cmd.Parameters.AddWithValue("@COD_FAMILIA", cod_familia);
+                cmd.Parameters.AddWithValue("@COD_CLIENTE", cod_cliente);                
+                cmd.Parameters.AddWithValue("@TIP_ANCHO", tip_ancho);
+                cmd.Parameters.AddWithValue("@COD_GAMA", cod_gama);
+                cmd.Parameters.AddWithValue("@ECO_MASTER", eco_master);
+                cmd.Parameters.AddWithValue("@IMASTER", imaster);                
+                cmd.Parameters.AddWithValue("@TRD", trd);
+                cmd.Parameters.AddWithValue("@ATYC", atyc);
+                cmd.Parameters.AddWithValue("@MS", ms);
+                cmd.Parameters.AddWithValue("@OBS_ECO_MASTER", obs_eco_master);
+                cmd.Parameters.AddWithValue("@OBS_IMASTER", obs_imaster);
+                cmd.Parameters.AddWithValue("@OBS_TRD", obs_trd);
+                cmd.Parameters.AddWithValue("@OBS_ATYC", obs_atyc);
+                cmd.Parameters.AddWithValue("@OBS_MS", obs_ms);
+                cmd.Parameters.AddWithValue("@FEC_REG_INI", fec_reg_ini);
+                cmd.Parameters.AddWithValue("@FEC_REG_FIN", fec_reg_fin);
+                cmd.Parameters.AddWithValue("@COD_USUARIO", cod_usuario);
+
+                SqlDataReader read = cmd.ExecuteReader();
+
+                while (read.Read())
+                {
+                    Capacidades lista = new Capacidades()
+                    {
+                        Fec_Creacion = read["FEC_CREACION"].ToString(),
+                        Cod_Familia = read["COD_FAMILIA"].ToString(),
+                        Cod_Tela    = read["COD_TELA"].ToString(),
+                        Cod_Cliente = read["COD_CLIENTE"].ToString(),
+                        Nom_Cliente = read["NOM_CLIENTE"].ToString(),
+                        Tip_Ancho = read["TIP_ANCHO"].ToString(),
+                        Des_Tip_Ancho = read["DES_TIP_ANCHO"].ToString(),
+                        Cod_Gama = read["COD_GAMA"].ToString(),
+                        Des_Gama = read["DES_GAMA"].ToString(),
+                        Eco_Master = read["ECO_MASTER"].ToString(),
+                        IMaster = read["IMASTER"].ToString(),
+                        TRD = read["TRD"].ToString(),
+                        ATYC = read["ATYC"].ToString(),
+                        MS = read["MS"].ToString(),
+                        Obs_Eco_Master = read["OBS_ECO_MASTER"].ToString(),
+                        Obs_IMaster = read["OBS_IMASTER"].ToString(),
+                        Obs_TRD = read["OBS_TRD"].ToString(),
+                        Obs_ATYC = read["OBS_ATYC"].ToString(),
+                        Obs_MS = read["OBS_MS"].ToString()
+                    };
+
+                    lstCapacidades.Add(lista);
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+            return lstCapacidades;
+        }
+
+        public List<Gama> muestraGama()
+        {
+            Conectar();
+            List<Gama> lstgama = new List<Gama>();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("TI_MUESTRA_GAMA_WS", cnn);
+                SqlDataReader read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+                    Gama tipo = new Gama()
+                    {
+                        Cod_IntCol = read["COD_INTCOL"].ToString(),
+                        Des_IntCol = read["DES_INTCOL"].ToString()
+
+                    };
+                    lstgama.Add(tipo);
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+            return lstgama;
+        }
+
+        public List<TipAncho> muestraTipAncho()
+        {
+            Conectar();
+            List<TipAncho> lsttipo = new List<TipAncho>();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("TI_MUESTRA_TIPO_ANCHO_WS", cnn);
+                SqlDataReader read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+                    TipAncho tipo = new TipAncho()
+                    {
+                        Tip_Ancho = read["TIP_ANCHO"].ToString(),
+                        Des_TipAncho = read["DES_TIPANCHO"].ToString()
+
+                    };
+                    lsttipo.Add(tipo);
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+            return lsttipo;
+        }
+
+        public List<FamArticulo> MuestraFamArticulo(string opcion)
+        {
+            Conectar();
+            List<FamArticulo> lstfamarticulo = new List<FamArticulo>();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("TI_MUESTRA_FAMILIA_WS", cnn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@OPCION", opcion);
+                SqlDataReader read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+                    FamArticulo lista = new FamArticulo()
+                    {
+                        Cod_Familia = read["COD_FAMILIA"].ToString(),
+                        Cod_Tela = read["COD_TELA"].ToString()
+                    };
+                    lstfamarticulo.Add(lista);
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+            return lstfamarticulo;
+        }
+
+        public List<Cliente> MuestraCliente(string opcion)
+        {
+            Conectar();
+            List<Cliente> lstcliente = new List<Cliente>();
+
+            try
+            {
+                SqlCommand cmd = new SqlCommand("TI_MUESTRA_CLIENTE_WS", cnn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@OPCION", opcion);
+                SqlDataReader read = cmd.ExecuteReader();
+                while (read.Read())
+                {
+                    Cliente lista = new Cliente()
+                    {
+                        Codigo_Cliente = read["COD_CLIENTE"].ToString(),
+                        Nombre_Cliente = read["NOM_CLIENTE"].ToString(),
+                        Abreviatura_Cliente = read["ABR_CLIENTE"].ToString()
+                    };
+                    lstcliente.Add(lista);
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+            finally
+            {
+                Desconectar();
+            }
+            return lstcliente;
+        }
+
     }
 }
+

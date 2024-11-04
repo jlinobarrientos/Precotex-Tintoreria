@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\HARONI\\Proyecto_Tintoreria\\Ws-precotex\\Ws-precotex.csproj": {}
+    "\\\\192.168.5.24\\Proyecto_Tintoreria\\Ws-precotex\\Ws-precotex.csproj": {}
   },
   "projects": {
-    "D:\\HARONI\\Proyecto_Tintoreria\\Ws-precotex\\Ws-precotex.csproj": {
+    "\\\\192.168.5.24\\Proyecto_Tintoreria\\Ws-precotex\\Ws-precotex.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HARONI\\Proyecto_Tintoreria\\Ws-precotex\\Ws-precotex.csproj",
+        "projectUniqueName": "\\\\192.168.5.24\\Proyecto_Tintoreria\\Ws-precotex\\Ws-precotex.csproj",
         "projectName": "Ws-precotex",
-        "projectPath": "D:\\HARONI\\Proyecto_Tintoreria\\Ws-precotex\\Ws-precotex.csproj",
-        "packagesPath": "C:\\Users\\jlino\\.nuget\\packages\\",
-        "outputPath": "D:\\HARONI\\Proyecto_Tintoreria\\Ws-precotex\\obj\\",
+        "projectPath": "\\\\192.168.5.24\\Proyecto_Tintoreria\\Ws-precotex\\Ws-precotex.csproj",
+        "packagesPath": "C:\\Users\\hmedina\\.nuget\\packages\\",
+        "outputPath": "\\\\192.168.5.24\\Proyecto_Tintoreria\\Ws-precotex\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jlino\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hmedina\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,6 +35,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -90,12 +96,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[5.0.17, 5.0.17]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -104,7 +104,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

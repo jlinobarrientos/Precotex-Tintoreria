@@ -9,5 +9,6 @@ namespace Ws_prectoex.Data
     {
        public string Cod_Tela { get; set; }
        public string Des_Tela { get; set; }
+       public string Respuesta { get; set; }
     }
 }

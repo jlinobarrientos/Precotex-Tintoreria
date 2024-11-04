@@ -1,0 +1,131 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "\\\\192.168.5.24\\Proyecto_Tintoreria\\Ws-precotex\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{61FF5CC0-B97A-44EC-B135-0E4A88BC19FA}|Ws-precotex.csproj|\\\\192.168.5.24\\proyecto_tintoreria\\ws-precotex\\controllers\\jwttokencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61FF5CC0-B97A-44EC-B135-0E4A88BC19FA}|Ws-precotex.csproj|\\\\192.168.5.24\\proyecto_tintoreria\\ws-precotex\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61FF5CC0-B97A-44EC-B135-0E4A88BC19FA}|Ws-precotex.csproj|\\\\192.168.5.24\\proyecto_tintoreria\\ws-precotex\\models\\proceso.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61FF5CC0-B97A-44EC-B135-0E4A88BC19FA}|Ws-precotex.csproj|\\\\192.168.5.24\\proyecto_tintoreria\\ws-precotex\\data\\iprocesos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61FF5CC0-B97A-44EC-B135-0E4A88BC19FA}|Ws-precotex.csproj|\\\\192.168.5.24\\proyecto_tintoreria\\ws-precotex\\controllers\\procesos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61FF5CC0-B97A-44EC-B135-0E4A88BC19FA}|Ws-precotex.csproj|\\\\192.168.5.24\\proyecto_tintoreria\\ws-precotex\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{61FF5CC0-B97A-44EC-B135-0E4A88BC19FA}|Ws-precotex.csproj|\\\\192.168.5.24\\proyecto_tintoreria\\ws-precotex\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "JWTTokenController.cs",
+              "DocumentMoniker": "\\\\192.168.5.24\\Proyecto_Tintoreria\\Ws-precotex\\Controllers\\JWTTokenController.cs",
+              "RelativeDocumentMoniker": "Controllers\\JWTTokenController.cs",
+              "ToolTip": "\\\\192.168.5.24\\Proyecto_Tintoreria\\Ws-precotex\\Controllers\\JWTTokenController.cs",
+              "RelativeToolTip": "Controllers\\JWTTokenController.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAowA4AAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T13:26:55.429Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "\\\\192.168.5.24\\Proyecto_Tintoreria\\Ws-precotex\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
+              "ToolTip": "\\\\192.168.5.24\\Proyecto_Tintoreria\\Ws-precotex\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Controllers\\LoginController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwB0AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T14:41:45.478Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Proceso.cs",
+              "DocumentMoniker": "\\\\192.168.5.24\\Proyecto_Tintoreria\\Ws-precotex\\Models\\Proceso.cs",
+              "RelativeDocumentMoniker": "Models\\Proceso.cs",
+              "ToolTip": "\\\\192.168.5.24\\Proyecto_Tintoreria\\Ws-precotex\\Models\\Proceso.cs",
+              "RelativeToolTip": "Models\\Proceso.cs",
+              "ViewState": "AgIAAGMBAAAAAAAAAAAcwHgBAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T14:20:16.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Iprocesos.cs",
+              "DocumentMoniker": "\\\\192.168.5.24\\Proyecto_Tintoreria\\Ws-precotex\\Data\\Iprocesos.cs",
+              "RelativeDocumentMoniker": "Data\\Iprocesos.cs",
+              "ToolTip": "\\\\192.168.5.24\\Proyecto_Tintoreria\\Ws-precotex\\Data\\Iprocesos.cs",
+              "RelativeToolTip": "Data\\Iprocesos.cs",
+              "ViewState": "AgIAAPMIAAAAAAAAAAAnwAIJAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T14:20:17.181Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "\\\\192.168.5.24\\Proyecto_Tintoreria\\Ws-precotex\\Startup.cs",
+              "RelativeDocumentMoniker": "Startup.cs",
+              "ToolTip": "\\\\192.168.5.24\\Proyecto_Tintoreria\\Ws-precotex\\Startup.cs",
+              "RelativeToolTip": "Startup.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T14:20:17.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "\\\\192.168.5.24\\Proyecto_Tintoreria\\Ws-precotex\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "\\\\192.168.5.24\\Proyecto_Tintoreria\\Ws-precotex\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T14:20:17.193Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Procesos.cs",
+              "DocumentMoniker": "\\\\192.168.5.24\\Proyecto_Tintoreria\\Ws-precotex\\Controllers\\Procesos.cs",
+              "RelativeDocumentMoniker": "Controllers\\Procesos.cs",
+              "ToolTip": "\\\\192.168.5.24\\Proyecto_Tintoreria\\Ws-precotex\\Controllers\\Procesos.cs",
+              "RelativeToolTip": "Controllers\\Procesos.cs",
+              "ViewState": "AQIAABIFAAAAAAAAAAAAACQFAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-24T14:20:17.199Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

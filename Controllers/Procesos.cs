@@ -3,12 +3,15 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using Microsoft.Extensions.Primitives;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Ws_prectoex.Data;
+using Ws_prectoex.Models;
 
 namespace Ws_prectoex.Controllers
 {
@@ -380,9 +383,7 @@ namespace Ws_prectoex.Controllers
                 return ex.Message;
             }
         }
-
-
-        
+                
 
 
         [Route("seguimientotobera/showLecturaDetalleImagen/{CodReceta}")]
@@ -563,7 +564,78 @@ namespace Ws_prectoex.Controllers
             }
         }
 
-                                                        /*Despacho Almacén*/
+        [Route("tejeduria/Tj_Muestra_Produccion_Rectilineo")]        
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<List<Produccion_Rectilineo>> Tj_Muestra_Produccion_Rectilineo(string fec_produccion_ini, string fec_produccion_fin, string ot, string cod_tela, string cod_usuario)
+        {
+            List<Produccion_Rectilineo> lstTejeduria = new List<Produccion_Rectilineo>();
+            try
+            {
+                lstTejeduria = iprocesos.produccion_Rectilineos(fec_produccion_ini, fec_produccion_fin, ot, cod_tela, cod_usuario);
+                return lstTejeduria;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+        }
+
+        [Route("tejeduria/Tj_Muestra_Produccion_Rectilineo_Det")]
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<List<Produccion_Rectilineo>> Tj_Muestra_Produccion_Rectilineo_Det(string cod_ordtra, string cod_maquina, string cod_usuario)
+        {
+            List<Produccion_Rectilineo> lstTejeduriaDet = new List<Produccion_Rectilineo>();
+            try
+            {
+                lstTejeduriaDet = iprocesos.produccion_Rectilineos_Det(cod_ordtra, cod_maquina,cod_usuario);
+                return lstTejeduriaDet;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+        }
+
+        [Route("tejeduria/Tj_Mant_Produccion_Rectilineo")]
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<List<Respuesta>> Tj_Mant_Produccion_Rectilineo(string accion, string cod_ordtra, string num_secuencia, string sec_maquina, string und_producido,
+            string und_fallado, string tip_trabajador, string cod_trabajador, string id, string cod_usuario)
+        {
+            List<Respuesta> lstRespuesta = new List<Respuesta>();
+            try
+            {
+                lstRespuesta = iprocesos.mant_Produccion_Rectilineo(accion, cod_ordtra, num_secuencia, sec_maquina, und_producido, und_fallado, tip_trabajador, cod_trabajador, id, cod_usuario);
+                return lstRespuesta;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+            
+        }
+
+        [Route("tejeduria/tj_muestra_tela")]
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<List<Tela>> tj_Muestra_Tela(string cod_tela)
+        {
+
+            List<Tela> lista = new List<Tela>();
+            try
+            {
+                lista = iprocesos.MuestraDesTela(cod_tela);
+                return lista;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+        }
+
+                                                    /*Despacho Almacén*/
         /*********************************************************************************************************************/
 
         [Route("exportacion/Listar_Cliente")]
@@ -936,6 +1008,7 @@ namespace Ws_prectoex.Controllers
                                        , objFile.nTrDensidadSal2
                                        , objFile.nTrTemperatura1
                                        , objFile.nTrTemperatura2
+                                       , objFile.nTrCantDosif
                                        , objFile.nTrLtDosifColor
                                        , objFile.nTrLtDosifSal
                                        , objFile.nTrLtDosif1Alca
@@ -944,6 +1017,7 @@ namespace Ws_prectoex.Controllers
                                        , objFile.nTrPh2Alcali1
                                        , objFile.nTrPh2Alcali2
                                        , objFile.nTrLtDosif2Alca
+                                       , objFile.nTrLtDosif3Alca
                                        , objFile.nTrNivBanoMaq2
                                        , objFile.nTrAgotamiento1
                                        , objFile.nTrAgotamiento2
@@ -1009,6 +1083,7 @@ namespace Ws_prectoex.Controllers
                                                      , string Tr_Densidad_Sal_2
                                                      , string Tr_Temperatura_1
                                                      , string Tr_Temperatura_2
+                                                     , string Tr_Cant_Dosif
                                                      , string Tr_Lt_Dosif_Color
                                                      , string Tr_Lt_Dosif_Sal
                                                      , string Tr_Lt_Dosif1_Alca
@@ -1017,6 +1092,7 @@ namespace Ws_prectoex.Controllers
                                                      , string Tr_Ph_2_Alcali_1
                                                      , string Tr_Ph_2_Alcali_2
                                                      , string Tr_Lt_Dosif2_Alca
+                                                     , string Tr_Lt_Dosif3_Alca
                                                      , string Tr_Niv_Bano_Maq2
                                                      , string Tr_Agotamiento_1
                                                      , string Tr_Agotamiento_2
@@ -1115,6 +1191,7 @@ namespace Ws_prectoex.Controllers
                                                          , Tr_Densidad_Sal_2
                                                          , Tr_Temperatura_1
                                                          , Tr_Temperatura_2
+                                                         , Tr_Cant_Dosif
                                                          , Tr_Lt_Dosif_Color
                                                          , Tr_Lt_Dosif_Sal
                                                          , Tr_Lt_Dosif1_Alca
@@ -1123,6 +1200,7 @@ namespace Ws_prectoex.Controllers
                                                          , Tr_Ph_2_Alcali_1
                                                          , Tr_Ph_2_Alcali_2
                                                          , Tr_Lt_Dosif2_Alca
+                                                         , Tr_Lt_Dosif3_Alca
                                                          , Tr_Niv_Bano_Maq2
                                                          , Tr_Agotamiento_1
                                                          , Tr_Agotamiento_2
@@ -1189,6 +1267,7 @@ namespace Ws_prectoex.Controllers
             public string nTrDensidadSal2 { get; set; }
             public string nTrTemperatura1 { get; set; }
             public string nTrTemperatura2 { get; set; }
+            public string nTrCantDosif { get; set; }
             public string nTrLtDosifColor { get; set; }
             public string nTrLtDosifSal { get; set; }
             public string nTrLtDosif1Alca { get; set; }
@@ -1197,6 +1276,7 @@ namespace Ws_prectoex.Controllers
             public string nTrPh2Alcali1 { get; set; }
             public string nTrPh2Alcali2 { get; set; }
             public string nTrLtDosif2Alca { get; set; }
+            public string nTrLtDosif3Alca { get; set; }
             public string nTrNivBanoMaq2 { get; set; }
             public string nTrAgotamiento1 { get; set; }
             public string nTrAgotamiento2 { get; set; }
@@ -1222,6 +1302,103 @@ namespace Ws_prectoex.Controllers
             public string sOpeEntrante { get; set; }
             public string sObs { get; set; }
         }
+
+
+        [Route("tintoreria/ti_mant_capacidades")]
+        //[Authorize]
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<List<Capacidades>> ti_mant_capacidades(string opcion, string cod_familia, string cod_cliente, string tip_ancho, string cod_gama, string eco_master, string imaster, string trd, string atyc, string ms
+                                               , string obs_eco_master, string obs_imaster, string obs_trd, string obs_atyc, string obs_ms, string fec_reg_ini, string fec_reg_fin, string cod_usuario)
+        {
+            List<Capacidades> lstCapacidades = new List<Capacidades>();
+            try
+            {
+                lstCapacidades = iprocesos.mantCapacidades(opcion, cod_familia, cod_cliente, tip_ancho, cod_gama, eco_master, imaster, trd, atyc, ms, obs_eco_master, obs_imaster, obs_trd, obs_atyc, obs_ms, fec_reg_ini, fec_reg_fin, cod_usuario);
+                return lstCapacidades;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+        }
+
+        [Route("tintoreria/ti_muestra_gama")]
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<List<Gama>> ti_muestra_gama()
+        {
+
+            List<Gama> lstgama = new List<Gama>();
+            try
+            {
+                lstgama = iprocesos.muestraGama();
+                return lstgama;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+        }
+
+
+        [Route("tintoreria/ti_muestra_tipancho")]
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<List<TipAncho>> ti_muestra_tipancho()
+        {
+
+            List<TipAncho> lsttipancho = new List<TipAncho>();
+            try
+            {
+                lsttipancho = iprocesos.muestraTipAncho();
+                return lsttipancho;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+        }
+
+        [Route("tintoreria/ti_muestra_famarticulo")]
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<List<FamArticulo>> ti_muestra_famarticulo(string opcion)
+        {
+
+            List<FamArticulo> lstfamarticulo = new List<FamArticulo>();
+            try
+            {
+                lstfamarticulo = iprocesos.MuestraFamArticulo(opcion
+                    );
+                return lstfamarticulo;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+        }
+
+        [Route("tintoreria/ti_muestra_cliente")]
+        [AllowAnonymous]
+        [HttpGet]
+        public async Task<List<Cliente>> ti_muestra_clientes(string opcion)
+        {
+
+            List<Cliente> lstcliente = new List<Cliente>();
+            try
+            {
+                lstcliente = iprocesos.MuestraCliente(opcion);
+                return lstcliente;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error " + e.Message);
+            }
+        }
+
+
+
     }
 }
 

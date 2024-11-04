@@ -221,6 +221,36 @@ namespace Ws_prectoex.Data
         public string Nombre_Tipo_Aguja { get; set; }
     }
 
+    public class Produccion_Rectilineo
+    {
+        public string Fec_Produccion_Ini { get; set; }
+        public string Fec_Produccion_Fin { get; set; }
+        public string Fec_Lectura { get; set; }
+        public string Cod_Ordtra { get; set; }
+        public string Num_Secuencia { get; set; }
+        public string Sec_Maquina { get; set; }
+        public string Cod_Maquina { get; set; }
+        public string Cod_Tela { get; set; }
+        public string Des_Tela { get; set; }
+        public string Comb { get; set; }
+        public string Cod_Talla { get; set; }
+        public string Kg_Producido { get; set; }
+        public string Und_Requerido { get; set; }
+        public string Und_Producido { get; set; }
+        public string Und_Pendiente { get; set; }
+        public string Und_Ingresar { get; set; }
+        public string Und_Fallado { get; set; }
+        public string Tejedor { get; set; }
+        public string Cod_Usuario { get; set; }
+        public string OC { get; set; }
+        public string Precio_Unitario { get; set; }
+        public string Total { get; set; }
+        public string Cliente { get; set; }
+        public string Id { get; set; }
+        public string Tot_Und { get; set; }
+        public string Tot_Falla { get; set; }
+    }
+
     public class tela_proceso
     {
         public string Partida { get; set; }        
@@ -388,6 +418,7 @@ namespace Ws_prectoex.Data
         public string Pr_Niv_Bano_Maq { get; set; }
         public string Pr_Ph_Pilling_1 { get; set; }
         public string Pr_Ph_Pilling_2 { get; set; }
+        public string Tr_Bar { get; set; }
         public string Tr_Tobera { get; set; }
         public string Tr_Acumulador { get; set; }
         public string Tr_Bomba { get; set; }
@@ -407,6 +438,7 @@ namespace Ws_prectoex.Data
         public string Tr_Densidad_Sal_2 { get; set; }
         public string Tr_Temperatura_1 { get; set; }
         public string Tr_Temperatura_2 { get; set; }
+        public string Tr_Cant_Dosif { get; set; }
         public string Tr_GL_Densidad { get; set; }
         public string Tr_GL_Densidad_2 { get; set; }
         public string Tr_LT_Densidad { get; set; }
@@ -423,6 +455,7 @@ namespace Ws_prectoex.Data
         public string Tr_Ph_2_Alcali_1 { get; set; }
         public string Tr_Ph_2_Alcali_2 { get; set; }
         public string Tr_Lt_Dosif2_Alca { get; set; }
+        public string Tr_Lt_Dosif3_Alca { get; set; }
         public string Tr_Niv_Bano_Maq_2 { get; set; }
         public string Tr_Agotamiento_1 { get; set; }
         public string Tr_Agotamiento_2 { get; set; }
@@ -451,6 +484,54 @@ namespace Ws_prectoex.Data
         public string Cambio_Turno { get; set; }
         public string Observaciones { get; set; }
         public string Flg_Habilita { get; set; }
+        public string Flg_Maquina_AT { get; set; }
+        public string Cod_Usuario { get; set; }
+    }
+
+
+    public class Capacidades
+    {
+        public string Fec_Creacion { get; set; }
+        public string Cod_Familia { get; set; }
+        public string Cod_Tela { get; set; }
+        public string Cod_Cliente { get; set; }
+        public string Nom_Cliente { get; set; }
+        public string Tip_Ancho { get; set; }
+        public string Des_Tip_Ancho { get; set; }
+        public string Cod_Gama { get; set; }
+        public string Des_Gama { get; set; }
+        public string Eco_Master { get; set; }
+        public string IMaster { get; set; }
+        public string TRD { get; set; }
+        public string ATYC { get; set; }
+        public string MS { get; set; }
+        public string Obs_Eco_Master { get; set; }
+        public string Obs_IMaster { get; set; }
+        public string Obs_TRD { get; set; }
+        public string Obs_ATYC { get; set; }
+        public string Obs_MS { get; set; }
+        public string Fec_Reg_Ini { get; set; }
+        public string Fec_Reg_Fin { get; set; }
+        public string Cod_Usuario { get; set; }
+    }
+
+    public class Gama
+    {
+        public string Cod_IntCol { get; set; }
+        public string Des_IntCol { get; set; }
+    }
+
+    public class TipAncho
+    {
+        public string Tip_Ancho { get; set; }
+        public string Des_TipAncho { get; set; }
+    }
+
+    public class FamArticulo
+    { 
+        public string Cod_Familia { get; set; }
+        public string Cod_Tela { get; set; }
+
     }
 
 }
